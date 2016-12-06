@@ -15,6 +15,31 @@ ActiveRecord::Schema.define(version: 20161206213231) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "line_items", force: :cascade do |t|
+    t.integer  "order_id"
+    t.integer  "product_id"
+    t.integer  "quantity"
+    t.integer  "total_sale_price_in_cents"
+    t.integer  "estimated_bake_time_in_seconds"
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
+  end
+
+  create_table "orders", force: :cascade do |t|
+    t.integer  "client_id"
+    t.integer  "cakewalker_id"
+    t.string   "status"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  create_table "products", force: :cascade do |t|
+    t.integer  "unit_price_in_cents"
+    t.boolean  "for_sale"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+  end
+
   create_table "roles", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
