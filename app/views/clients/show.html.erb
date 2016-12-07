@@ -1,0 +1,32 @@
+<h1>
+  Client Details for <%= @user.full_name %>
+</h1>
+
+<%= link_to "Go Back", products_path %>
+
+<hr>
+
+<div class = "row">
+  <div class = "col-md-6">
+    When Client Signed Up
+  </div>
+  <div <div class="col-md-6">
+    Email
+  </div>
+</div>
+
+<hr>
+<div class = "row">
+  <div class = "col-md-6">
+    <%= time_ago_in_words(@user.created_at) %> ago
+  </div>
+  <div <div class="col-md-6">
+    <%= @user.email %>
+  </div>
+</div>
+
+<hr>
+
+<div>
+  <%= link_to "Delete Account", client_path, method: :delete, class: 'btn btn-sm btn-danger' %>
+</div>
