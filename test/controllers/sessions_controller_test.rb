@@ -5,5 +5,4 @@ class SessionsControllerTest < ActionDispatch::IntegrationTest
     get new_session_url
     assert_response :success
   end
-
 end

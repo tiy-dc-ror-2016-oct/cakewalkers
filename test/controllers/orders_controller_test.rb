@@ -36,5 +36,4 @@ class OrdersControllerTest < ActionDispatch::IntegrationTest
     delete order_path(order_id)
     refute Order.find_by(id: order_id)
   end
-
 end
