@@ -47,7 +47,7 @@ ActiveRecord::Schema.define(version: 20161207211159) do
     t.string   "full_name"
     t.string   "phone"
     t.string   "email"
-    t.integer  "card_id"
+    t.integer  "cart_id"
   end
 
   create_table "products", force: :cascade do |t|
