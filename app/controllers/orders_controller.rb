@@ -25,10 +25,6 @@ class OrdersController < ApplicationController
     end
   end
 
-  def order_params
-    params.require(:order).permit(:shipping_city, :shipping_street, :shipping_state, :shipping_zip, :billing_street, :billing_state, :billing_zip, :billing_city, :full_name, :phone, :email)
-  end
-
   def show
     @order = Order.find(params[:id])
   end
@@ -36,5 +32,11 @@ class OrdersController < ApplicationController
   def destroy
     Order.find(params[:id]).destroy
     redirect_to root_path
+  end
+
+  private
+  
+  def order_params
+    params.require(:order).permit(:shipping_city, :shipping_street, :shipping_state, :shipping_zip, :billing_street, :billing_state, :billing_zip, :billing_city, :full_name, :phone, :email)
   end
 end
