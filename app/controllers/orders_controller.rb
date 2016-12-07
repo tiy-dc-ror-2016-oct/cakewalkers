@@ -6,7 +6,7 @@ class OrdersController < ApplicationController
   def create
     @order = Order.new(order_params)
     if @order.save
-      redirect_to order_path(@order.id)
+      redirect_to client_order_path(@order.id)
     else
       render :new
     end
@@ -19,7 +19,7 @@ class OrdersController < ApplicationController
   def update
     @order = Order.find(params[:id])
     if @order.update(order_params)
-      redirect_to order_path(params[:id])
+      redirect_to client_order_path(params[:id])
     else
       render :edit
     end
@@ -35,7 +35,7 @@ class OrdersController < ApplicationController
   end
 
   private
-  
+
   def order_params
     params.require(:order).permit(:shipping_city, :shipping_street, :shipping_state, :shipping_zip, :billing_street, :billing_state, :billing_zip, :billing_city, :full_name, :phone, :email)
   end
