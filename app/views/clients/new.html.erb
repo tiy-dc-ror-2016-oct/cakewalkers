@@ -1,4 +1,4 @@
-<%= form_for @user do |f| %>
+<%= form_for @user, url:"/clients/new" do |f| %>
 
   <%= f.label :email, class: "control-label" %>
   <%= f.text_field :email %>

@@ -10,13 +10,13 @@ class ClientsController < ApplicationController
 
     if @user.save
       session[:current_user_id] = @user.id
-      redirect_to tweets_path
+      redirect_to products_path
     else
       render :new
     end
   end
 
   def user_params
-    params.require(:user).permit(:email, :password_confirmation, :password, :full_name, :nickname)
+    params.require(:user).permit(:email, :password_confirmation, :password, :full_name)
   end
 end
