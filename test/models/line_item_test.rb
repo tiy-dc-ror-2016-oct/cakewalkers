@@ -7,7 +7,7 @@ class LineItemTest < ActiveSupport::TestCase
     product_id: products(:cake).id),
     quantity: 2,
     unit_sale_price: 1000,
-    total_sale_price_in_cent: 2000,
+    total_sale_price_in_cents: 2000,
     estimated_bake_time_in_seconds: 1800
   end
 end
