@@ -1,5 +1,4 @@
 class ClientsController < ApplicationController
-  layout "welcome"
   def new
     @user = User.new
   end
