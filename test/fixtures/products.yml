@@ -1,9 +1,9 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  unit_price_in_cents: 1
-  for_sale: false
+cake:
+  unit_price_in_cents: 1000
+  for_sale: true
 
-two:
-  unit_price_in_cents: 1
-  for_sale: false
+muffin:
+  unit_price_in_cents: 200
+  for_sale: true

@@ -1,15 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  order_id: 1
-  product_id: 1
-  quantity: 1
-  total_sale_price_in_cents: 1
-  estimated_bake_time_in_seconds: 1
+cake:
+  order: first
+  product: cake
+  quantity: 2
+  total_sale_price_in_cents: 2000
+  estimated_bake_time_in_seconds: 1800
 
-two:
-  order_id: 1
-  product_id: 1
-  quantity: 1
-  total_sale_price_in_cents: 1
-  estimated_bake_time_in_seconds: 1
+muffin:
+  order: second
+  product: muffin
+  quantity: 2
+  total_sale_price_in_cents: 400
+  estimated_bake_time_in_seconds: 600
