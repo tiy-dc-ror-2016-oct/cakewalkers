@@ -13,8 +13,8 @@ class SessionsController < ApplicationController
     end
   end
 
-def destroy
-  session.delete("current_user_id")
-  redirect_to root_path
-end
+  def destroy
+    session.delete("current_user_id")
+    redirect_to root_path
+  end
 end
