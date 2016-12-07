@@ -15,6 +15,17 @@ class ClientsController < ApplicationController
     end
   end
 
+  def show
+    @user = User.find(params["id"])
+    render :show
+  end
+
+  def destroy
+    @user = User.find(params["id"])
+    @user.destroy
+    redirect_to root_url, notice: "Account was successfully destroyed."
+  end
+
   def user_params
     params.require(:user).permit(:email, :password_confirmation, :password, :full_name)
   end
