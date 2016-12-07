@@ -2,6 +2,7 @@ class Order < ApplicationRecord
   has_many :line_items
   belongs_to :client, class_name: :user
   belongs_to :cakewalker, class_name: :user
+  belongs_to :cart
   validates :billing_street, presence: true
   validates :billing_city, presence: true
   validates :billing_state, presence: true
