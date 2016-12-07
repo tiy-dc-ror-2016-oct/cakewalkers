@@ -27,11 +27,6 @@ class OrdersControllerTest < ActionDispatch::IntegrationTest
     assert_equal "Dis Guy", Order.find(order_id).full_name
   end
 
-  test "should get show" do
-    get order_path(orders(:first).id)
-    assert_response :success
-  end
-
   test "should be able to destroy" do
     order_id = orders(:first).id
     delete order_path(order_id)
