@@ -1,10 +1,11 @@
-class ClientsController < ApplicationController
+class UsersController < ApplicationController
   def new
     @user = User.new
   end
 
   def create
     @user = User.new(user_params)
+    @user.roles << Role.find(params[:user][:roles])
     session["message"] = "you signed up!"
 
     if @user.save
@@ -26,7 +27,8 @@ class ClientsController < ApplicationController
   def update
     @user = User.find(params[:id])
     if @user.update(user_params)
-      redirect_to client_path(params[:id])
+      @user.roles.update(Role.find(params[:user][:roles]))
+      redirect_to user_path(params[:id])
     else
       render :edit
     end
