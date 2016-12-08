@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
       flash[:success] = "Successfully logged in!"
       redirect_to products_path
     else
-      flash[:danger] = "Invalid email/password combination" # Not quite right!
+      flash[:danger] = "Invalid email/password combination"
       redirect_to new_session_path
     end
   end
