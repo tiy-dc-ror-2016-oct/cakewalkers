@@ -12,8 +12,11 @@
   </div>
 
   <div class="form-group">
-    <%= f.label :roles %>
-    <%= f.select :roles,  Role.all.map { |p| [p.name, p.id] } %>
+    <% if can? :manage, :all %>
+      <%= f.label :roles %>
+      <%= f.select :roles,  Role.all.map { |p| [p.name, p.id] } %>
+    <% end %>
+
   </div>
 
   <div class="form-group">

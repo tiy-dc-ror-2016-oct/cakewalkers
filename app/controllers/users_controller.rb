@@ -5,9 +5,13 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-    @user.roles << Role.find(params[:user][:roles])
+    if !current_user
+      @user.roles << Role.find_by(name: "client")
+    else
+      @user.roles << Role.find(params[:user][:roles])
+    end
     session["message"] = "you signed up!"
-
+  
     if @user.save
       session[:current_user_id] = @user.id
       redirect_to products_path
