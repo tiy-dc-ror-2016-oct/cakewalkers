@@ -8,11 +8,6 @@
   <hr>
 <% end %>
 
-<% if @cart %>
-  <% @cart.each do |item| %>
-    <%= item.name %>
-    <%= item.unit_price_in_cents/100 %></p>
-  <% end %>
-<% end %>
+  <%= render partial: "/carts/show" %>
 
 <%= link_to "Checkout", new_order_path %>
