@@ -2,12 +2,26 @@
 
 <% @products.each do |product| %>
   <p>Name: <%= product.name %></p>
-  <p>Price: $<%= product.unit_price_in_cents/100 %></p>
+  <% if product.unit_price_in_cents %>
+    <p>
+      Price: <%= product.unit_price_in_cents/100%>
+    </p>
+  <% end %>
 
   <%= link_to "Add to cart!", line_items_path(line_item: { product_id: product.id, quantity: 1, total_sale_price_in_cents: product.unit_price_in_cents}), method: :post, class: "btn" %>
   <hr>
 <% end %>
 
-  <%= render partial: "/carts/show" %>
+<%= render partial: "/carts/show" %>
+
+<% if @cart %>
+  <% @cart.each do |item| %>
+    <%= item.name %>
+    <p>
+      Price: <%= item.unit_price_in_cents/100%>
+    </p>
+  <% end %>
+<% end %>
+
 
 <%= link_to "Checkout", new_order_path %>

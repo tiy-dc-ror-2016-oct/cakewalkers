@@ -3,7 +3,29 @@
 cake:
   unit_price_in_cents: 1000
   for_sale: true
+  time_to_bake_in_seconds: 1000
+  api_id: 3e46954c-627a-4afc-97cc-d9ae16f62d1e
 
 muffin:
   unit_price_in_cents: 200
   for_sale: true
+  time_to_bake_in_seconds: 1500
+  api_id: 3e46954c-627a-4afc-97cc-d9ae16f62d1e
+
+cupcake:
+  unit_price_in_cents: 200
+  for_sale: true
+  time_to_bake_in_seconds: 2000
+  api_id: 3e46954c-627a-4afc-97cc-d9ae16f62d1e
+
+bread:
+  unit_price_in_cents: 200
+  for_sale: true
+  time_to_bake_in_seconds: 2000
+  api_id: 3e46954c-627a-4afc-97cc-d9ae16f62d1e
+
+croissant:
+  unit_price_in_cents: 200
+  for_sale: true
+  time_to_bake_in_seconds: 2000
+  api_id: 3e46954c-627a-4afc-97cc-d9ae16f62d1e
