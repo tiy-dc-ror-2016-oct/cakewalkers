@@ -8,7 +8,7 @@ class OrdersControllerTest < ActionDispatch::IntegrationTest
       "https://cakewalkers-api.herokuapp.com/bake_jobs/3e46954c-627a-4afc-97cc-d9ae16f62d1e"
     ).to_return(
       :status => 200,
-      :body => File.read("../helpers/response.txt"),
+      :body => File.read("test/helpers/response.txt"),
       :headers => { 'Content-Type' => 'application/json' }
     )
   end
@@ -25,12 +25,6 @@ class OrdersControllerTest < ActionDispatch::IntegrationTest
     assert_select "form"
   end
 
-  test "should be able to create new order" do
-    post orders_path, params: { order: { full_name: "Allie Rowan", email: "arowan@gmail.com", phone: "3015551234", billing_street: "1234 kenyon st", billing_city: "Washington", billing_state: "DC", billing_zip: "12345", credit_card_number: "13004-0123-1423", cc_expiration: Date.new, cc_code: "234" } }
-    assert_response :redirect
-    assert_equal "Allie Rowan", Order.last.full_name
-  end
-
   test "should be able to update an order" do
     order_id = orders(:first).id
     patch order_path(order_id), params: { order: { full_name: "Dis Guy" } }
@@ -45,9 +39,12 @@ class OrdersControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "can post new bake job" do
-    product = Product.first
-    order = Order.create(full_name: "Allie Rowan", email: "arowan@gmail.com", phone: "3015551234", billing_street: "1234 kenyon st", billing_city: "Washington", billing_state: "DC", billing_zip: "12345", credit_card_number: "13004-0123-1423", cc_expiration: Date.new, cc_code: "234")
-    order.line_items.build(product: product, quantity: 2)
-    post orders_path, params: { full_name: "Allie Rowan", email: "arowan@gmail.com", phone: "3015551234", billing_street: "1234 kenyon st", billing_city: "Washington", billing_state: "DC", billing_zip: "12345", credit_card_number: "13004-0123-1423", cc_expiration: Date.new, cc_code: "234" }
+    get products_path
+    current_order = CurrentOrder.find(session[:current_order_id])
+
+    current_order.line_items.create!(product: Product.first, quantity: 2)
+    post orders_path, params: { order: { full_name: "Allie Rowan", email: "arowan@gmail.com", phone: "3015551234", billing_street: "1234 kenyon st", billing_city: "Washington", billing_state: "DC", billing_zip: "12345", credit_card_number: "13004-0123-1423", cc_expiration: Date.new, cc_code: "234" } }
+    puts last_response
+    assert_equal 1, Order.last.line_items.size
   end
 end

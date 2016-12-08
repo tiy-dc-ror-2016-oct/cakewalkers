@@ -10,11 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< Updated upstream
-ActiveRecord::Schema.define(version: 20161208211108) do
-=======
-ActiveRecord::Schema.define(version: 20161208210033) do
->>>>>>> Stashed changes
+ActiveRecord::Schema.define(version: 20161208223459) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -38,6 +34,7 @@ ActiveRecord::Schema.define(version: 20161208210033) do
     t.datetime "created_at",                     null: false
     t.datetime "updated_at",                     null: false
     t.integer  "current_order_id"
+    t.integer  "bake_job_id"
   end
 
   create_table "orders", force: :cascade do |t|
@@ -57,7 +54,7 @@ ActiveRecord::Schema.define(version: 20161208210033) do
     t.string   "full_name"
     t.string   "phone"
     t.string   "email"
-    t.integer  "card_id"
+    t.integer  "cart_id"
     t.string   "credit_card_number"
     t.date     "cc_expiration"
     t.string   "cc_code"

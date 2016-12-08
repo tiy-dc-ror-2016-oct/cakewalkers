@@ -7,9 +7,10 @@ class OrdersController < ApplicationController
     @order = Order.new(order_params)
     @order.line_items = current_order.line_items
     if @order.save
+
       @order.line_items.each do |line_item|
         response = post_bake_job(line_item.product.api_id, line_item.quantity)
-        line_item.bake_job_id = response.parsed_response["id"]
+        line_item.bake_job_id = response.parsed_response["id"].to_i
       end
       redirect_to client_order_path(@order.id)
     else
