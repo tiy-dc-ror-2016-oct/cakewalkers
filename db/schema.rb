@@ -10,12 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161208164202) do
+ActiveRecord::Schema.define(version: 20161208211108) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "carts", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "current_orders", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -28,6 +33,7 @@ ActiveRecord::Schema.define(version: 20161208164202) do
     t.integer  "estimated_bake_time_in_seconds"
     t.datetime "created_at",                     null: false
     t.datetime "updated_at",                     null: false
+    t.integer  "current_order_id"
   end
 
   create_table "orders", force: :cascade do |t|
@@ -47,7 +53,7 @@ ActiveRecord::Schema.define(version: 20161208164202) do
     t.string   "full_name"
     t.string   "phone"
     t.string   "email"
-    t.integer  "cart_id"
+    t.integer  "card_id"
     t.string   "credit_card_number"
     t.date     "cc_expiration"
     t.string   "cc_code"

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+
+
   resources :client_orders, only: [:show]
   resources :products
   resources :line_items, except: [:show, :new]
