@@ -1,3 +1,9 @@
 <p>
   You submitted an order at <%= @order.created_at %>
 </p>
+<p>
+  Your order is expected to take <%= @order.total_estimated_time_in_seconds / 60 %> minutes to bake.
+</p>
+<p>
+  Status: <%= @order.status %>
+</p>
