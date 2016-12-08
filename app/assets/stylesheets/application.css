@@ -13,3 +13,11 @@
  *= require_tree .
  *= require_self
  */
+
+
+ /*This is to Change the Color to Purple for the Nav Bar*/
+ /*
+ .nav.navbar-nav{
+     background-color: #DD33FF !important;
+     border-color: #DD33FF !important;
+ }*/

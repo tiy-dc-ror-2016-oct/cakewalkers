@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+  include CanCan::ControllerAdditions
   protect_from_forgery with: :exception
 
   helper_method :current_user
@@ -12,4 +13,7 @@ class ApplicationController < ActionController::Base
     Cart.find_by(id: session["current_cart_id"])
   end
 
+  rescue_from CanCan::AccessDenied do |error|
+    redirect_to products_path, :alert => error.message
+  end
 end

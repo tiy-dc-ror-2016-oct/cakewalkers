@@ -48,7 +48,7 @@ ActiveRecord::Schema.define(version: 20161208222218) do
     t.string   "full_name"
     t.string   "phone"
     t.string   "email"
-    t.integer  "card_id"
+    t.integer  "cart_id"
     t.string   "credit_card_number"
     t.date     "cc_expiration"
     t.string   "cc_code"
