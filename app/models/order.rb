@@ -10,5 +10,8 @@ class Order < ApplicationRecord
   validates :full_name, presence: true
   validates :email, presence: true
   validates :phone, presence: true
+  validates :credit_card_number, presence: true
+  validates :cc_expiration, presence: true
+  validates :cc_code, presence: true
 
 end
