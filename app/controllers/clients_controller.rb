@@ -16,8 +16,7 @@ class ClientsController < ApplicationController
   end
 
   def show
-    @user = User.find(params["id"])
-    render :show
+    @user = User.find(params[:id])
   end
 
   def edit
@@ -39,6 +38,7 @@ class ClientsController < ApplicationController
     redirect_to root_url, notice: "Account was successfully destroyed."
   end
 
+  private
   def user_params
     params.require(:user).permit(:email, :password_confirmation, :password, :full_name)
   end
