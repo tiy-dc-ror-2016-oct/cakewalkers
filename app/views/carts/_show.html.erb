@@ -1,0 +1,7 @@
+<div id="cart">
+  <h5>Your current cart:</h5>
+  <% current_order.line_items.each do |item| %>
+    <p><%= Product.find_by(id: item.product_id).name %>
+    -> $<%= item.total_sale_price_in_cents/100 %></p>
+  <% end %>
+</div>
