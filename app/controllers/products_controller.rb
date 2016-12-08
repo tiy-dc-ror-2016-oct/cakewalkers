@@ -1,9 +1,9 @@
 class ProductsController < ApplicationController
   def index
     @products = Product.all
-    if !current_order
-      @current_order = CurrentOrder.create
-      session[:current_order_id] = @current_order.id
+    if !current_cart
+      @current_cart = Cart.create
+      session[:current_cart_id] = @current_cart.id
     end
   end
 
