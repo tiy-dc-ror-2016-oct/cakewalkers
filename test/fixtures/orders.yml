@@ -11,6 +11,9 @@ first:
   full_name: Ben Mangelson
   email: b@gmail.com
   phone: 123456789
+  credit_card_number: 2309423-049332340
+  cc_expiration: 2017-06-15
+  cc_code: 303
 
 second:
   client: alex
@@ -23,3 +26,6 @@ second:
   full_name: Alex Guy
   email: a@gmail.com
   phone: 123456789
+  credit_card_number: 30491-40593-2304932
+  cc_expiration: 2017-06-15
+  cc_code: 303

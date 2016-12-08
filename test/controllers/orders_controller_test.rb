@@ -15,7 +15,7 @@ class OrdersControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should be able to create new order" do
-    post orders_path, params: { order: { full_name: "Allie Rowan", email: "arowan@gmail.com", phone: "3015551234", billing_street: "1234 kenyon st", billing_city: "Washington", billing_state: "DC", billing_zip: "12345" } }
+    post orders_path, params: { order: { full_name: "Allie Rowan", email: "arowan@gmail.com", phone: "3015551234", billing_street: "1234 kenyon st", billing_city: "Washington", billing_state: "DC", billing_zip: "12345", credit_card_number: "13004-0123-1423", cc_expiration: Date.new, cc_code: "234" } }
     assert_response :redirect
     assert_equal "Allie Rowan", Order.last.full_name
   end
