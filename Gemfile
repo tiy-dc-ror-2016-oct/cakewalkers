@@ -32,6 +32,7 @@ gem 'ffaker'
 gem 'simplecov'
 gem 'cancancan'
 gem 'mail'
+gem 'httparty'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

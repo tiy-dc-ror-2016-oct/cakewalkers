@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< Updated upstream
 ActiveRecord::Schema.define(version: 20161208211108) do
+=======
+ActiveRecord::Schema.define(version: 20161208210033) do
+>>>>>>> Stashed changes
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -62,9 +66,11 @@ ActiveRecord::Schema.define(version: 20161208211108) do
   create_table "products", force: :cascade do |t|
     t.integer  "unit_price_in_cents"
     t.boolean  "for_sale"
-    t.datetime "created_at",          null: false
-    t.datetime "updated_at",          null: false
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
     t.string   "name"
+    t.string   "api_id"
+    t.integer  "time_to_bake_in_seconds"
   end
 
   create_table "roles", force: :cascade do |t|

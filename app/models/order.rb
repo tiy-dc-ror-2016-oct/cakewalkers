@@ -14,4 +14,10 @@ class Order < ApplicationRecord
   validates :cc_expiration, presence: true
   validates :cc_code, presence: true
 
+  def total_estimated_time_in_seconds
+    bake_rounds = (line_items.size / 3.0).ceil
+    max_line_items = line_items.max_by(bake_rounds) { |item| item.product.time_to_bake_in_seconds}
+    max_line_items.map { |item| item.product.time_to_bake_in_seconds }.reduce(:+)
+  end
+
 end
