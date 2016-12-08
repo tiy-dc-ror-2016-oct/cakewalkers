@@ -4,7 +4,7 @@ class LineItemsController < ApplicationController
     @line_item = LineItem.new(line_item_params)
 
     if @line_item.save
-      current_order.line_items << @line_item
+      current_cart.line_items << @line_item
     end
 
     redirect_to products_path

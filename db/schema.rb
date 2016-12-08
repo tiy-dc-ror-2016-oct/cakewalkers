@@ -20,11 +20,6 @@ ActiveRecord::Schema.define(version: 20161208223459) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "current_orders", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "line_items", force: :cascade do |t|
     t.integer  "order_id"
     t.integer  "product_id"
@@ -33,8 +28,8 @@ ActiveRecord::Schema.define(version: 20161208223459) do
     t.integer  "estimated_bake_time_in_seconds"
     t.datetime "created_at",                     null: false
     t.datetime "updated_at",                     null: false
-    t.integer  "current_order_id"
     t.integer  "bake_job_id"
+    t.integer  "cart_id"
   end
 
   create_table "orders", force: :cascade do |t|
