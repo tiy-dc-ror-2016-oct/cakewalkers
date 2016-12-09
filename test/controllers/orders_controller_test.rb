@@ -5,7 +5,7 @@ class OrdersControllerTest < ActionDispatch::IntegrationTest
   def setup
     stub_request(
       :post,
-      "https://cakewalkers-api.herokuapp.com/bake_jobs/3e46954c-627a-4afc-97cc-d9ae16f62d1e"
+      "http://localhost:1234/bake_jobs/3e46954c-627a-4afc-97cc-d9ae16f62d1e"
     ).to_return(
       :status => 200,
       :body => File.read("test/helpers/response.txt"),

@@ -9,13 +9,12 @@ class OrdersController < ApplicationController
     @order = Order.new(order_params)
     @order.line_items = current_cart.line_items
     if @order.save
+      current_cart.line_items.delete_all
       @order.line_items.each do |line_item|
-        response = post_bake_job(line_item.product.api_id, line_item.quantity)
-        line_item.bake_job_id = response.parsed_response["id"].to_i
-        line_item.save
+        response = post_bake_job(line_item)
+        line_item.update(bake_job_id: response.parsed_response["id"].to_i)
       end
-      @order.status = "baking"
-      @order.save
+      @order.update(status: "waiting")
       redirect_to client_order_path(@order.id)
     else
       render :new
@@ -44,20 +43,17 @@ class OrdersController < ApplicationController
     redirect_to root_path
   end
 
+
+  def status
+    @order = Order.find(params[:id])
+    render json: { status: BakeJobHandler.new(@order).order_status }
+  end
+
   private
   def order_params
     params.require(:order).permit(:shipping_city, :shipping_street, :shipping_state, :shipping_zip, :billing_street, :billing_state, :billing_zip, :billing_city, :full_name, :phone, :email, :credit_card_number, :cc_expiration, :cc_code)
   end
 
-  def post_bake_job(code, quantity)
-    HTTParty.post("#{BASE_URI}/#{code}",
-      body:
-      {
-        bake_job:
-        {
-          quantity: quantity
-        }
-      }
-    )
-  end
+
+
 end
