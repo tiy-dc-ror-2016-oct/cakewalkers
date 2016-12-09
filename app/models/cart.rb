@@ -10,4 +10,12 @@ class Cart < ApplicationRecord
   def total
     line_items.sum(:total_sale_price_in_cents)/100
   end
+
+  def line_item_total
+    total = 0
+    line_items.each do |item|
+      total += item.total_sale_price_in_cents
+    end
+    total
+  end
 end

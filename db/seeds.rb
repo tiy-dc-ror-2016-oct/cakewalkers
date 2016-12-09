@@ -179,8 +179,10 @@ products = [
 "name": "Pullman loaf",
 "code": "4184ce36-5758-47c6-b85b-b539b5edc3f5",
 "time_to_bake_in_seconds": 1899,
+"unit_price_in_cents": 800,
 "created_at": "2016-12-08T23:14:18.456Z",
-"updated_at": "2016-12-08T23:14:18.456Z"
+"updated_at": "2016-12-08T23:14:18.456Z",
+"for_sale": true
 },
 {
 "id": 21,
@@ -251,8 +253,10 @@ products = [
 "name": "Avocado cake",
 "code": "9b202592-0ce3-42b9-8359-840d17e37963",
 "time_to_bake_in_seconds": 3112,
+"unit_price_in_cents": 3800,
 "created_at": "2016-12-08T23:14:18.495Z",
-"updated_at": "2016-12-08T23:14:18.495Z"
+"updated_at": "2016-12-08T23:14:18.495Z",
+"for_sale": true
 },
 {
 "id": 30,
@@ -1075,8 +1079,10 @@ products = [
 "name": "Muffin",
 "code": "edff5940-2aa7-497b-a0f9-70caffcf1db7",
 "time_to_bake_in_seconds": 2736,
+"unit_price_in_cents": 300,
 "created_at": "2016-12-08T23:14:18.975Z",
-"updated_at": "2016-12-08T23:14:18.975Z"
+"updated_at": "2016-12-08T23:14:18.975Z",
+"for_sale": true
 },
 {
 "id": 133,
@@ -1434,9 +1440,11 @@ products = [
 "id": 177,
 "name": "Spice cake",
 "code": "5dc08ed1-2f62-4085-89b1-105443d5fda1",
+"unit_price_in_cents": 2200,
 "time_to_bake_in_seconds": 3025,
 "created_at": "2016-12-08T23:14:19.197Z",
-"updated_at": "2016-12-08T23:14:19.197Z"
+"updated_at": "2016-12-08T23:14:19.197Z",
+"for_sale": true
 },
 {
 "id": 178,
@@ -1635,8 +1643,10 @@ products = [
 "name": "Whoopie pies",
 "code": "7b05c87a-58e5-4634-8bf6-f9f89c154515",
 "time_to_bake_in_seconds": 3189,
+"unit_price_in_cents": 300,
 "created_at": "2016-12-08T23:14:19.305Z",
-"updated_at": "2016-12-08T23:14:19.305Z"
+"updated_at": "2016-12-08T23:14:19.305Z",
+"for_sale": true
 },
 {
 "id": 203,
@@ -1652,6 +1662,8 @@ products.each do |product|
   Product.create(
     api_id: product[:code],
     name: product[:name],
-    time_to_bake_in_seconds: product[:time_to_bake_in_seconds]
+    time_to_bake_in_seconds: product[:time_to_bake_in_seconds],
+    unit_price_in_cents: product[:unit_price_in_cents],
+    for_sale: product[:for_sale]
   )
 end

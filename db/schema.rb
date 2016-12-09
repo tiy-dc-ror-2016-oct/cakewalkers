@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161208223459) do
+ActiveRecord::Schema.define(version: 20161209183141) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,8 +28,8 @@ ActiveRecord::Schema.define(version: 20161208223459) do
     t.integer  "estimated_bake_time_in_seconds"
     t.datetime "created_at",                     null: false
     t.datetime "updated_at",                     null: false
-    t.integer  "bake_job_id"
     t.integer  "cart_id"
+    t.integer  "bake_job_id"
   end
 
   create_table "orders", force: :cascade do |t|
@@ -49,7 +49,7 @@ ActiveRecord::Schema.define(version: 20161208223459) do
     t.string   "full_name"
     t.string   "phone"
     t.string   "email"
-    t.integer  "cart_id"
+    t.integer  "card_id"
     t.string   "credit_card_number"
     t.date     "cc_expiration"
     t.string   "cc_code"
@@ -57,9 +57,9 @@ ActiveRecord::Schema.define(version: 20161208223459) do
 
   create_table "products", force: :cascade do |t|
     t.integer  "unit_price_in_cents"
-    t.boolean  "for_sale"
-    t.datetime "created_at",              null: false
-    t.datetime "updated_at",              null: false
+    t.boolean  "for_sale",                default: false
+    t.datetime "created_at",                              null: false
+    t.datetime "updated_at",                              null: false
     t.string   "name"
     t.string   "api_id"
     t.integer  "time_to_bake_in_seconds"
