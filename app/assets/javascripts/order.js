@@ -1,10 +1,9 @@
-(function (){
-
+(function() {
   window.cakewalkers = window.cakewalkers || {};
-  // Expose to the namespace
-  window.cakewalkers.loadLineItems = loadLineItems;
 
-  function loadLineItems() {
+  window.cakewalkers.loadOrderStatus = loadOrderStatus;
+
+  function loadOrderStatus() {
     var locArray = window.location.pathname.split("/");
     var orderId = locArray.pop();
     return $.ajax("/orders/"+orderId+"/status", {
@@ -12,4 +11,5 @@
       dataType: "json"
     });
   }
-})();
+
+}());

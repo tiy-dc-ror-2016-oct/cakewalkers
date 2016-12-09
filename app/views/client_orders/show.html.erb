@@ -1,25 +1,28 @@
-<p>
-  You submitted an order at <%= @order.created_at %>
-</p>
-<p>
-  Your order is expected to take <%= @order.total_estimated_time_in_seconds / 60 %> minutes to bake.
-</p>
-<p>
-  Status: <%= @order.status %>
-</p>
+<h1>Your Order Status</h1>
+<h3>Deliciousness is heading your way</h3>
+<dl class="dl-horizontal">
+  <dt>
+    Submitted:
+  </dt>
+  <dd>
+    <%= time_ago_in_words(@order.created_at) %> ago
+  </dd>
+  <dt>
+    Status:
+  </dt>
+  <dd class="client-order">
 
-<table>
-  <thead>
-    <tr>
-      <th>
-        Baked Good
-      </th>
-      <th>
-        Status
-      </th>
-    </tr>
-  </thead>
-  <tbody class="client-line-items">
-
-  </tbody>
-</table>
+  </dd>
+</dl>
+<div class="well">
+  <p>You Ordered:</p>
+  <ul class= "list-unstyled">
+    <ul class="list-unstyled">
+      <% @order.grouped_line_items.each do |product, line_items| %>
+        <li>
+          <%= line_items.size %> <%= product.name %>
+        </li>
+      <% end %>
+    </ul>
+  </ul>
+</div>
