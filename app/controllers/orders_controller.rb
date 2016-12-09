@@ -9,9 +9,10 @@ class OrdersController < ApplicationController
     @order = Order.new(order_params)
     @order.line_items = current_cart.line_items
     if @order.save
+      bake_job = BakeJobHandler.new(@order)
       current_cart.line_items.delete_all
       @order.line_items.each do |line_item|
-        response = post_bake_job(line_item)
+        response = bake_job.post_bake_job(line_item)
         line_item.update(bake_job_id: response.parsed_response["id"].to_i)
       end
       @order.update(status: "waiting")
