@@ -1,5 +1,4 @@
 
-<% @products.each do |product| %>
   <%= form_for product do |f| %>
 
     <div class="form-group">
@@ -20,4 +19,3 @@
     <hr>
     <%= f.submit "Update", class: 'btn btn-primary' %>
   <% end %>
-<% end %>

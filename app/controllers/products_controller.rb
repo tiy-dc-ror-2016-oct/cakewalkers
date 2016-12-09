@@ -1,10 +1,14 @@
 class ProductsController < ApplicationController
   load_and_authorize_resource
   def index
-    @products = Product.all
-    if !current_cart
-      @current_cart = Cart.create
-      session[:current_cart_id] = @current_cart.id
+    if current_user.admin? == true
+      @products = Product.all
+    else
+      @products = Product.where(:for_sale => true)
+      if !current_cart
+        @current_cart = Cart.create
+        session[:current_cart_id] = @current_cart.id
+      end
     end
   end
 
@@ -18,7 +22,7 @@ class ProductsController < ApplicationController
   def update
     @product = Product.find(params[:id])
     if @product.update(product_params)
-      redirect_to product_path(params[:id])
+      redirect_to products_path
     else
       render :edit
     end

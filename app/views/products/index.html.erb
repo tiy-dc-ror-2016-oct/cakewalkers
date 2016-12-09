@@ -1,28 +1,51 @@
-<h4>All Products</h4>
-
-<div>
+<h4>All Products
+<small>
   <% if current_user && current_user.admin? %>
-    <%= link_to "Admin: Edit Viewable Products", products_path %>
-  <% end %>
-</div>
+  Admin View
+<% end %>
+</small>
+</h4>
 
-<%= render partial: "/carts/show" %>
-<br />
-<%= link_to "Checkout", new_order_path %>
+
+
+<% unless current_user.admin? %>
+  <%= render partial: "/carts/show" %>
+  <br />
+  <h5> <%= link_to "Checkout", new_order_path %> </h5>
+<% end %>
+
 <br />
 <% @products.each do |product| %>
-  <% if product.for_sale == true %>
+
     <p>Name: <%= product.name %></p>
+
     <% if product.unit_price_in_cents %>
       <p>
         Price: <%= product.unit_price_in_cents/100%>
       </p>
     <% end %>
 
-    <%= link_to "Add to cart!", line_items_path(line_item: { product_id: product.id, quantity: 1, total_sale_price_in_cents: product.unit_price_in_cents}), method: :post, class: "btn" %>
+    <% if current_user && current_user.admin? %>
+      <% if product.for_sale == true %>
+        <p>
+          Viewable
+        </p>
+        <% else %>
+        <p>
+          Not Viewable
+        </p>
+      <% end %>
+    <% end %>
+
+    <% if current_user && current_user.admin? %>
+      <%= link_to "Admin: Edit Product Info", edit_product_path(product.id), class: "btn btn-info" %>
+    <% else %>
+      <%= link_to "Add to cart!", line_items_path(line_item: { product_id: product.id, quantity: 1, total_sale_price_in_cents: product.unit_price_in_cents}), method: :post, class: "btn btn-success" %>
+    <% end %>
+
     <hr>
   <% end %>
-<% end %>
+
 
 <% if @cart %>
   <% @cart.each do |item| %>

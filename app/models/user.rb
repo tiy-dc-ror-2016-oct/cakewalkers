@@ -9,9 +9,12 @@ class User < ApplicationRecord
   has_many :addresses
 
   def admin?
-    binding.pry
-    self.roles.first.name "admin"
+    roles_array = []
+    self.roles.map { |x| roles_array << x.name }
 
-    #Do a cmap to see if the value contains the work "admin"
+    if roles_array.include? "admin"
+      return true
+    end
+
   end
 end
