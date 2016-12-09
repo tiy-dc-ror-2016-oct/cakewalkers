@@ -1,17 +1,21 @@
 class OrdersController < ApplicationController
+  BASE_URI = ENV["CAKEWALKER_API"]||"http://localhost:1234/bake_jobs"
+
   def new
     @order = Order.new
   end
 
   def create
     @order = Order.new(order_params)
-    @order.line_items = current_order.line_items
+    @order.line_items = current_cart.line_items
     if @order.save
-
       @order.line_items.each do |line_item|
         response = post_bake_job(line_item.product.api_id, line_item.quantity)
         line_item.bake_job_id = response.parsed_response["id"].to_i
+        line_item.save
       end
+      @order.status = "baking"
+      @order.save
       redirect_to client_order_path(@order.id)
     else
       render :new
@@ -46,7 +50,7 @@ class OrdersController < ApplicationController
   end
 
   def post_bake_job(code, quantity)
-    HTTParty.post("https://cakewalkers-api.herokuapp.com/bake_jobs/#{code}",
+    HTTParty.post("#{BASE_URI}/#{code}",
       body:
       {
         bake_job:
