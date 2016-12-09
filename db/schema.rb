@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161209183141) do
+ActiveRecord::Schema.define(version: 20161209194701) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -61,7 +61,7 @@ ActiveRecord::Schema.define(version: 20161209183141) do
     t.string   "full_name"
     t.string   "phone"
     t.string   "email"
-    t.integer  "card_id"
+    t.integer  "cart_id"
     t.string   "credit_card_number"
     t.date     "cc_expiration"
     t.string   "cc_code"
