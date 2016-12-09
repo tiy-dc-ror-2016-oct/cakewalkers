@@ -6,6 +6,8 @@ class User < ApplicationRecord
   has_many :orders, foreign_key: :cakewalker_id
   validates :email, uniqueness: true
 
+  has_many :addresses
+
   def admin?
     if self.roles.includes(Role.find_by(name: "admin"))
     end
