@@ -1,6 +1,18 @@
 class OrdersController < ApplicationController
   def new
-    @order = Order.new
+    @order = Order.new()
+    @default_address = nil
+    if current_user
+      @default_address = Address.find_by(user_id: current_user.id, is_default: true)
+    end
+    if @default_address
+      @order.delivery_address = @default_address
+      @order.billing_address = @default_address
+    else
+      @order.delivery_address = Address(new)
+      @order.billing_address = Address(new)
+    end
+    binding.pry
   end
 
   def create
@@ -42,6 +54,7 @@ class OrdersController < ApplicationController
 
   private
   def order_params
+    binding.pry
     params.require(:order).permit(:shipping_city, :shipping_street, :shipping_state, :shipping_zip, :billing_street, :billing_state, :billing_zip, :billing_city, :full_name, :phone, :email, :credit_card_number, :cc_expiration, :cc_code)
   end
 

@@ -10,10 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161208223459) do
+ActiveRecord::Schema.define(version: 20161209185807) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "addresses", force: :cascade do |t|
+    t.integer  "user_id"
+    t.string   "contact_phone"
+    t.string   "street"
+    t.string   "apartment"
+    t.string   "city"
+    t.string   "state"
+    t.boolean  "is_default"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
 
   create_table "carts", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -28,24 +40,16 @@ ActiveRecord::Schema.define(version: 20161208223459) do
     t.integer  "estimated_bake_time_in_seconds"
     t.datetime "created_at",                     null: false
     t.datetime "updated_at",                     null: false
-    t.integer  "bake_job_id"
     t.integer  "cart_id"
+    t.integer  "bake_job_id"
   end
 
   create_table "orders", force: :cascade do |t|
     t.integer  "client_id"
     t.integer  "cakewalker_id"
     t.string   "status"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
-    t.string   "shipping_street"
-    t.string   "shipping_city"
-    t.string   "shipping_state"
-    t.string   "shipping_zip"
-    t.string   "billing_street"
-    t.string   "billing_city"
-    t.string   "billing_state"
-    t.string   "billing_zip"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
     t.string   "full_name"
     t.string   "phone"
     t.string   "email"
@@ -53,6 +57,8 @@ ActiveRecord::Schema.define(version: 20161208223459) do
     t.string   "credit_card_number"
     t.date     "cc_expiration"
     t.string   "cc_code"
+    t.integer  "delivery_address_id"
+    t.integer  "shipping_address_id"
   end
 
   create_table "products", force: :cascade do |t|
