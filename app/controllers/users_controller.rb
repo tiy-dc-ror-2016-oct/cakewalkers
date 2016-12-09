@@ -11,7 +11,6 @@ class UsersController < ApplicationController
       @user.roles << Role.find(params[:user][:roles])
     end
     session["message"] = "you signed up!"
-  
     if @user.save
       session[:current_user_id] = @user.id
       redirect_to products_path
@@ -31,7 +30,6 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     if @user.update(user_params)
-      @user.roles.update(Role.find(params[:user][:roles]))
       redirect_to user_path(params[:id])
     else
       render :edit

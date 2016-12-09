@@ -6,8 +6,15 @@ class User < ApplicationRecord
   has_many :orders, foreign_key: :cakewalker_id
   validates :email, uniqueness: true
 
+  has_many :addresses
+
   def admin?
-    if self.roles.includes(Role.find_by(name: "admin"))
+    roles_array = []
+    self.roles.map { |x| roles_array << x.name }
+
+    if roles_array.include? "admin"
+      return true
     end
+
   end
 end
