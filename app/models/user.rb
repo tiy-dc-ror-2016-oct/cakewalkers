@@ -9,7 +9,9 @@ class User < ApplicationRecord
   has_many :addresses
 
   def admin?
-    if self.roles.includes(Role.find_by(name: "admin"))
-    end
+    binding.pry
+    self.roles.first.name "admin"
+
+    #Do a cmap to see if the value contains the work "admin"
   end
 end
