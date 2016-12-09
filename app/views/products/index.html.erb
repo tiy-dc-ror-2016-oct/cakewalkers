@@ -1,63 +1,27 @@
-
 <!-- Adds "Admin View" to the side of title if Admin -->
 <h4>All Products
-<small>
-  <% if current_user && current_user.admin? %>
-  Admin View
-<% end %>
-</small>
+  <small>
+    <% if current_user && current_user.admin? %>
+    Admin View
+    <% end %>
+  </small>
 </h4>
 
-<!-- Removes cart, checkout and dollar amount if Admin -->
-<% unless current_user.admin? %>
-  <%= render partial: "/carts/show" %>
-  <br />
-  <h5> <%= link_to "Checkout", new_order_path %> </h5>
-<% end %>
+<div class="container">
 
-<br />
-
-<% @products.each do |product| %>
-
-    <!-- Naming the Product -->
-    <p>Name: <%= product.name %></p>
-
-    <!-- Product Price. It changes it from cents to a dollar format -->
-    <% if product.unit_price_in_cents %>
-      <p>
-        Price: <%= product.unit_price_in_cents/100%>
-      </p>
-    <% end %>
-
-    <!-- If Admin, will tell you if product is viewable or not for client -->
-    <% if current_user && current_user.admin? %>
-      <% if product.for_sale == true %>
-        <p>
-          Viewable
-        </p>
-        <% else %>
-        <p>
-          Not Viewable
-        </p>
+  <div class="row">
+    <div class="col-md-6">
+      <% @products.each do |product| %>
+        <p>Name: <%= product.name %></p>
+        Price: <%= number_to_currency product.unit_price_in_cents/100 %>
+        <%= link_to "Add to cart!", line_items_path(line_item: { product_id: product.id, quantity: 1, total_sale_price_in_cents: product.unit_price_in_cents}), method: :post, class: "btn" %>
       <% end %>
-    <% end %>
+    </div>
 
-    <!-- Add to cart button if Client. If Admin it changes to an edit product button -->
-    <% if current_user && current_user.admin? %>
-      <%= link_to "Admin: Edit Product", edit_product_path(product.id), class: "btn btn-info" %>
-    <% else %>
-      <%= link_to "Add to cart!", line_items_path(line_item: { product_id: product.id, quantity: 1, total_sale_price_in_cents: product.unit_price_in_cents}), method: :post, class: "btn btn-success" %>
-    <% end %>
-
-    <hr>
-  <% end %>
-
-
-<% if @cart %>
-  <% @cart.each do |item| %>
-    <%= item.name %>
-    <p>
-      Price: <%= item.unit_price_in_cents/100%>
-    </p>
-  <% end %>
-<% end %>
+    <div class="col-md-6">
+      <% if !current_cart.line_items.empty? %>
+        <%= render partial: "/carts/show" %>
+      <% end %>
+    </div>
+  </div>
+</div>

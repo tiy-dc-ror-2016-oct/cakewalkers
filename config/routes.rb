@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-
+  resource :cart, only: [:destroy]
   resources :client_orders, only: [:show]
   resources :products
   resources :line_items, except: [:show, :new]
