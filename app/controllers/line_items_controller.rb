@@ -12,11 +12,6 @@ class LineItemsController < ApplicationController
     redirect_to products_path
   end
 
-  def status
-    @line_item = LineItem.find(params[:id])
-    HTTParty.get("#{BASE_URI}/bake_jobs/#{params[:id]}").to_json
-  end
-
   private
   def line_item_params
     params.require(:line_item).permit(:product_id, :quantity, :total_sale_price_in_cents, :estimated_bake_time_in_seconds)

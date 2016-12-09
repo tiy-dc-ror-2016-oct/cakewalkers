@@ -44,6 +44,16 @@ class OrdersController < ApplicationController
     redirect_to root_path
   end
 
+
+  def status
+    @order = Order.find(params[:id])
+    response = []
+    @order.line_items.each do |line_item|
+      response << HTTParty.get("#{BASE_URI}/#{line_item.bake_job_id}").to_json
+    end
+    render json: response
+  end
+
   private
   def order_params
     params.require(:order).permit(:shipping_city, :shipping_street, :shipping_state, :shipping_zip, :billing_street, :billing_state, :billing_zip, :billing_city, :full_name, :phone, :email, :credit_card_number, :cc_expiration, :cc_code)
