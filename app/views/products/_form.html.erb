@@ -1,0 +1,28 @@
+
+<% @products.each do |product| %>
+  <p>Name: <%= product.name %></p>
+  <% if product.unit_price_in_cents %>
+    <p>
+      Price: <%= product.unit_price_in_cents/100%>
+    </p>
+  <% end %>
+
+  <%= form_for product do |f| %>
+
+    <div class="form-group">
+      <%= f.label :name %>
+      <%= f.text_field :name, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+        <%= f.label :for_sale %>
+        <%= f.check_box :for_sale %>
+    </div>
+
+    <hr>
+
+    <%= f.submit "Update", class: 'btn btn-primary' %>
+  <% end %>
+
+  <hr>
+<% end %>
