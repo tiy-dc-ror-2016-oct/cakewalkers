@@ -1,3 +1,5 @@
+
+<!-- Adds "Admin View" to the side of title if Admin -->
 <h4>All Products
 <small>
   <% if current_user && current_user.admin? %>
@@ -6,8 +8,7 @@
 </small>
 </h4>
 
-
-
+<!-- Removes cart, checkout and dollar amount if Admin -->
 <% unless current_user.admin? %>
   <%= render partial: "/carts/show" %>
   <br />
@@ -15,16 +16,20 @@
 <% end %>
 
 <br />
+
 <% @products.each do |product| %>
 
+    <!-- Naming the Product -->
     <p>Name: <%= product.name %></p>
 
+    <!-- Product Price. It changes it from cents to a dollar format -->
     <% if product.unit_price_in_cents %>
       <p>
         Price: <%= product.unit_price_in_cents/100%>
       </p>
     <% end %>
 
+    <!-- If Admin, will tell you if product is viewable or not for client -->
     <% if current_user && current_user.admin? %>
       <% if product.for_sale == true %>
         <p>
@@ -37,8 +42,9 @@
       <% end %>
     <% end %>
 
+    <!-- Add to cart button if Client. If Admin it changes to an edit product button -->
     <% if current_user && current_user.admin? %>
-      <%= link_to "Admin: Edit Product Info", edit_product_path(product.id), class: "btn btn-info" %>
+      <%= link_to "Admin: Edit Product", edit_product_path(product.id), class: "btn btn-info" %>
     <% else %>
       <%= link_to "Add to cart!", line_items_path(line_item: { product_id: product.id, quantity: 1, total_sale_price_in_cents: product.unit_price_in_cents}), method: :post, class: "btn btn-success" %>
     <% end %>

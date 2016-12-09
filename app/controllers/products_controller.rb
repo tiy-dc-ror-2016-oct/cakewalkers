@@ -1,7 +1,7 @@
 class ProductsController < ApplicationController
   load_and_authorize_resource
   def index
-    if current_user.admin? == true
+    if current_user.admin?
       @products = Product.all
     else
       @products = Product.where(:for_sale => true)
