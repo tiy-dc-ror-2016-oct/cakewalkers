@@ -148,7 +148,8 @@ products = [
 "created_at": "2016-12-09T20:45:56.058Z",
 "updated_at": "2016-12-09T20:45:56.058Z",
 "unit_price_in_cents": 300,
-"for_sale": true
+"for_sale": true,
+"image_url": "Muffin.jpg"
 },
 {
 "id": 16,
@@ -190,7 +191,8 @@ products = [
 "created_at": "2016-12-09T20:45:56.075Z",
 "updated_at": "2016-12-09T20:45:56.075Z",
 "unit_price_in_cents": 800,
-"for_sale": true
+"for_sale": true,
+"image_url": "PullmanLoaf.jpg"
 },
 {
 "id": 21,
@@ -264,7 +266,8 @@ products = [
 "created_at": "2016-12-09T20:45:56.103Z",
 "updated_at": "2016-12-09T20:45:56.103Z",
 "unit_price_in_cents": 3800,
-"for_sale": true
+"for_sale": true,
+"image_url": "AvacodoCake.jpg"
 },
 {
 "id": 30,
@@ -1450,7 +1453,8 @@ products = [
 "created_at": "2016-12-09T20:45:56.620Z",
 "updated_at": "2016-12-09T20:45:56.620Z",
 "unit_price_in_cents": 2200,
-"for_sale": true
+"for_sale": true,
+"image_url": "Spice-Cake_8517.jpg"
 },
 {
 "id": 178,
@@ -1652,7 +1656,8 @@ products = [
 "created_at": "2016-12-09T20:45:56.718Z",
 "updated_at": "2016-12-09T20:45:56.718Z",
 "unit_price_in_cents": 300,
-"for_sale": true
+"for_sale": true,
+"image_url": "WhoopiePir.jpg"
 },
 {
 "id": 203,
@@ -1663,12 +1668,14 @@ products = [
 "updated_at": "2016-12-09T20:45:56.721Z"
 }
 ]
+
 products.each do |product|
   Product.create(
     api_id: product[:code],
     name: product[:name],
     time_to_bake_in_seconds: product[:time_to_bake_in_seconds],
     unit_price_in_cents: product[:unit_price_in_cents],
-    for_sale: product[:for_sale]
+    for_sale: product[:for_sale],
+    image_url: product[:image_url]
   )
 end

@@ -14,15 +14,15 @@
       <% if current_user && current_user.admin? %>
         <% @products.each do |product| %>
           <p><%= product.name %> -- <%= number_to_currency product.unit_price_in_cents.to_i/100 %></p>
-          <%= image_tag(product.image_url, size: '150x100') %>
+          <%= image_tag(product.image_url, size: '150x100') if product.image_url %>
           <% if product.for_sale %>
             <p>Viewable</p>
           <% else %>
             <p>Not Viewable</p>
           <% end %>
           <%= link_to "Admin: Edit Product", edit_product_path(product.id), class: "btn btn-info" %>
+          <hr>
         <% end %>
-      <hr>
 
       <% else %>
         <% @products.each do |product| %>
