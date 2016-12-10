@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   resources :orders, only: [:new, :create, :edit, :update, :destroy] do
     member do
       get '/status', action: :status, as: :status
+      patch '/delivered', action: :delivered, as: :delivered
     end
   end
   root "welcome#index"
