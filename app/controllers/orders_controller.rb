@@ -51,9 +51,9 @@ class OrdersController < ApplicationController
     @order = Order.find(params[:id])
   end
 
-  def status
+  def status # 600 seconds for delivery time
     @order = Order.find(params[:id])
-    render json: { status: BakeJobHandler.new(@order).order_status }
+    render json: { status: BakeJobHandler.new(@order).order_status, time_to_go: BakeJobHandler.new(@order).active_job_time_to_completion + 600 }
   end
 
   def new_featured
