@@ -6,6 +6,7 @@
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link rel='shortcut icon' href='favicon.ico' type='image/x-icon'/ >
 
   </head>
 
@@ -20,6 +21,9 @@
             <span class="icon-bar"></span>
           </button>
            <%= link_to "Bakeshop", root_path, class: "navbar-brand" %>
+           <div id="logo">
+             <%= image_tag("Logo-Highres.png", size: '40x40') %>
+           </div>
         </div>
         <div class="collapse navbar-collapse" id="bakeshop-nav">
           <ul class="nav navbar-nav">
