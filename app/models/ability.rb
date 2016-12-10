@@ -12,14 +12,16 @@ class Ability
       can :update, Order, cakewalker_id: user.id
     else
       can :create, User
-      can :create, Order
       can :update, Order, client_id: user.id
-      can :create, LineItem
-      can :destroy, LineItem
     end
     can :read, Product
     can :read, User, id: user.id
     can :update, User, id: user.id
     can :destroy, User, id: user.id
+    can :create, LineItem
+    can :destroy, LineItem
+    can :create, Order
+    can :manage, Cart
+    can :new_featured, Order
   end
 end
