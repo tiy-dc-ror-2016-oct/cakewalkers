@@ -1,15 +1,18 @@
 <h1>Bakeshop</h1>
-<p>
-  Indulge your sweet tooth at the click of a button
-</p>
-<p>
-  It's Bakeshop's mission to bring you with tasty treats quickly and seamlessly. Place an order to suit your craving, and our groundbreaking automated ovens will immediately get to work to efficiently bake your treat. With real-time status updates, you can stay up to date as the order is baked, picked up, and delivered to your doorstep by our friendly cake-walkers.
-</p>
-<h3>
-  Today's featured sweet is...
-</h3>
-<p>
-  <%= Product.all.sample.name %>
-  <br />
-  <%= link_to "Buy one now!", new_order_path %>
-</p>
+<div class="welcome">
+
+  <p>
+    Indulge your sweet tooth at the click of a button
+  </p>
+  <p>
+    It's Bakeshop's mission to bring you with tasty treats quickly and seamlessly. Place an order to suit your craving, and our groundbreaking automated ovens will immediately get to work to efficiently bake your treat. With real-time status updates, you can stay up to date as the order is baked, picked up, and delivered to your doorstep by our friendly cake-walkers.
+  </p>
+  <h3>
+    Today's featured sweet is...
+  </h3>
+  <p>
+    <%= Product.all.sample.name %>
+    <br />
+    <%= link_to "Buy one now!", new_order_path %>
+  </p>
+</div>
