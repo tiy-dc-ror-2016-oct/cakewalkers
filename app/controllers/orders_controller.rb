@@ -57,10 +57,12 @@ class OrdersController < ApplicationController
     render json: { status: BakeJobHandler.new(@order).order_status }
   end
 
-  def delivered
-    @order = Order.find(params[:id])
-    @order.update(status: "Delivered")
-    redirect_to orders_path
+  def new_featured
+    @order = Order.new
+    @current_cart = Cart.create
+    @current_cart.line_items << LineItem.create(product: Product.featured, quantity: 1, total_sale_price_in_cents: Product.featured.unit_price_in_cents)
+    session[:current_cart_id] = @current_cart.id
+    render :new
   end
 
   private

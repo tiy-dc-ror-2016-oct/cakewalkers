@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-
+  get '/new_featured', controller: :orders, action: :new_featured, as: :new_featured
   resource :cart, only: [:destroy]
   resources :client_orders, only: [:show]
   resources :products
