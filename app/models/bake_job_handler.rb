@@ -6,11 +6,17 @@ class BakeJobHandler
   end
 
   def order_status
-    status_codes = { "waiting" => 1, "baking" => 2, "done" => 3 }
-    status_names = { 1=> "In the Queue", 2=> "Baking to perfection", 3=> "Ready for pickup!"}
-    response_array = order_statuses
-    order_status_codes = response_array.map { |response| status_codes[response["state"]] }
-    status_names[order_status_codes.min]
+    if @order.status == "Out for delivery" || @order.status == "Delivered"
+      @order.status
+    else
+      status_codes = { "waiting" => 1, "baking" => 2, "done" => 3 }
+      status_names = { 1=> "Ready to bake", 2=> "Baking", 3=> "Ready for delivery"}
+      response_array = order_statuses
+      order_status_codes = response_array.map { |response| status_codes[response["state"]] }
+      # status_names[order_status_codes.min]
+      @order.status = status_names[order_status_codes.min]
+      return @order.status
+    end
   end
 
   def order_statuses
