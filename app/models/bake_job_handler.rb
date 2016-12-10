@@ -43,4 +43,20 @@ class BakeJobHandler
     )
   end
 
+  def get_all_bake_jobs
+    HTTParty.get("#{BASE_URI}")
+  end
+
+  def get_active_jobs_from_factory
+    get_all_bake_jobs.select { |job| job["state"] == "baking" || job["state"] == "waiting" }
+  end
+
+  def total_active_job_time
+    get_active_jobs_from_factory.sum { |job| job["estimated_time_to_completion_in_seconds"] }
+  end
+
+  def active_job_time_to_completion
+    total_active_job_time / 3
+  end
+
 end

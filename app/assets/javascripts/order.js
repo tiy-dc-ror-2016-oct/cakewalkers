@@ -27,7 +27,7 @@ $(document).ready(function(){
             $('#shipping_city').val("");
             $('#shipping_zip').val("");
             $('#shipping_state').val("");
-        };
+        }
 
     });
 });
