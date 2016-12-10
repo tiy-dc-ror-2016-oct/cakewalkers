@@ -52,15 +52,15 @@ class OrdersController < ApplicationController
     @order = Order.find(params[:id])
   end
 
-  def destroy
-    Order.find(params[:id]).destroy
-    redirect_to root_path
-  end
-
-
   def status
     @order = Order.find(params[:id])
     render json: { status: BakeJobHandler.new(@order).order_status }
+  end
+
+  def delivered
+    @order = Order.find(params[:id])
+    @order.update(status: "Delivered")
+    redirect_to orders_path
   end
 
   private
