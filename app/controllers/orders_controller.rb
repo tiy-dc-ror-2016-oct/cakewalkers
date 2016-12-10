@@ -50,6 +50,12 @@ class OrdersController < ApplicationController
     render json: { status: BakeJobHandler.new(@order).order_status }
   end
 
+  def delivered
+    @order = Order.find(params[:id])
+    @order.update(status: "Delivered")
+    redirect_to orders_path
+  end
+
   private
   def order_params
     params.require(:order).permit(:shipping_city, :shipping_street, :shipping_state, :shipping_zip, :billing_street, :billing_state, :billing_zip, :billing_city, :full_name, :phone, :email, :credit_card_number, :cc_expiration, :cc_code)
