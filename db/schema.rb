@@ -40,8 +40,8 @@ ActiveRecord::Schema.define(version: 20161210170030) do
     t.integer  "estimated_bake_time_in_seconds"
     t.datetime "created_at",                     null: false
     t.datetime "updated_at",                     null: false
-    t.integer  "bake_job_id"
     t.integer  "cart_id"
+    t.integer  "bake_job_id"
   end
 
   create_table "orders", force: :cascade do |t|
