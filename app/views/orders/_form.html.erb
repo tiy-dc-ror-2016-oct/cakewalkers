@@ -1,75 +1,155 @@
 <%= form_for order do |f| %>
 
+
+<% @order.errors.full_messages.each do |message| %>
+  <% if message.index("Full name") %>
+    <div class="alert alert-danger"><%= message %></div>
+    <% end %>
+<% end %>
+
   <div class="form-group">
     <%= f.label :full_name, class: "control-label" %>
     <%= f.text_field :full_name, class: "form-control" %>
   </div>
+
+
+  <% @order.errors.full_messages.each do |message| %>
+    <% if message.index("Email") %>
+      <div class="alert alert-danger"><%= message %></div>
+      <% end %>
+  <% end %>
 
   <div class="form-group">
     <%= f.label :email, class: "control-label" %>
     <%= f.email_field :email, class: "form-control" %>
   </div>
 
+
+    <% @order.errors.full_messages.each do |message| %>
+      <% if message.index("Phone") %>
+        <div class="alert alert-danger"><%= message %></div>
+        <% end %>
+    <% end %>
+
   <div class="form-group">
     <%= f.label :phone, class: "control-label" %>
     <%= f.phone_field :phone, class: "form-control" %>
   </div>
 
+
   <br />
+
+
+    <% @order.errors.full_messages.each do |message| %>
+      <% if message.index("Billing street") %>
+        <div class="alert alert-danger"><%= message %></div>
+        <% end %>
+    <% end %>
+
+    <div class="form-group">
+      <%= f.label :billing_street, class: "control-label" %>
+      <%= f.text_field :billing_street, class: "form-control", id: "billing_street" %>
+    </div>
+
+
+    <% @order.errors.full_messages.each do |message| %>
+      <% if message.index("Billing city") %>
+        <div class="alert alert-danger"><%= message %></div>
+        <% end %>
+    <% end %>
+
+    <div class="form-group">
+      <%= f.label :billing_city, class: "control-label" %>
+      <%= f.text_field :billing_city, class: "form-control", id: "billing_city" %>
+    </div>
+
+
+    <% @order.errors.full_messages.each do |message| %>
+      <% if message.index("Billing state") %>
+        <div class="alert alert-danger"><%= message %></div>
+        <% end %>
+    <% end %>
+
+    <div class="form-group">
+      <%= f.label :billing_state, class: "control-label" %>
+      <%= f.text_field :billing_state, class: "form-control", id: "billing_state" %>
+    </div>
+
+
+    <% @order.errors.full_messages.each do |message| %>
+      <% if message.index("Billing zip") %>
+        <div class="alert alert-danger"><%= message %></div>
+        <% end %>
+    <% end %>
+
+    <div class="form-group">
+      <%= f.label :billing_zip, class: "control-label" %>
+      <%= f.text_field :billing_zip, class: "form-control", id: "billing_zip" %>
+    </div>
+
+<br>
+
+<input type="checkbox" name="check-address" id="check-address">
+<em>Check this box if Billing Address and Mailing Address are the same.</em>
+
+<br>
 
   <div class="form-group">
     <%= f.label :shipping_street, class: "control-label" %>
-    <%= f.text_field :shipping_street, class: "form-control" %>
+    <%= f.text_field :shipping_street, class: "form-control", id: "shipping_street" %>
   </div>
+
 
   <div class="form-group">
     <%= f.label :shipping_city, class: "control-label" %>
-    <%= f.text_field :shipping_city, class: "form-control" %>
+    <%= f.text_field :shipping_city, class: "form-control", id: "shipping_city" %>
   </div>
+
 
   <div class="form-group">
     <%= f.label :shipping_state, class: "control-label" %>
-    <%= f.text_field :shipping_state, class: "form-control" %>
+    <%= f.text_field :shipping_state, class: "form-control", id: "shipping_state" %>
   </div>
+
 
   <div class="form-group">
     <%= f.label :shipping_zip, class: "control-label" %>
-    <%= f.text_field :shipping_zip, class: "form-control" %>
+    <%= f.text_field :shipping_zip, class: "form-control", id: "shipping_zip" %>
   </div>
+
 
   <br />
 
-  <div class="form-group">
-    <%= f.label :billing_street, class: "control-label" %>
-    <%= f.text_field :billing_street, class: "form-control" %>
-  </div>
 
-  <div class="form-group">
-    <%= f.label :billing_city, class: "control-label" %>
-    <%= f.text_field :billing_city, class: "form-control" %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :billing_state, class: "control-label" %>
-    <%= f.text_field :billing_state, class: "form-control" %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :billing_zip, class: "control-label" %>
-    <%= f.text_field :billing_zip, class: "form-control" %>
-  </div>
-
-  <br />
+  <% @order.errors.full_messages.each do |message| %>
+    <% if message.index("Credit card") %>
+      <div class="alert alert-danger"><%= message %></div>
+      <% end %>
+  <% end %>
 
   <div class="form-group">
     <%= f.label :credit_card_number, class: "control-label" %>
     <%= f.text_field :credit_card_number, class: "form-control" %>
   </div>
 
+
+  <% @order.errors.full_messages.each do |message| %>
+    <% if message.index("Cc experation") %>
+      <div class="alert alert-danger"><%= message %></div>
+      <% end %>
+  <% end %>
+
   <div class="form-group">
     <%= f.label :cc_expiration, class: "control-label" %>
     <%= f.date_field :cc_expiration, class: "form-control" %>
   </div>
+
+
+  <% @order.errors.full_messages.each do |message| %>
+    <% if message.index("Cc code") %>
+      <div class="alert alert-danger"><%= message %></div>
+      <% end %>
+  <% end %>
 
   <div class="form-group">
     <%= f.label :cc_code, class: "control-label" %>
@@ -79,3 +159,5 @@
   <%= f.submit "Submit", class: "btn btn-default" %>
 
 <% end %>
+
+<br>
