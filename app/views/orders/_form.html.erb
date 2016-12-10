@@ -10,16 +10,16 @@
     <%= f.email_field :email, class: "form-control" %>
   </div>
 
-  <div class="form-group">
-    <%= f.label :phone, class: "control-label" %>
-    <%= f.phone_field :phone, class: "form-control" %>
-  </div>
-
   <br />
 
-  <h4> Delivery Address </h4>
+  <h4> Delivery Information </h4>
 
   <%= f.fields_for :delivery_address do |ff| %>
+    <div class="form-group">
+      <%= ff.label :contact_phone, class: "control-label" %>
+      <%= ff.phone_field :contact_phone, class: "form-control" %>
+    </div>
+
     <div class="form-group">
       <%= ff.label :street, class: "control-label" %>
       <%= ff.text_field :street, class: "form-control" %>
@@ -42,7 +42,7 @@
   <% end %>
   <br />
 
-  <h4> Billing Address </h4>
+  <h4> Billing Information </h4>
 
   <%= f.fields_for :billing_address do |ff| %>
     <div class="form-group">
@@ -68,20 +68,37 @@
 
   <br />
 
-  <div class="form-group">
-    <%= f.label :credit_card_number, class: "control-label" %>
-    <%= f.text_field :credit_card_number, class: "form-control" %>
-  </div>
+  <%= f.fields_for :credit_card do |ff| %>
+    <div class="form-group">
+      <%= ff.label :name_on_card, class: "control-label" %>
+      <%= ff.text_field :name_on_card, class: "form-control" %>
+    </div>
 
-  <div class="form-group">
-    <%= f.label :cc_expiration, class: "control-label" %>
-    <%= f.date_field :cc_expiration, class: "form-control" %>
-  </div>
+    <div class="form-group">
+      <%= ff.label :kind, class: "control-label" %>
+      <%= ff.text_field :kind, class: "form-control" %>
+    </div>
 
-  <div class="form-group">
-    <%= f.label :cc_code, class: "control-label" %>
-    <%= f.text_field :cc_code, class: "form-control" %>
-  </div>
+    <div class="form-group">
+      <%= ff.label :number, class: "control-label" %>
+      <%= ff.text_field :number, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= ff.label :expiration_month, class: "control-label" %>
+      <%= ff.text_field :expiration_month, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= ff.label :expiration_year, class: "control-label" %>
+      <%= ff.text_field :expiration_year, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= ff.label :security_code, class: "control-label" %>
+      <%= ff.text_field :security_code, class: "form-control" %>
+    </div>
+  <% end %>
 
   <%= f.submit "Submit", class: "btn btn-default" %>
 

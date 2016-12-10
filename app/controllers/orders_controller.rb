@@ -5,14 +5,20 @@ class OrdersController < ApplicationController
     @order = Order.new
     @default_address = nil
     if current_user
-      @default_address = Address.find_by(user_id: current_user.id, is_default: true)
+      default_address = Address.find_by(user_id: current_user.id, is_default: true)
+      user_credit_card = CreditCard.find_by(user_id: current_user.id, is_default: true)
     end
-    if @default_address
-      @order.delivery_address = @default_address
-      @order.billing_address = @default_address
+    if default_address
+      @order.delivery_address = default_address
+      @order.billing_address = default_address
     else
       @order.delivery_address = Address.new
       @order.billing_address = Address.new
+    end
+    if user_credit_card
+      @order.credit_card = user_credit_card
+    else
+      @order.credit_card = CreditCard.new
     end
   end
 
@@ -70,8 +76,9 @@ class OrdersController < ApplicationController
   private
 
   def order_params
-    params.require(:order).permit(:full_name, :email, :phone, :credit_card_number, :cc_expiration, :cc_code,
+    params.require(:order).permit(:full_name, :email, :phone,
                                   delivery_address_attributes: [:street, :city, :state, :zip_code],
-                                  billing_address_attributes: [:street, :city, :state, :zip_code])
+                                  billing_address_attributes: [:street, :city, :state, :zip_code],
+                                  credit_card_attributes: [:name_on_card, :kind, :number, :expiration_month, :expiration_year, :security_code])
   end
 end
