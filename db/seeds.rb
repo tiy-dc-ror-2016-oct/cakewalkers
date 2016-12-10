@@ -29,1638 +29,1643 @@ new_user.roles << Role.find_by(name: "admin")
 # Create all prducts
 products = [
 {
-"id": 1,
+"id": 610,
 "name": "Adobe bread",
-"code": "3eeafe68-779b-4ecf-bd43-031b50be443c",
-"time_to_bake_in_seconds": 1804,
-"created_at": "2016-12-08T23:14:18.346Z",
-"updated_at": "2016-12-08T23:14:18.346Z"
+"code": "c3b40b4c-fc83-496c-8a6d-df4e1a702d10",
+"time_to_bake_in_seconds": 1988,
+"created_at": "2016-12-09T21:05:49.502Z",
+"updated_at": "2016-12-09T21:05:49.502Z"
 },
 {
-"id": 2,
+"id": 611,
 "name": "Amish friendship bread",
-"code": "ff755d47-1172-41cc-86bb-e7761f19a8b6",
-"time_to_bake_in_seconds": 1662,
-"created_at": "2016-12-08T23:14:18.364Z",
-"updated_at": "2016-12-08T23:14:18.364Z"
+"code": "98132c15-7550-4abf-ab80-293a24e4050f",
+"time_to_bake_in_seconds": 2063,
+"created_at": "2016-12-09T21:05:49.515Z",
+"updated_at": "2016-12-09T21:05:49.515Z"
 },
 {
-"id": 3,
+"id": 612,
 "name": "Anadama bread",
-"code": "7d9499bc-4620-458f-81cb-875bfcb9a35e",
-"time_to_bake_in_seconds": 1540,
-"created_at": "2016-12-08T23:14:18.373Z",
-"updated_at": "2016-12-08T23:14:18.373Z"
+"code": "9247f7c6-cc47-4baa-8ea0-5823f75e5cab",
+"time_to_bake_in_seconds": 1923,
+"created_at": "2016-12-09T21:05:49.521Z",
+"updated_at": "2016-12-09T21:05:49.521Z"
 },
 {
-"id": 4,
+"id": 613,
 "name": "Banana bread",
-"code": "e846946a-c202-4dca-90aa-e087b2ea5d81",
-"time_to_bake_in_seconds": 1809,
-"created_at": "2016-12-08T23:14:18.382Z",
-"updated_at": "2016-12-08T23:14:18.382Z"
+"code": "fec1b69b-55f0-4eef-83e8-a0077079da25",
+"time_to_bake_in_seconds": 1627,
+"created_at": "2016-12-09T21:05:49.526Z",
+"updated_at": "2016-12-09T21:05:49.526Z"
 },
 {
-"id": 5,
+"id": 614,
 "name": "Beaten biscuit",
-"code": "9d13f6eb-a45e-48dc-9bdc-8e99782305f5",
-"time_to_bake_in_seconds": 1563,
-"created_at": "2016-12-08T23:14:18.387Z",
-"updated_at": "2016-12-08T23:14:18.387Z"
+"code": "9ec6f4a9-7265-46bf-b287-905d4c2a3f16",
+"time_to_bake_in_seconds": 1595,
+"created_at": "2016-12-09T21:05:49.530Z",
+"updated_at": "2016-12-09T21:05:49.530Z"
 },
 {
-"id": 6,
+"id": 615,
 "name": "Biscuit",
-"code": "4f772622-e43d-4b03-bd9d-60b91bb41bec",
-"time_to_bake_in_seconds": 2058,
-"created_at": "2016-12-08T23:14:18.393Z",
-"updated_at": "2016-12-08T23:14:18.393Z"
+"code": "c99f48a4-5e10-408b-b41b-6c51afe08b39",
+"time_to_bake_in_seconds": 1767,
+"created_at": "2016-12-09T21:05:49.534Z",
+"updated_at": "2016-12-09T21:05:49.534Z"
 },
 {
-"id": 7,
+"id": 616,
 "name": "Brown bread",
-"code": "5dce3273-804c-407f-9375-c1614b8a5939",
-"time_to_bake_in_seconds": 907,
-"created_at": "2016-12-08T23:14:18.398Z",
-"updated_at": "2016-12-08T23:14:18.398Z"
+"code": "3b5cdd8f-c2a9-4a19-8187-ba9d439b7b39",
+"time_to_bake_in_seconds": 1052,
+"created_at": "2016-12-09T21:05:49.539Z",
+"updated_at": "2016-12-09T21:05:49.539Z"
 },
 {
-"id": 8,
+"id": 617,
 "name": "Bulkie roll",
-"code": "091149d6-4992-48c1-9118-a578ad4dbe40",
-"time_to_bake_in_seconds": 2022,
-"created_at": "2016-12-08T23:14:18.404Z",
-"updated_at": "2016-12-08T23:14:18.404Z"
+"code": "a80f4e71-4e01-4c27-8347-0750ddd8938f",
+"time_to_bake_in_seconds": 1645,
+"created_at": "2016-12-09T21:05:49.544Z",
+"updated_at": "2016-12-09T21:05:49.544Z"
 },
 {
-"id": 9,
+"id": 618,
 "name": "Cornbread",
-"code": "9caf6765-009c-47da-b654-8e6146d3a484",
-"time_to_bake_in_seconds": 1704,
-"created_at": "2016-12-08T23:14:18.409Z",
-"updated_at": "2016-12-08T23:14:18.409Z"
+"code": "87a13c73-1586-46de-bf3b-fc0b8d4d6a9d",
+"time_to_bake_in_seconds": 1571,
+"created_at": "2016-12-09T21:05:49.548Z",
+"updated_at": "2016-12-09T21:05:49.548Z"
 },
 {
-"id": 10,
+"id": 619,
 "name": "Cuban bread",
-"code": "810649af-3d3c-4ab8-a586-b47e20ce0c0c",
-"time_to_bake_in_seconds": 1641,
-"created_at": "2016-12-08T23:14:18.414Z",
-"updated_at": "2016-12-08T23:14:18.414Z"
+"code": "03525b8b-d7e4-4848-a599-d77d8cdf6f41",
+"time_to_bake_in_seconds": 1892,
+"created_at": "2016-12-09T21:05:49.552Z",
+"updated_at": "2016-12-09T21:05:49.552Z"
 },
 {
-"id": 11,
+"id": 620,
 "name": "Frybread",
-"code": "293509b9-bf69-48b5-aad9-3e78b8a89450",
-"time_to_bake_in_seconds": 1699,
-"created_at": "2016-12-08T23:14:18.418Z",
-"updated_at": "2016-12-08T23:14:18.418Z"
+"code": "177a95e6-56c9-4db6-a720-10d5c30ea572",
+"time_to_bake_in_seconds": 1542,
+"created_at": "2016-12-09T21:05:49.556Z",
+"updated_at": "2016-12-09T21:05:49.556Z"
 },
 {
-"id": 12,
+"id": 621,
 "name": "Graham bread",
-"code": "0a9ffbf1-37ca-4f98-bfb5-9893de8e04fa",
-"time_to_bake_in_seconds": 2052,
-"created_at": "2016-12-08T23:14:18.423Z",
-"updated_at": "2016-12-08T23:14:18.423Z"
+"code": "fe39b9d3-761b-4a98-a274-8e6f1c07fc37",
+"time_to_bake_in_seconds": 1820,
+"created_at": "2016-12-09T21:05:49.563Z",
+"updated_at": "2016-12-09T21:05:49.563Z"
 },
 {
-"id": 13,
+"id": 622,
 "name": "Hot water corn bread",
-"code": "e43cf1f2-09f1-4c89-8883-23ef157211fc",
-"time_to_bake_in_seconds": 1760,
-"created_at": "2016-12-08T23:14:18.427Z",
-"updated_at": "2016-12-08T23:14:18.427Z"
+"code": "1ce19ce0-76a5-48a5-8a69-f29d1cfc7a3d",
+"time_to_bake_in_seconds": 1612,
+"created_at": "2016-12-09T21:05:49.569Z",
+"updated_at": "2016-12-09T21:05:49.569Z"
 },
 {
-"id": 14,
+"id": 623,
 "name": "Hushpuppy",
-"code": "978ac007-a19c-4aa9-9a01-111465306670",
-"time_to_bake_in_seconds": 1851,
-"created_at": "2016-12-08T23:14:18.431Z",
-"updated_at": "2016-12-08T23:14:18.431Z"
+"code": "22020a7d-9c82-48d3-ac19-2c9a86d96044",
+"time_to_bake_in_seconds": 1923,
+"created_at": "2016-12-09T21:05:49.574Z",
+"updated_at": "2016-12-09T21:05:49.574Z"
 },
 {
-"id": 15,
+"id": 624,
 "name": "Muffin",
-"code": "63573006-9e71-4da2-9c85-beaaa4bbfcc0",
-"time_to_bake_in_seconds": 1304,
-"created_at": "2016-12-08T23:14:18.435Z",
-"updated_at": "2016-12-08T23:14:18.435Z"
+"code": "44618925-905f-4d23-8822-8af5ae2220f4",
+"time_to_bake_in_seconds": 1292,
+"created_at": "2016-12-09T21:05:49.579Z",
+"updated_at": "2016-12-09T21:05:49.579Z"
 },
 {
-"id": 16,
+"id": 625,
 "name": "Muffuletta",
-"code": "63e1b55d-77b0-4b49-bf0e-e9ac4f36b1cc",
-"time_to_bake_in_seconds": 1696,
-"created_at": "2016-12-08T23:14:18.439Z",
-"updated_at": "2016-12-08T23:14:18.439Z"
+"code": "68fbdd4c-2e61-4e92-9052-9a3912d08e10",
+"time_to_bake_in_seconds": 1627,
+"created_at": "2016-12-09T21:05:49.584Z",
+"updated_at": "2016-12-09T21:05:49.584Z"
 },
 {
-"id": 17,
+"id": 626,
 "name": "Parker House roll",
-"code": "e059dff3-347b-4187-9d01-510b76ba819c",
-"time_to_bake_in_seconds": 1603,
-"created_at": "2016-12-08T23:14:18.444Z",
-"updated_at": "2016-12-08T23:14:18.444Z"
+"code": "6bef02de-93af-4383-9910-79e596d1da79",
+"time_to_bake_in_seconds": 1543,
+"created_at": "2016-12-09T21:05:49.588Z",
+"updated_at": "2016-12-09T21:05:49.588Z"
 },
 {
-"id": 18,
+"id": 627,
 "name": "Pepperoni roll",
-"code": "95c21070-7841-4e78-ab12-af3cf91606b3",
-"time_to_bake_in_seconds": 1768,
-"created_at": "2016-12-08T23:14:18.448Z",
-"updated_at": "2016-12-08T23:14:18.448Z"
+"code": "34319843-f369-4c30-9d9c-003e104de99e",
+"time_to_bake_in_seconds": 1514,
+"created_at": "2016-12-09T21:05:49.592Z",
+"updated_at": "2016-12-09T21:05:49.592Z"
 },
 {
-"id": 19,
+"id": 628,
 "name": "Popover",
-"code": "39ab7ba6-2276-4b8c-adc1-644f3febacd7",
-"time_to_bake_in_seconds": 1721,
-"created_at": "2016-12-08T23:14:18.452Z",
-"updated_at": "2016-12-08T23:14:18.452Z"
+"code": "ddd7df13-2a3a-4432-8228-89bc95741f12",
+"time_to_bake_in_seconds": 2003,
+"created_at": "2016-12-09T21:05:49.596Z",
+"updated_at": "2016-12-09T21:05:49.596Z"
 },
 {
-"id": 20,
+"id": 629,
 "name": "Pullman loaf",
-"code": "4184ce36-5758-47c6-b85b-b539b5edc3f5",
-"time_to_bake_in_seconds": 1899,
+"code": "28e9c3fb-176d-44cf-87ea-7e54a53baf27",
+"time_to_bake_in_seconds": 1839,
 "unit_price_in_cents": 800,
-"created_at": "2016-12-08T23:14:18.456Z",
-"updated_at": "2016-12-08T23:14:18.456Z",
-"for_sale": true
+"for_sale": true,
+"created_at": "2016-12-09T21:05:49.600Z",
+"updated_at": "2016-12-09T21:05:49.600Z",
+"image_url": "PullmanLoaf.jpg"
 },
 {
-"id": 21,
+"id": 630,
 "name": "Salt-rising bread",
-"code": "29aed8f4-f744-4bcc-bc92-95e778d72c60",
-"time_to_bake_in_seconds": 2034,
-"created_at": "2016-12-08T23:14:18.461Z",
-"updated_at": "2016-12-08T23:14:18.461Z"
+"code": "05499a69-21dd-4e71-aa8d-302ae1db844e",
+"time_to_bake_in_seconds": 1735,
+"created_at": "2016-12-09T21:05:49.604Z",
+"updated_at": "2016-12-09T21:05:49.604Z"
 },
 {
-"id": 22,
+"id": 631,
 "name": "Scali bread",
-"code": "1a01572a-1a1b-4329-9b1f-39247a1e8717",
-"time_to_bake_in_seconds": 1940,
-"created_at": "2016-12-08T23:14:18.465Z",
-"updated_at": "2016-12-08T23:14:18.465Z"
+"code": "3696d67b-c866-4e00-9ec5-afaea75d4e3e",
+"time_to_bake_in_seconds": 1946,
+"created_at": "2016-12-09T21:05:49.608Z",
+"updated_at": "2016-12-09T21:05:49.608Z"
 },
 {
-"id": 23,
+"id": 632,
 "name": "Sloosh",
-"code": "b66b88dd-8998-4252-9a96-9471b998f287",
-"time_to_bake_in_seconds": 1653,
-"created_at": "2016-12-08T23:14:18.469Z",
-"updated_at": "2016-12-08T23:14:18.469Z"
+"code": "14777c13-24e1-4247-8033-0d968e574701",
+"time_to_bake_in_seconds": 1965,
+"created_at": "2016-12-09T21:05:49.613Z",
+"updated_at": "2016-12-09T21:05:49.613Z"
 },
 {
-"id": 24,
+"id": 633,
 "name": "Texas toast",
-"code": "e2720077-7c6e-4864-a8e0-949e64c91e0f",
-"time_to_bake_in_seconds": 1479,
-"created_at": "2016-12-08T23:14:18.473Z",
-"updated_at": "2016-12-08T23:14:18.473Z"
+"code": "51dd8cd5-b56b-4814-baf5-7c8405517fbd",
+"time_to_bake_in_seconds": 1470,
+"created_at": "2016-12-09T21:05:49.617Z",
+"updated_at": "2016-12-09T21:05:49.617Z"
 },
 {
-"id": 25,
+"id": 634,
 "name": "Angel food cake",
-"code": "35c3c45a-9d20-40b5-b46b-412f89d9a57f",
-"time_to_bake_in_seconds": 2851,
-"created_at": "2016-12-08T23:14:18.478Z",
-"updated_at": "2016-12-08T23:14:18.478Z"
-},
-{
-"id": 26,
-"name": "Apple cake",
-"code": "c47b21bd-bc3d-4691-89f9-c86dc8865b27",
-"time_to_bake_in_seconds": 2929,
-"created_at": "2016-12-08T23:14:18.482Z",
-"updated_at": "2016-12-08T23:14:18.482Z"
-},
-{
-"id": 27,
-"name": "Applesauce cake",
-"code": "1cdb0407-dce0-4151-b8d4-3333ca7420c9",
-"time_to_bake_in_seconds": 2847,
-"created_at": "2016-12-08T23:14:18.486Z",
-"updated_at": "2016-12-08T23:14:18.486Z"
-},
-{
-"id": 28,
-"name": "Aranygaluska",
-"code": "3c66ed31-e4d7-4381-a3cc-203b4a5ccd6a",
-"time_to_bake_in_seconds": 3192,
-"created_at": "2016-12-08T23:14:18.490Z",
-"updated_at": "2016-12-08T23:14:18.490Z"
-},
-{
-"id": 29,
-"name": "Avocado cake",
-"code": "9b202592-0ce3-42b9-8359-840d17e37963",
-"time_to_bake_in_seconds": 3112,
-"unit_price_in_cents": 3800,
-"created_at": "2016-12-08T23:14:18.495Z",
-"updated_at": "2016-12-08T23:14:18.495Z",
-"for_sale": true
-},
-{
-"id": 30,
-"name": "Babka",
-"code": "400f4813-405a-40c1-80c5-1541339421e8",
-"time_to_bake_in_seconds": 3071,
-"created_at": "2016-12-08T23:14:18.499Z",
-"updated_at": "2016-12-08T23:14:18.499Z"
-},
-{
-"id": 31,
-"name": "Ballokume",
-"code": "af573eca-d183-4820-be38-93634c9c6c64",
-"time_to_bake_in_seconds": 2717,
-"created_at": "2016-12-08T23:14:18.503Z",
-"updated_at": "2016-12-08T23:14:18.503Z"
-},
-{
-"id": 32,
-"name": "Banana cake",
-"code": "4eca2ba6-7678-4cb9-86e9-a729f8689595",
-"time_to_bake_in_seconds": 2764,
-"created_at": "2016-12-08T23:14:18.507Z",
-"updated_at": "2016-12-08T23:14:18.507Z"
-},
-{
-"id": 33,
-"name": "Basbousa",
-"code": "f455105a-1994-4446-a94c-f27b3605acc2",
-"time_to_bake_in_seconds": 3279,
-"created_at": "2016-12-08T23:14:18.512Z",
-"updated_at": "2016-12-08T23:14:18.512Z"
-},
-{
-"id": 34,
-"name": "Beer cake",
-"code": "ab619a2c-8bc6-4af8-acd7-cb00a5aa0b49",
-"time_to_bake_in_seconds": 3186,
-"created_at": "2016-12-08T23:14:18.516Z",
-"updated_at": "2016-12-08T23:14:18.516Z"
-},
-{
-"id": 35,
-"name": "Better than sex cake",
-"code": "7f5f2b5e-6d47-442a-94f5-a10e2c550972",
-"time_to_bake_in_seconds": 2743,
-"created_at": "2016-12-08T23:14:18.520Z",
-"updated_at": "2016-12-08T23:14:18.520Z"
-},
-{
-"id": 36,
-"name": "Boston cream pie",
-"code": "45fdf48f-7b79-462e-b207-a3d3f0196754",
-"time_to_bake_in_seconds": 3082,
-"created_at": "2016-12-08T23:14:18.524Z",
-"updated_at": "2016-12-08T23:14:18.524Z"
-},
-{
-"id": 37,
-"name": "Banana cake/bread",
-"code": "701b6145-2b55-46d4-8ec7-b3fb070da5c9",
-"time_to_bake_in_seconds": 3202,
-"created_at": "2016-12-08T23:14:18.528Z",
-"updated_at": "2016-12-08T23:14:18.528Z"
-},
-{
-"id": 38,
-"name": "Banoffee pie",
-"code": "f6ce8a26-b062-4e48-9d4a-58e4db4573ca",
-"time_to_bake_in_seconds": 2972,
-"created_at": "2016-12-08T23:14:18.533Z",
-"updated_at": "2016-12-08T23:14:18.533Z"
-},
-{
-"id": 39,
-"name": "Bara brith",
-"code": "6fbebb02-1111-4872-a1f2-84fe60d105d8",
-"time_to_bake_in_seconds": 3147,
-"created_at": "2016-12-08T23:14:18.537Z",
-"updated_at": "2016-12-08T23:14:18.537Z"
-},
-{
-"id": 40,
-"name": "Battenberg cake",
-"code": "72d91934-f39e-4daa-9d18-0b1eae763386",
-"time_to_bake_in_seconds": 3278,
-"created_at": "2016-12-08T23:14:18.542Z",
-"updated_at": "2016-12-08T23:14:18.542Z"
-},
-{
-"id": 41,
-"name": "Baumkuchen",
-"code": "6b862098-9b99-4d6d-b3a2-b452caf2530e",
-"time_to_bake_in_seconds": 2878,
-"created_at": "2016-12-08T23:14:18.546Z",
-"updated_at": "2016-12-08T23:14:18.546Z"
-},
-{
-"id": 42,
-"name": "Bibingka",
-"code": "c96192a1-c035-45e9-bd75-08dd212abda0",
-"time_to_bake_in_seconds": 3254,
-"created_at": "2016-12-08T23:14:18.550Z",
-"updated_at": "2016-12-08T23:14:18.550Z"
-},
-{
-"id": 43,
-"name": "Bienenstich Bee Sting",
-"code": "6f6bae63-ac2f-41d5-b3c3-7295501f8b29",
-"time_to_bake_in_seconds": 2825,
-"created_at": "2016-12-08T23:14:18.555Z",
-"updated_at": "2016-12-08T23:14:18.555Z"
-},
-{
-"id": 44,
-"name": "Birthday cake",
-"code": "c7151d93-38ee-4ee5-9e9a-1c060b275ec8",
-"time_to_bake_in_seconds": 3017,
-"created_at": "2016-12-08T23:14:18.559Z",
-"updated_at": "2016-12-08T23:14:18.559Z"
-},
-{
-"id": 45,
-"name": "Bizcocho Dominicano",
-"code": "038cc516-5f80-4808-8d32-e451698e4a2e",
-"time_to_bake_in_seconds": 2833,
-"created_at": "2016-12-08T23:14:18.563Z",
-"updated_at": "2016-12-08T23:14:18.563Z"
-},
-{
-"id": 46,
-"name": "Black Forest cake",
-"code": "dfe856ec-36bf-4ab4-991a-cc9801284812",
-"time_to_bake_in_seconds": 2704,
-"created_at": "2016-12-08T23:14:18.568Z",
-"updated_at": "2016-12-08T23:14:18.568Z"
-},
-{
-"id": 47,
-"name": "Blitztorte",
-"code": "a39cb333-a549-4784-b757-595da6fdd24d",
-"time_to_bake_in_seconds": 3179,
-"created_at": "2016-12-08T23:14:18.572Z",
-"updated_at": "2016-12-08T23:14:18.572Z"
-},
-{
-"id": 48,
-"name": "Blondie",
-"code": "732e2b97-e75c-462a-83be-2d98966329d8",
-"time_to_bake_in_seconds": 2788,
-"created_at": "2016-12-08T23:14:18.576Z",
-"updated_at": "2016-12-08T23:14:18.576Z"
-},
-{
-"id": 49,
-"name": "Bolo de mel",
-"code": "40857bcf-bc50-48d1-a920-5dea2187552f",
-"time_to_bake_in_seconds": 2831,
-"created_at": "2016-12-08T23:14:18.581Z",
-"updated_at": "2016-12-08T23:14:18.581Z"
-},
-{
-"id": 50,
-"name": "Brazil nut cake",
-"code": "4b2da525-6f2b-4b70-86d1-b7dc835aaa36",
-"time_to_bake_in_seconds": 2851,
-"created_at": "2016-12-08T23:14:18.585Z",
-"updated_at": "2016-12-08T23:14:18.585Z"
-},
-{
-"id": 51,
-"name": "Brownie",
-"code": "6dc43020-513d-4fac-9cad-405cdb22224c",
-"time_to_bake_in_seconds": 2790,
-"created_at": "2016-12-08T23:14:18.589Z",
-"updated_at": "2016-12-08T23:14:18.589Z"
-},
-{
-"id": 52,
-"name": "Buccellato",
-"code": "be6074db-ab18-4614-b15c-a26e46fb0a83",
-"time_to_bake_in_seconds": 3030,
-"created_at": "2016-12-08T23:14:18.596Z",
-"updated_at": "2016-12-08T23:14:18.596Z"
-},
-{
-"id": 53,
-"name": "Budapestlängd",
-"code": "504c77d0-4d52-45e7-a349-9573f1566de7",
-"time_to_bake_in_seconds": 2906,
-"created_at": "2016-12-08T23:14:18.600Z",
-"updated_at": "2016-12-08T23:14:18.600Z"
-},
-{
-"id": 54,
-"name": "Bundt cake",
-"code": "dea2374b-8e8e-4a46-bb56-c6fd79ac2118",
-"time_to_bake_in_seconds": 2756,
-"created_at": "2016-12-08T23:14:18.604Z",
-"updated_at": "2016-12-08T23:14:18.604Z"
-},
-{
-"id": 55,
-"name": "Butter cake",
-"code": "603e99d0-983a-4ae9-9d55-64e2c9cdbbc0",
-"time_to_bake_in_seconds": 2882,
-"created_at": "2016-12-08T23:14:18.608Z",
-"updated_at": "2016-12-08T23:14:18.608Z"
-},
-{
-"id": 56,
-"name": "Butterfly cake",
-"code": "acc27293-bb89-418a-87cf-9816245717a0",
-"time_to_bake_in_seconds": 3199,
-"created_at": "2016-12-08T23:14:18.612Z",
-"updated_at": "2016-12-08T23:14:18.612Z"
-},
-{
-"id": 57,
-"name": "Cassata",
-"code": "a49c922a-9b24-41c1-a4fd-50c70e7eeb62",
-"time_to_bake_in_seconds": 3275,
-"created_at": "2016-12-08T23:14:18.617Z",
-"updated_at": "2016-12-08T23:14:18.617Z"
-},
-{
-"id": 58,
-"name": "Carrot cake",
-"code": "05967b08-53eb-4c45-b282-3248843c8e43",
-"time_to_bake_in_seconds": 2796,
-"created_at": "2016-12-08T23:14:18.621Z",
-"updated_at": "2016-12-08T23:14:18.621Z"
-},
-{
-"id": 59,
-"name": "Cheesecake",
-"code": "9193b92b-1296-4528-8069-690ef6134522",
-"time_to_bake_in_seconds": 2796,
-"created_at": "2016-12-08T23:14:18.625Z",
-"updated_at": "2016-12-08T23:14:18.625Z"
-},
-{
-"id": 60,
-"name": "Chestnut cake",
-"code": "923680ba-a571-4c1f-9a59-14f7b6f934da",
-"time_to_bake_in_seconds": 2826,
-"created_at": "2016-12-08T23:14:18.629Z",
-"updated_at": "2016-12-08T23:14:18.629Z"
-},
-{
-"id": 61,
-"name": "Chiffon cake",
-"code": "747e6704-bce9-4491-8761-1be84c2d07f5",
-"time_to_bake_in_seconds": 2851,
-"created_at": "2016-12-08T23:14:18.633Z",
-"updated_at": "2016-12-08T23:14:18.633Z"
-},
-{
-"id": 62,
-"name": "Chocolate cake",
-"code": "c4e60b1a-e95e-4345-888f-07157d7f4642",
-"time_to_bake_in_seconds": 3002,
-"created_at": "2016-12-08T23:14:18.638Z",
-"updated_at": "2016-12-08T23:14:18.638Z"
-},
-{
-"id": 63,
-"name": "Christmas cake",
-"code": "b429617e-7953-45b5-b96d-940e6a8ce25b",
-"time_to_bake_in_seconds": 3138,
-"created_at": "2016-12-08T23:14:18.642Z",
-"updated_at": "2016-12-08T23:14:18.642Z"
-},
-{
-"id": 64,
-"name": "Clementine cake",
-"code": "1598b437-61fc-4187-b82e-ed48b374ce3a",
-"time_to_bake_in_seconds": 2714,
-"created_at": "2016-12-08T23:14:18.646Z",
-"updated_at": "2016-12-08T23:14:18.646Z"
-},
-{
-"id": 65,
-"name": "Coconut cake",
-"code": "cca280af-897d-4637-b1f9-2f5d472af96a",
-"time_to_bake_in_seconds": 2744,
-"created_at": "2016-12-08T23:14:18.650Z",
-"updated_at": "2016-12-08T23:14:18.650Z"
-},
-{
-"id": 66,
-"name": "Coffee cake",
-"code": "b158ef6e-ef04-4cf0-93dc-8d9c61f0a711",
-"time_to_bake_in_seconds": 2817,
-"created_at": "2016-12-08T23:14:18.655Z",
-"updated_at": "2016-12-08T23:14:18.655Z"
-},
-{
-"id": 67,
-"name": "Cremeschnitte",
-"code": "598ba6e3-f284-4e87-8e22-c2fffb59d4f8",
-"time_to_bake_in_seconds": 3149,
-"created_at": "2016-12-08T23:14:18.659Z",
-"updated_at": "2016-12-08T23:14:18.659Z"
-},
-{
-"id": 68,
-"name": "Croquembouche",
-"code": "ade60df2-37fa-48b7-b2ab-aec9f5a7fc29",
-"time_to_bake_in_seconds": 3094,
-"created_at": "2016-12-08T23:14:18.664Z",
-"updated_at": "2016-12-08T23:14:18.664Z"
-},
-{
-"id": 69,
-"name": "Crystal cake",
-"code": "d4fc8418-c600-4f81-995a-f3e0afd1f145",
-"time_to_bake_in_seconds": 3086,
-"created_at": "2016-12-08T23:14:18.668Z",
-"updated_at": "2016-12-08T23:14:18.668Z"
-},
-{
-"id": 70,
-"name": "Cuatro leches cake",
-"code": "799d63f9-31ad-4dd3-8ee0-aac10817f81b",
-"time_to_bake_in_seconds": 2994,
-"created_at": "2016-12-08T23:14:18.672Z",
-"updated_at": "2016-12-08T23:14:18.672Z"
-},
-{
-"id": 71,
-"name": "Cucumber cake",
-"code": "144cd840-1014-455f-9769-f15069fda5a2",
-"time_to_bake_in_seconds": 3168,
-"created_at": "2016-12-08T23:14:18.676Z",
-"updated_at": "2016-12-08T23:14:18.676Z"
-},
-{
-"id": 72,
-"name": "Cupcake",
-"code": "1454255f-bb00-44be-8a31-061692ca23ad",
-"time_to_bake_in_seconds": 2856,
-"created_at": "2016-12-08T23:14:18.681Z",
-"updated_at": "2016-12-08T23:14:18.681Z"
-},
-{
-"id": 73,
-"name": "Dacquoise",
-"code": "02b082fe-07a3-45a7-ab52-abae7cd36848",
-"time_to_bake_in_seconds": 2700,
-"created_at": "2016-12-08T23:14:18.685Z",
-"updated_at": "2016-12-08T23:14:18.685Z"
-},
-{
-"id": 74,
-"name": "Date and walnut loaf",
-"code": "03fff123-5a47-4c58-b72b-f8d0aabf6bc1",
-"time_to_bake_in_seconds": 2896,
-"created_at": "2016-12-08T23:14:18.690Z",
-"updated_at": "2016-12-08T23:14:18.690Z"
-},
-{
-"id": 75,
-"name": "Date square",
-"code": "f0279b03-2782-4567-a930-094921e86ed5",
-"time_to_bake_in_seconds": 3129,
-"created_at": "2016-12-08T23:14:18.694Z",
-"updated_at": "2016-12-08T23:14:18.694Z"
-},
-{
-"id": 76,
-"name": "Depression cake",
-"code": "d2f02206-a11c-4800-ae17-7309c6b51643",
-"time_to_bake_in_seconds": 2715,
-"created_at": "2016-12-08T23:14:18.698Z",
-"updated_at": "2016-12-08T23:14:18.698Z"
-},
-{
-"id": 77,
-"name": "Devil's food cake",
-"code": "6d58aae2-8297-409d-9cbe-6e7510d451e6",
-"time_to_bake_in_seconds": 3035,
-"created_at": "2016-12-08T23:14:18.702Z",
-"updated_at": "2016-12-08T23:14:18.702Z"
-},
-{
-"id": 78,
-"name": "Dobos cake",
-"code": "40c142a1-8bb7-4361-beb2-bf49182cfd27",
-"time_to_bake_in_seconds": 3207,
-"created_at": "2016-12-08T23:14:18.706Z",
-"updated_at": "2016-12-08T23:14:18.706Z"
-},
-{
-"id": 79,
-"name": "Dundee cake",
-"code": "21d36374-aefc-4c77-82c6-364263eb78cc",
-"time_to_bake_in_seconds": 3222,
-"created_at": "2016-12-08T23:14:18.711Z",
-"updated_at": "2016-12-08T23:14:18.711Z"
-},
-{
-"id": 80,
-"name": "Eccles cake",
-"code": "90bd322c-4623-4b8c-879d-0de03de0c0e7",
-"time_to_bake_in_seconds": 2848,
-"created_at": "2016-12-08T23:14:18.715Z",
-"updated_at": "2016-12-08T23:14:18.715Z"
-},
-{
-"id": 81,
-"name": "Esterházy torte",
-"code": "cdc6ae19-061c-4f3e-b1ef-78611c4c1958",
-"time_to_bake_in_seconds": 3170,
-"created_at": "2016-12-08T23:14:18.719Z",
-"updated_at": "2016-12-08T23:14:18.719Z"
-},
-{
-"id": 82,
-"name": "Fat rascal",
-"code": "197293a9-ad34-4a96-9dfe-874aa47e26a1",
-"time_to_bake_in_seconds": 3171,
-"created_at": "2016-12-08T23:14:18.724Z",
-"updated_at": "2016-12-08T23:14:18.724Z"
-},
-{
-"id": 83,
-"name": "Faworki",
-"code": "ce919bab-5011-4b30-bd80-cfb76beac738",
-"time_to_bake_in_seconds": 2901,
-"created_at": "2016-12-08T23:14:18.728Z",
-"updated_at": "2016-12-08T23:14:18.728Z"
-},
-{
-"id": 84,
-"name": "Fig cake",
-"code": "38c7f9ea-49c2-48cf-ab51-1df3682ca966",
-"time_to_bake_in_seconds": 3280,
-"created_at": "2016-12-08T23:14:18.733Z",
-"updated_at": "2016-12-08T23:14:18.733Z"
-},
-{
-"id": 85,
-"name": "Financier",
-"code": "bd97c9c6-95b9-4796-af3b-8086b5925720",
-"time_to_bake_in_seconds": 2835,
-"created_at": "2016-12-08T23:14:18.737Z",
-"updated_at": "2016-12-08T23:14:18.737Z"
-},
-{
-"id": 86,
-"name": "Flourless chocolate cake",
-"code": "500e156d-3ca8-4500-b6a6-df35c1e42ebe",
-"time_to_bake_in_seconds": 3098,
-"created_at": "2016-12-08T23:14:18.741Z",
-"updated_at": "2016-12-08T23:14:18.741Z"
-},
-{
-"id": 87,
-"name": "Fondant Fancy",
-"code": "6ee30176-90bb-4003-84b5-3e633cdbb740",
-"time_to_bake_in_seconds": 2947,
-"created_at": "2016-12-08T23:14:18.746Z",
-"updated_at": "2016-12-08T23:14:18.746Z"
-},
-{
-"id": 88,
-"name": "Fragelité",
-"code": "55856287-a75b-40fa-9a93-daa0fc0e9d88",
-"time_to_bake_in_seconds": 3129,
-"created_at": "2016-12-08T23:14:18.750Z",
-"updated_at": "2016-12-08T23:14:18.750Z"
-},
-{
-"id": 89,
-"name": "Frog cake",
-"code": "f15a6588-7a6c-434f-a2e0-a5b4e58ac7cd",
-"time_to_bake_in_seconds": 2918,
-"created_at": "2016-12-08T23:14:18.755Z",
-"updated_at": "2016-12-08T23:14:18.755Z"
-},
-{
-"id": 90,
-"name": "Fruitcake",
-"code": "2c2f1a3a-a705-42bf-b4a9-09ccf49793ab",
-"time_to_bake_in_seconds": 2949,
-"created_at": "2016-12-08T23:14:18.760Z",
-"updated_at": "2016-12-08T23:14:18.760Z"
-},
-{
-"id": 91,
-"name": "Fountain cake",
-"code": "95ecae02-39fd-45d9-bb11-d81dfc7b73ee",
-"time_to_bake_in_seconds": 2791,
-"created_at": "2016-12-08T23:14:18.764Z",
-"updated_at": "2016-12-08T23:14:18.764Z"
-},
-{
-"id": 92,
-"name": "Funing big cake",
-"code": "d7920fd4-8275-49d1-a424-2f1b38e50dc7",
-"time_to_bake_in_seconds": 3136,
-"created_at": "2016-12-08T23:14:18.768Z",
-"updated_at": "2016-12-08T23:14:18.768Z"
-},
-{
-"id": 93,
-"name": "Genoa cake",
-"code": "1e30dec7-d7ac-46bd-8331-37ddd276dd69",
-"time_to_bake_in_seconds": 3065,
-"created_at": "2016-12-08T23:14:18.773Z",
-"updated_at": "2016-12-08T23:14:18.773Z"
-},
-{
-"id": 94,
-"name": "Genoise Genoese cake",
-"code": "e3b0e9d3-5e69-44b3-ad4f-999a9f193779",
-"time_to_bake_in_seconds": 3207,
-"created_at": "2016-12-08T23:14:18.777Z",
-"updated_at": "2016-12-08T23:14:18.777Z"
-},
-{
-"id": 95,
-"name": "German Chocolate Cake",
-"code": "09c293dc-529f-466a-bd23-5b2586402840",
-"time_to_bake_in_seconds": 3299,
-"created_at": "2016-12-08T23:14:18.781Z",
-"updated_at": "2016-12-08T23:14:18.781Z"
-},
-{
-"id": 96,
-"name": "Gingerbread",
-"code": "ebffe878-dd59-4bfc-9ea9-d35ba3a6ee35",
-"time_to_bake_in_seconds": 3023,
-"created_at": "2016-12-08T23:14:18.786Z",
-"updated_at": "2016-12-08T23:14:18.786Z"
-},
-{
-"id": 97,
-"name": "Goose Breast",
-"code": "c4588010-7706-43f9-b162-0d5e391eea34",
-"time_to_bake_in_seconds": 3133,
-"created_at": "2016-12-08T23:14:18.792Z",
-"updated_at": "2016-12-08T23:14:18.792Z"
-},
-{
-"id": 98,
-"name": "Halloween cake",
-"code": "c4c404ff-4841-4ed2-941a-52863e905315",
-"time_to_bake_in_seconds": 3037,
-"created_at": "2016-12-08T23:14:18.797Z",
-"updated_at": "2016-12-08T23:14:18.797Z"
-},
-{
-"id": 99,
-"name": "Hash brownies",
-"code": "6905f8e9-47e9-4969-9469-9ba60d376977",
+"code": "8274e1f4-2f5c-4d55-bb6a-106baab29d46",
 "time_to_bake_in_seconds": 2821,
-"created_at": "2016-12-08T23:14:18.803Z",
-"updated_at": "2016-12-08T23:14:18.803Z"
-},
-{
-"id": 100,
-"name": "Hot milk cake",
-"code": "5f8f6546-56b4-4523-8570-9e910e710f6a",
-"time_to_bake_in_seconds": 3155,
-"created_at": "2016-12-08T23:14:18.809Z",
-"updated_at": "2016-12-08T23:14:18.809Z"
-},
-{
-"id": 101,
-"name": "Ice cream cake",
-"code": "ee66ec87-6d00-4d74-9fe3-5c68248858a8",
-"time_to_bake_in_seconds": 2955,
-"created_at": "2016-12-08T23:14:18.814Z",
-"updated_at": "2016-12-08T23:14:18.814Z"
-},
-{
-"id": 102,
-"name": "Jaffa Cakes",
-"code": "74ac12d3-f249-4aa8-811a-a7da0abc103f",
-"time_to_bake_in_seconds": 2710,
-"created_at": "2016-12-08T23:14:18.822Z",
-"updated_at": "2016-12-08T23:14:18.822Z"
-},
-{
-"id": 103,
-"name": "Kabuni",
-"code": "713eb3ad-a29f-45ad-a239-78cd398cf3a4",
-"time_to_bake_in_seconds": 2917,
-"created_at": "2016-12-08T23:14:18.828Z",
-"updated_at": "2016-12-08T23:14:18.828Z"
-},
-{
-"id": 104,
-"name": "Karpatka",
-"code": "cb845be5-3eb5-49a2-9998-04a187a1913b",
-"time_to_bake_in_seconds": 3285,
-"created_at": "2016-12-08T23:14:18.834Z",
-"updated_at": "2016-12-08T23:14:18.834Z"
-},
-{
-"id": 105,
-"name": "Kiev cake",
-"code": "d746fdd3-2bab-4b22-ac39-2ec7fdf84331",
-"time_to_bake_in_seconds": 3024,
-"created_at": "2016-12-08T23:14:18.839Z",
-"updated_at": "2016-12-08T23:14:18.839Z"
-},
-{
-"id": 106,
-"name": "King cake",
-"code": "8416f6c5-9f71-4cf1-bc82-8dc9673d4ad9",
-"time_to_bake_in_seconds": 2979,
-"created_at": "2016-12-08T23:14:18.843Z",
-"updated_at": "2016-12-08T23:14:18.843Z"
-},
-{
-"id": 107,
-"name": "Kladdkaka",
-"code": "b35811e3-c054-4cca-93da-5b0595b35f01",
-"time_to_bake_in_seconds": 2832,
-"created_at": "2016-12-08T23:14:18.851Z",
-"updated_at": "2016-12-08T23:14:18.851Z"
-},
-{
-"id": 108,
-"name": "Kliņģeris",
-"code": "e172cfa2-381d-461a-9c65-bbd88bb4f2ac",
-"time_to_bake_in_seconds": 3134,
-"created_at": "2016-12-08T23:14:18.859Z",
-"updated_at": "2016-12-08T23:14:18.859Z"
-},
-{
-"id": 109,
-"name": "Kołacz",
-"code": "7919e5c0-d74e-4618-bd27-9b9ed34d87ab",
-"time_to_bake_in_seconds": 2861,
-"created_at": "2016-12-08T23:14:18.865Z",
-"updated_at": "2016-12-08T23:14:18.865Z"
-},
-{
-"id": 110,
-"name": "Kolaczki",
-"code": "c9f4f93b-ec07-4f9c-9809-82036f5b90b3",
-"time_to_bake_in_seconds": 2718,
-"created_at": "2016-12-08T23:14:18.870Z",
-"updated_at": "2016-12-08T23:14:18.870Z"
-},
-{
-"id": 111,
-"name": "Kouign-amann",
-"code": "0b15aa67-8e4f-43fa-9878-cdf65e283e09",
-"time_to_bake_in_seconds": 3125,
-"created_at": "2016-12-08T23:14:18.875Z",
-"updated_at": "2016-12-08T23:14:18.875Z"
-},
-{
-"id": 112,
-"name": "Kutia",
-"code": "579d371a-0e0f-4b99-90d3-cf90ec6e9376",
-"time_to_bake_in_seconds": 3147,
-"created_at": "2016-12-08T23:14:18.880Z",
-"updated_at": "2016-12-08T23:14:18.880Z"
-},
-{
-"id": 113,
-"name": "Kransekake",
-"code": "af6c8ad1-3f1b-4159-8aae-18f9169e890d",
-"time_to_bake_in_seconds": 2983,
-"created_at": "2016-12-08T23:14:18.884Z",
-"updated_at": "2016-12-08T23:14:18.884Z"
-},
-{
-"id": 114,
-"name": "Kremówka",
-"code": "5bf4a036-fec0-4271-889d-bff88c54ebe2",
-"time_to_bake_in_seconds": 3011,
-"created_at": "2016-12-08T23:14:18.891Z",
-"updated_at": "2016-12-08T23:14:18.891Z"
-},
-{
-"id": 115,
-"name": "Krówka",
-"code": "6b65ae56-38c4-4c06-b961-8b953b75746a",
-"time_to_bake_in_seconds": 2897,
-"created_at": "2016-12-08T23:14:18.897Z",
-"updated_at": "2016-12-08T23:14:18.897Z"
-},
-{
-"id": 116,
-"name": "Lady Baltimore cake",
-"code": "c02fa588-ede8-4dea-a79e-fd0a0492453f",
-"time_to_bake_in_seconds": 3060,
-"created_at": "2016-12-08T23:14:18.902Z",
-"updated_at": "2016-12-08T23:14:18.902Z"
-},
-{
-"id": 117,
-"name": "Lamanki or Klamäti",
-"code": "4a997a6c-94e5-4b40-b492-743189df5e4f",
-"time_to_bake_in_seconds": 3196,
-"created_at": "2016-12-08T23:14:18.908Z",
-"updated_at": "2016-12-08T23:14:18.908Z"
-},
-{
-"id": 118,
-"name": "Lamington",
-"code": "65be8fb7-9c72-4d3c-bf02-be8c986d8447",
-"time_to_bake_in_seconds": 2778,
-"created_at": "2016-12-08T23:14:18.914Z",
-"updated_at": "2016-12-08T23:14:18.914Z"
-},
-{
-"id": 119,
-"name": "Layer cake",
-"code": "7b4bfa33-46af-4cf2-b41d-30134301f560",
-"time_to_bake_in_seconds": 3152,
-"created_at": "2016-12-08T23:14:18.918Z",
-"updated_at": "2016-12-08T23:14:18.918Z"
-},
-{
-"id": 120,
-"name": "Lemon cake",
-"code": "c305e071-3e45-4a97-90c9-78a4295c5f00",
-"time_to_bake_in_seconds": 2900,
-"created_at": "2016-12-08T23:14:18.923Z",
-"updated_at": "2016-12-08T23:14:18.923Z"
-},
-{
-"id": 121,
-"name": "Madeira cake",
-"code": "842f8648-7d82-4d55-ae2a-49bf12b69b3e",
-"time_to_bake_in_seconds": 2918,
-"created_at": "2016-12-08T23:14:18.927Z",
-"updated_at": "2016-12-08T23:14:18.927Z"
-},
-{
-"id": 122,
-"name": "Makowiec",
-"code": "f3119d1d-dc8f-470b-9e5f-8d54bf6840c1",
-"time_to_bake_in_seconds": 2838,
-"created_at": "2016-12-08T23:14:18.932Z",
-"updated_at": "2016-12-08T23:14:18.932Z"
-},
-{
-"id": 123,
-"name": "Magdalena",
-"code": "43f11363-1562-46e5-afea-03419d99c3a2",
-"time_to_bake_in_seconds": 2895,
-"created_at": "2016-12-08T23:14:18.937Z",
-"updated_at": "2016-12-08T23:14:18.937Z"
-},
-{
-"id": 124,
-"name": "Mantecada",
-"code": "6f4205b4-a62d-4bc4-9ee8-b78219071e75",
-"time_to_bake_in_seconds": 2732,
-"created_at": "2016-12-08T23:14:18.941Z",
-"updated_at": "2016-12-08T23:14:18.941Z"
-},
-{
-"id": 125,
-"name": "Marble cake",
-"code": "1d99d782-382c-4012-b2a6-73df2dcf80a1",
-"time_to_bake_in_seconds": 2906,
-"created_at": "2016-12-08T23:14:18.945Z",
-"updated_at": "2016-12-08T23:14:18.945Z"
-},
-{
-"id": 126,
-"name": "Mazurek",
-"code": "e70622a7-d4f0-4af0-802e-b46187ff46f0",
-"time_to_bake_in_seconds": 3287,
-"created_at": "2016-12-08T23:14:18.950Z",
-"updated_at": "2016-12-08T23:14:18.950Z"
-},
-{
-"id": 127,
-"name": "Merveilleux",
-"code": "de07ef37-70f9-4528-bebf-4fbcc1f2dbdb",
-"time_to_bake_in_seconds": 2905,
-"created_at": "2016-12-08T23:14:18.954Z",
-"updated_at": "2016-12-08T23:14:18.954Z"
-},
-{
-"id": 128,
-"name": "Mille-feuille",
-"code": "3b68c32d-2dc5-43b1-b195-ab968a29ab88",
-"time_to_bake_in_seconds": 2765,
-"created_at": "2016-12-08T23:14:18.958Z",
-"updated_at": "2016-12-08T23:14:18.958Z"
-},
-{
-"id": 129,
-"name": "Misérable cake",
-"code": "5871146c-1ca6-4639-8ffe-147f9f588131",
-"time_to_bake_in_seconds": 2840,
-"created_at": "2016-12-08T23:14:18.962Z",
-"updated_at": "2016-12-08T23:14:18.962Z"
-},
-{
-"id": 130,
-"name": "Molten chocolate cake",
-"code": "1a5b123e-8b3f-43b9-a121-4aae3a376f76",
-"time_to_bake_in_seconds": 3071,
-"created_at": "2016-12-08T23:14:18.967Z",
-"updated_at": "2016-12-08T23:14:18.967Z"
-},
-{
-"id": 131,
-"name": "Mooncake",
-"code": "074e071d-25bb-4fd8-aa3e-7eaaabaf8e01",
-"time_to_bake_in_seconds": 2732,
-"created_at": "2016-12-08T23:14:18.971Z",
-"updated_at": "2016-12-08T23:14:18.971Z"
-},
-{
-"id": 132,
-"name": "Muffin",
-"code": "edff5940-2aa7-497b-a0f9-70caffcf1db7",
-"time_to_bake_in_seconds": 2736,
-"unit_price_in_cents": 300,
-"created_at": "2016-12-08T23:14:18.975Z",
-"updated_at": "2016-12-08T23:14:18.975Z",
-"for_sale": true
-},
-{
-"id": 133,
-"name": "Napoleonshat",
-"code": "dc7e35e6-fd85-4ce4-9b4f-635996870352",
-"time_to_bake_in_seconds": 2729,
-"created_at": "2016-12-08T23:14:18.980Z",
-"updated_at": "2016-12-08T23:14:18.980Z"
-},
-{
-"id": 134,
-"name": "Napeleonskake",
-"code": "6b1c783b-5c1c-4628-a74f-1639e729a332",
-"time_to_bake_in_seconds": 2984,
-"created_at": "2016-12-08T23:14:18.984Z",
-"updated_at": "2016-12-08T23:14:18.984Z"
-},
-{
-"id": 135,
-"name": "Nasturtium cake",
-"code": "61488978-7e6a-4ed5-b622-2a202e286fe6",
-"time_to_bake_in_seconds": 3049,
-"created_at": "2016-12-08T23:14:18.988Z",
-"updated_at": "2016-12-08T23:14:18.988Z"
-},
-{
-"id": 136,
-"name": "Onion cake",
-"code": "aa186045-080a-4e20-851c-4750bbedb234",
-"time_to_bake_in_seconds": 3056,
-"created_at": "2016-12-08T23:14:18.992Z",
-"updated_at": "2016-12-08T23:14:18.992Z"
-},
-{
-"id": 137,
-"name": "Oponki or Pączki",
-"code": "5b334402-dcd8-45b5-97d7-5403a5579e7d",
-"time_to_bake_in_seconds": 3224,
-"created_at": "2016-12-08T23:14:18.996Z",
-"updated_at": "2016-12-08T23:14:18.996Z"
-},
-{
-"id": 138,
-"name": "Opera cake",
-"code": "829e5264-8c61-4fac-8192-d9397014fddb",
-"time_to_bake_in_seconds": 2955,
-"created_at": "2016-12-08T23:14:19.000Z",
-"updated_at": "2016-12-08T23:14:19.000Z"
-},
-{
-"id": 139,
-"name": "Orange and polenta cake",
-"code": "359ac9f6-8441-4c1a-8940-2ce8d12b3e6e",
-"time_to_bake_in_seconds": 3238,
-"created_at": "2016-12-08T23:14:19.005Z",
-"updated_at": "2016-12-08T23:14:19.005Z"
-},
-{
-"id": 140,
-"name": "Othellolagkage",
-"code": "6e9a4bff-c2cd-4588-a691-74a38b5077df",
-"time_to_bake_in_seconds": 3229,
-"created_at": "2016-12-08T23:14:19.009Z",
-"updated_at": "2016-12-08T23:14:19.009Z"
-},
-{
-"id": 141,
-"name": "Pan di Spagna",
-"code": "ef2759a4-1fee-4e9e-a60f-43fd4bf63507",
-"time_to_bake_in_seconds": 2880,
-"created_at": "2016-12-08T23:14:19.013Z",
-"updated_at": "2016-12-08T23:14:19.013Z"
-},
-{
-"id": 142,
-"name": "Pancake",
-"code": "1cc5d744-b311-40a4-9fd6-ebed1fdbad97",
-"time_to_bake_in_seconds": 2853,
-"created_at": "2016-12-08T23:14:19.017Z",
-"updated_at": "2016-12-08T23:14:19.017Z"
-},
-{
-"id": 143,
-"name": "Panpepato",
-"code": "357256e5-8188-4986-b0a9-9117fb872d9c",
-"time_to_bake_in_seconds": 2795,
-"created_at": "2016-12-08T23:14:19.025Z",
-"updated_at": "2016-12-08T23:14:19.025Z"
-},
-{
-"id": 144,
-"name": "Panettone",
-"code": "048044f4-d58f-4ac9-8f8f-f4717982ac01",
-"time_to_bake_in_seconds": 2705,
-"created_at": "2016-12-08T23:14:19.030Z",
-"updated_at": "2016-12-08T23:14:19.030Z"
-},
-{
-"id": 145,
-"name": "Parkin",
-"code": "cd4c8c20-8ed1-4c4c-9670-816fe2540c62",
-"time_to_bake_in_seconds": 2802,
-"created_at": "2016-12-08T23:14:19.036Z",
-"updated_at": "2016-12-08T23:14:19.036Z"
-},
-{
-"id": 146,
-"name": "Pavlova",
-"code": "306280ea-2392-4ed9-a0c2-3c854c8948ac",
-"time_to_bake_in_seconds": 2903,
-"created_at": "2016-12-08T23:14:19.042Z",
-"updated_at": "2016-12-08T23:14:19.042Z"
-},
-{
-"id": 147,
-"name": "Petit Gâteau",
-"code": "b008a097-98db-40f9-98d0-3940a265bcb8",
-"time_to_bake_in_seconds": 3094,
-"created_at": "2016-12-08T23:14:19.047Z",
-"updated_at": "2016-12-08T23:14:19.047Z"
-},
-{
-"id": 148,
-"name": "Petits fours",
-"code": "0ec9767d-75fb-47f0-8d4e-21eb100a27bb",
-"time_to_bake_in_seconds": 3281,
-"created_at": "2016-12-08T23:14:19.051Z",
-"updated_at": "2016-12-08T23:14:19.051Z"
-},
-{
-"id": 149,
-"name": "Piernik",
-"code": "8e2186e8-dfa0-4880-9d5a-fc1bd2039e24",
-"time_to_bake_in_seconds": 3165,
-"created_at": "2016-12-08T23:14:19.055Z",
-"updated_at": "2016-12-08T23:14:19.055Z"
-},
-{
-"id": 150,
-"name": "Plum cake",
-"code": "41ec02f7-f625-4ce8-9227-cec4e7587d1b",
-"time_to_bake_in_seconds": 2904,
-"created_at": "2016-12-08T23:14:19.060Z",
-"updated_at": "2016-12-08T23:14:19.060Z"
-},
-{
-"id": 151,
-"name": "Pound cake",
-"code": "f0354738-2ebf-4454-ba72-8c5bb2088ce7",
-"time_to_bake_in_seconds": 2789,
-"created_at": "2016-12-08T23:14:19.064Z",
-"updated_at": "2016-12-08T23:14:19.064Z"
-},
-{
-"id": 152,
-"name": "Princess cake",
-"code": "47d6a939-85be-42b5-98bc-24391e33fc9a",
-"time_to_bake_in_seconds": 2962,
-"created_at": "2016-12-08T23:14:19.069Z",
-"updated_at": "2016-12-08T23:14:19.069Z"
-},
-{
-"id": 153,
-"name": "Prinzregententorte",
-"code": "6ce2927d-7e5e-4d8d-bd5d-eac1ec5f9dcf",
-"time_to_bake_in_seconds": 2941,
-"created_at": "2016-12-08T23:14:19.074Z",
-"updated_at": "2016-12-08T23:14:19.074Z"
-},
-{
-"id": 154,
-"name": "Pumpkin bread",
-"code": "dd9098ab-3021-4d6d-93c6-cfe8d40da773",
-"time_to_bake_in_seconds": 2956,
-"created_at": "2016-12-08T23:14:19.078Z",
-"updated_at": "2016-12-08T23:14:19.078Z"
-},
-{
-"id": 155,
-"name": "Punschkrapfen",
-"code": "b5bfecf9-0c04-4f4a-b6f4-ed8252f0767e",
-"time_to_bake_in_seconds": 2774,
-"created_at": "2016-12-08T23:14:19.083Z",
-"updated_at": "2016-12-08T23:14:19.083Z"
-},
-{
-"id": 156,
-"name": "Queen Elizabeth cake",
-"code": "cdd21106-deb7-4a9c-8689-e51c496a887b",
-"time_to_bake_in_seconds": 3285,
-"created_at": "2016-12-08T23:14:19.087Z",
-"updated_at": "2016-12-08T23:14:19.087Z"
-},
-{
-"id": 157,
-"name": "Qumeshtore me pete",
-"code": "358354f0-c58e-4a56-a556-ab5cccd35496",
-"time_to_bake_in_seconds": 2944,
-"created_at": "2016-12-08T23:14:19.092Z",
-"updated_at": "2016-12-08T23:14:19.092Z"
-},
-{
-"id": 158,
-"name": "Red bean cake",
-"code": "0b2e1ecf-48d5-4534-8f84-19b9021dfcf3",
-"time_to_bake_in_seconds": 2887,
-"created_at": "2016-12-08T23:14:19.096Z",
-"updated_at": "2016-12-08T23:14:19.096Z"
-},
-{
-"id": 159,
-"name": "Red velvet cake",
-"code": "46d1273d-c9ea-480b-8961-c68bb6a04417",
-"time_to_bake_in_seconds": 3108,
-"created_at": "2016-12-08T23:14:19.100Z",
-"updated_at": "2016-12-08T23:14:19.100Z"
-},
-{
-"id": 160,
-"name": "Rum cake",
-"code": "fa78c998-05fa-430a-99cf-9f3c482b2b44",
-"time_to_bake_in_seconds": 2949,
-"created_at": "2016-12-08T23:14:19.105Z",
-"updated_at": "2016-12-08T23:14:19.105Z"
-},
-{
-"id": 161,
-"name": "Rum baba",
-"code": "50630135-0852-4d8c-be42-767f73582b4b",
-"time_to_bake_in_seconds": 2969,
-"created_at": "2016-12-08T23:14:19.110Z",
-"updated_at": "2016-12-08T23:14:19.110Z"
-},
-{
-"id": 162,
-"name": "Ruske kape",
-"code": "cd9a3949-43ac-4264-bf90-433a7d912b60",
-"time_to_bake_in_seconds": 3003,
-"created_at": "2016-12-08T23:14:19.114Z",
-"updated_at": "2016-12-08T23:14:19.114Z"
-},
-{
-"id": 163,
-"name": "Sachertorte",
-"code": "8453ccdf-af86-4ebd-98ac-af5c0cc60e49",
-"time_to_bake_in_seconds": 3135,
-"created_at": "2016-12-08T23:14:19.119Z",
-"updated_at": "2016-12-08T23:14:19.119Z"
-},
-{
-"id": 164,
-"name": "Šakotis",
-"code": "c3c2bde4-e727-4ef8-9ab3-e3e8e39f66e4",
-"time_to_bake_in_seconds": 2700,
-"created_at": "2016-12-08T23:14:19.124Z",
-"updated_at": "2016-12-08T23:14:19.124Z"
-},
-{
-"id": 165,
-"name": "Salzburger Nockerl",
-"code": "00965cb4-3866-480a-b25f-0aa1ec682f0d",
-"time_to_bake_in_seconds": 3241,
-"created_at": "2016-12-08T23:14:19.130Z",
-"updated_at": "2016-12-08T23:14:19.130Z"
-},
-{
-"id": 166,
-"name": "Sekacz",
-"code": "4eef7891-6b4a-4420-bc3e-da8dbee2b722",
-"time_to_bake_in_seconds": 3285,
-"created_at": "2016-12-08T23:14:19.146Z",
-"updated_at": "2016-12-08T23:14:19.146Z"
-},
-{
-"id": 167,
-"name": "Sernik",
-"code": "85c3f392-b870-497b-997b-9be955b27a97",
-"time_to_bake_in_seconds": 3273,
-"created_at": "2016-12-08T23:14:19.152Z",
-"updated_at": "2016-12-08T23:14:19.152Z"
-},
-{
-"id": 168,
-"name": "Sesame seed cake",
-"code": "fcabe089-ea55-4452-8ad9-0dd3936362a4",
-"time_to_bake_in_seconds": 2790,
-"created_at": "2016-12-08T23:14:19.157Z",
-"updated_at": "2016-12-08T23:14:19.157Z"
-},
-{
-"id": 169,
-"name": "Sfouf",
-"code": "e256f4d3-6332-4736-bc0b-b2383a31dfb8",
-"time_to_bake_in_seconds": 3198,
-"created_at": "2016-12-08T23:14:19.162Z",
-"updated_at": "2016-12-08T23:14:19.162Z"
-},
-{
-"id": 170,
-"name": "Simnel cake",
-"code": "6e995e5d-0753-462c-8f22-905015c28645",
-"time_to_bake_in_seconds": 2888,
-"created_at": "2016-12-08T23:14:19.167Z",
-"updated_at": "2016-12-08T23:14:19.167Z"
-},
-{
-"id": 171,
-"name": "Smoked salmon cheesecake",
-"code": "328c0c76-17dd-4ceb-ba8b-e2525c23d960",
-"time_to_bake_in_seconds": 2725,
-"created_at": "2016-12-08T23:14:19.172Z",
-"updated_at": "2016-12-08T23:14:19.172Z"
-},
-{
-"id": 172,
-"name": "Smörgåstårta",
-"code": "eb1ab0b7-a57c-4a2d-9278-3949ab78ef9b",
-"time_to_bake_in_seconds": 3232,
-"created_at": "2016-12-08T23:14:19.176Z",
-"updated_at": "2016-12-08T23:14:19.176Z"
-},
-{
-"id": 173,
-"name": "Snowball cake",
-"code": "e67f1bf0-8aef-487d-ac6d-c144fa9f2fb8",
-"time_to_bake_in_seconds": 2927,
-"created_at": "2016-12-08T23:14:19.180Z",
-"updated_at": "2016-12-08T23:14:19.180Z"
-},
-{
-"id": 174,
-"name": "Snow skin mooncake",
-"code": "623987d0-c60b-47c0-83ef-63f3dcdce55e",
-"time_to_bake_in_seconds": 2909,
-"created_at": "2016-12-08T23:14:19.184Z",
-"updated_at": "2016-12-08T23:14:19.184Z"
-},
-{
-"id": 175,
-"name": "Soufflé",
-"code": "08f11fed-9577-4fa0-9df0-8f137188aba9",
-"time_to_bake_in_seconds": 3179,
-"created_at": "2016-12-08T23:14:19.188Z",
-"updated_at": "2016-12-08T23:14:19.188Z"
-},
-{
-"id": 176,
-"name": "Spekkoek",
-"code": "6cb49a78-bd49-4741-ac14-0a883cb33c19",
-"time_to_bake_in_seconds": 2745,
-"created_at": "2016-12-08T23:14:19.192Z",
-"updated_at": "2016-12-08T23:14:19.192Z"
-},
-{
-"id": 177,
-"name": "Spice cake",
-"code": "5dc08ed1-2f62-4085-89b1-105443d5fda1",
-"unit_price_in_cents": 2200,
-"time_to_bake_in_seconds": 3025,
-"created_at": "2016-12-08T23:14:19.197Z",
-"updated_at": "2016-12-08T23:14:19.197Z",
-"for_sale": true
-},
-{
-"id": 178,
-"name": "Spit cake",
-"code": "4f1612f7-f4e0-4068-95d5-ca489b015d6d",
-"time_to_bake_in_seconds": 3154,
-"created_at": "2016-12-08T23:14:19.201Z",
-"updated_at": "2016-12-08T23:14:19.201Z"
-},
-{
-"id": 179,
-"name": "Sponge cake",
-"code": "9025b107-898d-4eeb-83d3-1bd9c1ee6fae",
+"created_at": "2016-12-09T21:05:49.622Z",
+"updated_at": "2016-12-09T21:05:49.622Z"
+},
+{
+"id": 635,
+"name": "Apple cake",
+"code": "95b3281a-e2c2-4b01-90af-97198c822326",
+"time_to_bake_in_seconds": 2797,
+"created_at": "2016-12-09T21:05:49.626Z",
+"updated_at": "2016-12-09T21:05:49.626Z"
+},
+{
+"id": 636,
+"name": "Applesauce cake",
+"code": "c5380535-f75a-439b-b892-726b4a75a515",
+"time_to_bake_in_seconds": 2734,
+"created_at": "2016-12-09T21:05:49.630Z",
+"updated_at": "2016-12-09T21:05:49.630Z"
+},
+{
+"id": 637,
+"name": "Aranygaluska",
+"code": "2937896f-80bc-4993-97e0-8ca826875a27",
+"time_to_bake_in_seconds": 2757,
+"created_at": "2016-12-09T21:05:49.634Z",
+"updated_at": "2016-12-09T21:05:49.634Z"
+},
+{
+"id": 638,
+"name": "Avocado cake",
+"code": "f3e0ba28-f14d-4fd5-a014-41146c1e94f3",
+"time_to_bake_in_seconds": 3269,
+"unit_price_in_cents": 3800,
+"for_sale": true,
+"created_at": "2016-12-09T21:05:49.639Z",
+"updated_at": "2016-12-09T21:05:49.639Z",
+"image_url": "AvacodoCake.jpg"
+},
+{
+"id": 639,
+"name": "Babka",
+"code": "d6f9a297-6f3f-4b9d-9358-d80ac49c8f61",
 "time_to_bake_in_seconds": 3159,
-"created_at": "2016-12-08T23:14:19.206Z",
-"updated_at": "2016-12-08T23:14:19.206Z"
+"created_at": "2016-12-09T21:05:49.643Z",
+"updated_at": "2016-12-09T21:05:49.643Z"
 },
 {
-"id": 180,
-"name": "St. Honoré cake",
-"code": "0785a074-6705-4c4c-b510-baf362ec6dbf",
-"time_to_bake_in_seconds": 2994,
-"created_at": "2016-12-08T23:14:19.210Z",
-"updated_at": "2016-12-08T23:14:19.210Z"
+"id": 640,
+"name": "Ballokume",
+"code": "f76ef25e-8461-4722-b70e-a0545c428f6b",
+"time_to_bake_in_seconds": 3132,
+"created_at": "2016-12-09T21:05:49.647Z",
+"updated_at": "2016-12-09T21:05:49.647Z"
 },
 {
-"id": 181,
-"name": "Stack cake",
-"code": "440f7f2a-7800-4b23-8fbd-a4b3a3f97874",
-"time_to_bake_in_seconds": 2769,
-"created_at": "2016-12-08T23:14:19.214Z",
-"updated_at": "2016-12-08T23:14:19.214Z"
+"id": 641,
+"name": "Banana cake",
+"code": "c73e45ba-22aa-4374-8d17-c6cb94b3522a",
+"time_to_bake_in_seconds": 3236,
+"created_at": "2016-12-09T21:05:49.651Z",
+"updated_at": "2016-12-09T21:05:49.651Z"
 },
 {
-"id": 182,
-"name": "Strawberry cake",
-"code": "f413ce8d-9fbb-47db-9b65-1dd62ac54ce5",
-"time_to_bake_in_seconds": 3094,
-"created_at": "2016-12-08T23:14:19.218Z",
-"updated_at": "2016-12-08T23:14:19.218Z"
-},
-{
-"id": 183,
-"name": "Streuselkuchen",
-"code": "bb02152d-2509-4c28-b6d7-2986d3621d99",
-"time_to_bake_in_seconds": 2861,
-"created_at": "2016-12-08T23:14:19.223Z",
-"updated_at": "2016-12-08T23:14:19.223Z"
-},
-{
-"id": 184,
-"name": "Studenterbrød",
-"code": "a1fdbe61-6d1a-4cb7-bc14-9c72dab3665c",
-"time_to_bake_in_seconds": 3195,
-"created_at": "2016-12-08T23:14:19.227Z",
-"updated_at": "2016-12-08T23:14:19.227Z"
-},
-{
-"id": 185,
-"name": "Sultana and cherry cake",
-"code": "91e520aa-dc55-4322-bfcd-60426012f31d",
-"time_to_bake_in_seconds": 2732,
-"created_at": "2016-12-08T23:14:19.232Z",
-"updated_at": "2016-12-08T23:14:19.232Z"
-},
-{
-"id": 186,
-"name": "Suncake",
-"code": "30cc25ca-afda-4fc4-87ce-0f38224b7109",
-"time_to_bake_in_seconds": 3070,
-"created_at": "2016-12-08T23:14:19.236Z",
-"updated_at": "2016-12-08T23:14:19.236Z"
-},
-{
-"id": 187,
-"name": "Swiss roll",
-"code": "b9959ff7-8fa4-4e10-9bec-b75855d2f39c",
-"time_to_bake_in_seconds": 2720,
-"created_at": "2016-12-08T23:14:19.240Z",
-"updated_at": "2016-12-08T23:14:19.240Z"
-},
-{
-"id": 188,
-"name": "Tarte Tatin",
-"code": "d476eaa4-c5ed-4711-889e-fb7b02b226d9",
-"time_to_bake_in_seconds": 2886,
-"created_at": "2016-12-08T23:14:19.245Z",
-"updated_at": "2016-12-08T23:14:19.245Z"
-},
-{
-"id": 189,
-"name": "Tea loaf",
-"code": "51f23437-0022-424e-9aaf-4d360116aa81",
-"time_to_bake_in_seconds": 2756,
-"created_at": "2016-12-08T23:14:19.249Z",
-"updated_at": "2016-12-08T23:14:19.249Z"
-},
-{
-"id": 190,
-"name": "Teacake",
-"code": "b6f7f643-89f0-4583-9bf4-42574de2f7a4",
-"time_to_bake_in_seconds": 2909,
-"created_at": "2016-12-08T23:14:19.254Z",
-"updated_at": "2016-12-08T23:14:19.254Z"
-},
-{
-"id": 191,
-"name": "Tiramisu",
-"code": "db066423-6a47-48f1-ab38-b6915b0e7f29",
-"time_to_bake_in_seconds": 2983,
-"created_at": "2016-12-08T23:14:19.258Z",
-"updated_at": "2016-12-08T23:14:19.258Z"
-},
-{
-"id": 192,
-"name": "Tompouce",
-"code": "8ebf3b62-896b-4f10-b311-61e4ce7e0d92",
-"time_to_bake_in_seconds": 3187,
-"created_at": "2016-12-08T23:14:19.262Z",
-"updated_at": "2016-12-08T23:14:19.262Z"
-},
-{
-"id": 193,
-"name": "Torta Tre Monti",
-"code": "3d2fb017-e130-45c6-bd09-06482a98a072",
+"id": 642,
+"name": "Basbousa",
+"code": "c2750518-3ca5-49f7-ab8c-4a68ebc8fae4",
 "time_to_bake_in_seconds": 2980,
-"created_at": "2016-12-08T23:14:19.267Z",
-"updated_at": "2016-12-08T23:14:19.267Z"
+"created_at": "2016-12-09T21:05:49.656Z",
+"updated_at": "2016-12-09T21:05:49.656Z"
 },
 {
-"id": 194,
-"name": "Tres leches cake",
-"code": "1d7f9880-4cbe-45e4-857a-42cee41133c1",
-"time_to_bake_in_seconds": 3066,
-"created_at": "2016-12-08T23:14:19.271Z",
-"updated_at": "2016-12-08T23:14:19.271Z"
+"id": 643,
+"name": "Beer cake",
+"code": "ab63c3af-2bb3-47ef-9be0-ec064a08823f",
+"time_to_bake_in_seconds": 2834,
+"created_at": "2016-12-09T21:05:49.662Z",
+"updated_at": "2016-12-09T21:05:49.662Z"
 },
 {
-"id": 195,
-"name": "Tunis cake",
-"code": "ea0982ba-1aad-4c43-8bfe-520295e6b15b",
-"time_to_bake_in_seconds": 2892,
-"created_at": "2016-12-08T23:14:19.275Z",
-"updated_at": "2016-12-08T23:14:19.275Z"
+"id": 644,
+"name": "Better than sex cake",
+"code": "4ecb48ca-c964-4d83-b458-ae1e7896a1d0",
+"time_to_bake_in_seconds": 3116,
+"created_at": "2016-12-09T21:05:49.667Z",
+"updated_at": "2016-12-09T21:05:49.667Z"
 },
 {
-"id": 196,
-"name": "Træstammer",
-"code": "7eff876a-fa88-4466-b9c6-b6d559060fab",
-"time_to_bake_in_seconds": 3137,
-"created_at": "2016-12-08T23:14:19.279Z",
-"updated_at": "2016-12-08T23:14:19.279Z"
+"id": 645,
+"name": "Boston cream pie",
+"code": "9930150a-4b3e-40fc-89cb-3c7ad64a4e68",
+"time_to_bake_in_seconds": 3256,
+"created_at": "2016-12-09T21:05:49.671Z",
+"updated_at": "2016-12-09T21:05:49.671Z"
 },
 {
-"id": 197,
-"name": "Upside-down cake",
-"code": "3cb2ce7d-b077-4b74-9ca7-82e4fea41463",
-"time_to_bake_in_seconds": 3140,
-"created_at": "2016-12-08T23:14:19.284Z",
-"updated_at": "2016-12-08T23:14:19.284Z"
+"id": 646,
+"name": "Banana cake/bread",
+"code": "98fe0aa8-9631-4415-878c-c6ea28cb4d1f",
+"time_to_bake_in_seconds": 3292,
+"created_at": "2016-12-09T21:05:49.676Z",
+"updated_at": "2016-12-09T21:05:49.676Z"
 },
 {
-"id": 198,
-"name": "Victoria sponge cake",
-"code": "fdadeb4e-437b-42ae-ac08-934f928794a8",
-"time_to_bake_in_seconds": 3083,
-"created_at": "2016-12-08T23:14:19.288Z",
-"updated_at": "2016-12-08T23:14:19.288Z"
+"id": 647,
+"name": "Banoffee pie",
+"code": "19e7626b-142d-45d7-821d-8aab04fa79c8",
+"time_to_bake_in_seconds": 3243,
+"created_at": "2016-12-09T21:05:49.680Z",
+"updated_at": "2016-12-09T21:05:49.680Z"
 },
 {
-"id": 199,
-"name": "Vínarterta",
-"code": "acadced3-d79c-4edb-9cb5-212367ad8001",
-"time_to_bake_in_seconds": 2973,
-"created_at": "2016-12-08T23:14:19.292Z",
-"updated_at": "2016-12-08T23:14:19.292Z"
+"id": 648,
+"name": "Bara brith",
+"code": "04286a73-83aa-4a6c-b0f5-e0b326a3d8b5",
+"time_to_bake_in_seconds": 3005,
+"created_at": "2016-12-09T21:05:49.684Z",
+"updated_at": "2016-12-09T21:05:49.684Z"
 },
 {
-"id": 200,
-"name": "Wedding cake",
-"code": "be455de7-5ef4-4747-9f2f-6da5d8701a25",
-"time_to_bake_in_seconds": 2819,
-"created_at": "2016-12-08T23:14:19.296Z",
-"updated_at": "2016-12-08T23:14:19.296Z"
+"id": 649,
+"name": "Battenberg cake",
+"code": "f0e4fb38-758c-41b2-ad9b-d9e2ecb07ea8",
+"time_to_bake_in_seconds": 3195,
+"created_at": "2016-12-09T21:05:49.688Z",
+"updated_at": "2016-12-09T21:05:49.688Z"
 },
 {
-"id": 201,
-"name": "Welsh cake",
-"code": "32130f2f-5baa-4954-b1cb-d78a2bb459dd",
+"id": 650,
+"name": "Baumkuchen",
+"code": "3f447854-9bee-43c8-81af-e48fd25d4328",
+"time_to_bake_in_seconds": 2875,
+"created_at": "2016-12-09T21:05:49.693Z",
+"updated_at": "2016-12-09T21:05:49.693Z"
+},
+{
+"id": 651,
+"name": "Bibingka",
+"code": "d7d466d3-0dae-40bf-b086-b30435608910",
+"time_to_bake_in_seconds": 3146,
+"created_at": "2016-12-09T21:05:49.697Z",
+"updated_at": "2016-12-09T21:05:49.697Z"
+},
+{
+"id": 652,
+"name": "Bienenstich Bee Sting",
+"code": "0cb8131b-e6f2-4d89-8d07-ef57346c7c99",
+"time_to_bake_in_seconds": 3088,
+"created_at": "2016-12-09T21:05:49.701Z",
+"updated_at": "2016-12-09T21:05:49.701Z"
+},
+{
+"id": 653,
+"name": "Birthday cake",
+"code": "1d88e015-5b1c-4ebc-9153-9163c8390751",
+"time_to_bake_in_seconds": 3094,
+"created_at": "2016-12-09T21:05:49.706Z",
+"updated_at": "2016-12-09T21:05:49.706Z"
+},
+{
+"id": 654,
+"name": "Bizcocho Dominicano",
+"code": "5c84e255-d66f-47d8-b444-d51b4eecd4c2",
+"time_to_bake_in_seconds": 2914,
+"created_at": "2016-12-09T21:05:49.712Z",
+"updated_at": "2016-12-09T21:05:49.712Z"
+},
+{
+"id": 655,
+"name": "Black Forest cake",
+"code": "4f62b1b6-ae2a-4194-aaf0-86b2dcac40cd",
 "time_to_bake_in_seconds": 3265,
-"created_at": "2016-12-08T23:14:19.301Z",
-"updated_at": "2016-12-08T23:14:19.301Z"
+"created_at": "2016-12-09T21:05:49.717Z",
+"updated_at": "2016-12-09T21:05:49.717Z"
 },
 {
-"id": 202,
-"name": "Whoopie pies",
-"code": "7b05c87a-58e5-4634-8bf6-f9f89c154515",
-"time_to_bake_in_seconds": 3189,
+"id": 656,
+"name": "Blitztorte",
+"code": "0714ab72-f34c-46e3-b33b-82b94ed15d42",
+"time_to_bake_in_seconds": 2844,
+"created_at": "2016-12-09T21:05:49.722Z",
+"updated_at": "2016-12-09T21:05:49.722Z"
+},
+{
+"id": 657,
+"name": "Blondie",
+"code": "fe2d0233-8c22-45a2-91fb-007226104bea",
+"time_to_bake_in_seconds": 3110,
+"created_at": "2016-12-09T21:05:49.726Z",
+"updated_at": "2016-12-09T21:05:49.726Z"
+},
+{
+"id": 658,
+"name": "Bolo de mel",
+"code": "afb433dc-ae68-4bff-9e8e-0395d0e73812",
+"time_to_bake_in_seconds": 3105,
+"created_at": "2016-12-09T21:05:49.730Z",
+"updated_at": "2016-12-09T21:05:49.730Z"
+},
+{
+"id": 659,
+"name": "Brazil nut cake",
+"code": "ca94361e-8315-4849-a2ee-27ada7b3c054",
+"time_to_bake_in_seconds": 2713,
+"created_at": "2016-12-09T21:05:49.734Z",
+"updated_at": "2016-12-09T21:05:49.734Z"
+},
+{
+"id": 660,
+"name": "Brownie",
+"code": "f98a8608-b820-49af-a659-c5eda3009d38",
+"time_to_bake_in_seconds": 2845,
+"created_at": "2016-12-09T21:05:49.738Z",
+"updated_at": "2016-12-09T21:05:49.738Z"
+},
+{
+"id": 661,
+"name": "Buccellato",
+"code": "e86bd44f-aa77-48bd-8594-d40d643726d0",
+"time_to_bake_in_seconds": 2861,
+"created_at": "2016-12-09T21:05:49.742Z",
+"updated_at": "2016-12-09T21:05:49.742Z"
+},
+{
+"id": 662,
+"name": "Budapestlängd",
+"code": "aad8f0fc-fd65-4ed9-996b-dea94313c40b",
+"time_to_bake_in_seconds": 2907,
+"created_at": "2016-12-09T21:05:49.747Z",
+"updated_at": "2016-12-09T21:05:49.747Z"
+},
+{
+"id": 663,
+"name": "Bundt cake",
+"code": "31674e30-10d7-4a10-88b6-98502421af1c",
+"time_to_bake_in_seconds": 2711,
+"created_at": "2016-12-09T21:05:49.752Z",
+"updated_at": "2016-12-09T21:05:49.752Z"
+},
+{
+"id": 664,
+"name": "Butter cake",
+"code": "1ac358e8-37b8-4cc3-905f-a259c00b353d",
+"time_to_bake_in_seconds": 3195,
+"created_at": "2016-12-09T21:05:49.756Z",
+"updated_at": "2016-12-09T21:05:49.756Z"
+},
+{
+"id": 665,
+"name": "Butterfly cake",
+"code": "c1a06c88-447b-48ca-b5e1-0e24cda05898",
+"time_to_bake_in_seconds": 2904,
+"created_at": "2016-12-09T21:05:49.760Z",
+"updated_at": "2016-12-09T21:05:49.760Z"
+},
+{
+"id": 666,
+"name": "Cassata",
+"code": "ccf50aac-d6bb-426f-8801-8817a9b3394f",
+"time_to_bake_in_seconds": 2820,
+"created_at": "2016-12-09T21:05:49.765Z",
+"updated_at": "2016-12-09T21:05:49.765Z"
+},
+{
+"id": 667,
+"name": "Carrot cake",
+"code": "16f5bab2-ac3d-4a4c-9e3e-928d8ae95e90",
+"time_to_bake_in_seconds": 2834,
+"created_at": "2016-12-09T21:05:49.769Z",
+"updated_at": "2016-12-09T21:05:49.769Z"
+},
+{
+"id": 668,
+"name": "Cheesecake",
+"code": "24bd07e8-da45-4302-ab6d-b379a60e3aea",
+"time_to_bake_in_seconds": 3135,
+"created_at": "2016-12-09T21:05:49.773Z",
+"updated_at": "2016-12-09T21:05:49.773Z"
+},
+{
+"id": 669,
+"name": "Chestnut cake",
+"code": "8713f223-13ab-41c7-b68b-345d925563fc",
+"time_to_bake_in_seconds": 3240,
+"created_at": "2016-12-09T21:05:49.777Z",
+"updated_at": "2016-12-09T21:05:49.777Z"
+},
+{
+"id": 670,
+"name": "Chiffon cake",
+"code": "901ca084-04ba-46a0-892a-c9e61ef217b3",
+"time_to_bake_in_seconds": 2988,
+"created_at": "2016-12-09T21:05:49.782Z",
+"updated_at": "2016-12-09T21:05:49.782Z"
+},
+{
+"id": 671,
+"name": "Chocolate cake",
+"code": "312e878b-7ae2-4c7d-b4fc-85bb12f97bdb",
+"time_to_bake_in_seconds": 2910,
+"created_at": "2016-12-09T21:05:49.786Z",
+"updated_at": "2016-12-09T21:05:49.786Z"
+},
+{
+"id": 672,
+"name": "Christmas cake",
+"code": "0ca8d0da-886d-4c85-b35e-f84c50d0efe7",
+"time_to_bake_in_seconds": 3044,
+"created_at": "2016-12-09T21:05:49.789Z",
+"updated_at": "2016-12-09T21:05:49.789Z"
+},
+{
+"id": 673,
+"name": "Clementine cake",
+"code": "2fbfc634-cb42-4062-b53d-fd28e1bb29bd",
+"time_to_bake_in_seconds": 3257,
+"created_at": "2016-12-09T21:05:49.793Z",
+"updated_at": "2016-12-09T21:05:49.793Z"
+},
+{
+"id": 674,
+"name": "Coconut cake",
+"code": "f3dfc7b1-4a7a-4913-bae4-7828a5e242ab",
+"time_to_bake_in_seconds": 2840,
+"created_at": "2016-12-09T21:05:49.798Z",
+"updated_at": "2016-12-09T21:05:49.798Z"
+},
+{
+"id": 675,
+"name": "Coffee cake",
+"code": "4c5bf6be-3837-4dbd-aa34-980cd6ea0b70",
+"time_to_bake_in_seconds": 3129,
+"created_at": "2016-12-09T21:05:49.802Z",
+"updated_at": "2016-12-09T21:05:49.802Z"
+},
+{
+"id": 676,
+"name": "Cremeschnitte",
+"code": "6a44eaab-39e4-4df5-b81a-c0d76002cced",
+"time_to_bake_in_seconds": 3009,
+"created_at": "2016-12-09T21:05:49.807Z",
+"updated_at": "2016-12-09T21:05:49.807Z"
+},
+{
+"id": 677,
+"name": "Croquembouche",
+"code": "007000b4-24af-4f5d-a3d7-a34cbb6750de",
+"time_to_bake_in_seconds": 3120,
+"created_at": "2016-12-09T21:05:49.811Z",
+"updated_at": "2016-12-09T21:05:49.811Z"
+},
+{
+"id": 678,
+"name": "Crystal cake",
+"code": "0f5a7475-3f85-4619-ba21-78a03cdbb772",
+"time_to_bake_in_seconds": 3183,
+"created_at": "2016-12-09T21:05:49.816Z",
+"updated_at": "2016-12-09T21:05:49.816Z"
+},
+{
+"id": 679,
+"name": "Cuatro leches cake",
+"code": "0d788d5b-409a-4e7d-aaff-835caa6f5903",
+"time_to_bake_in_seconds": 3205,
+"created_at": "2016-12-09T21:05:49.820Z",
+"updated_at": "2016-12-09T21:05:49.820Z"
+},
+{
+"id": 680,
+"name": "Cucumber cake",
+"code": "8e3e9461-7079-4453-8e3d-5da46f2a0727",
+"time_to_bake_in_seconds": 2931,
+"created_at": "2016-12-09T21:05:49.825Z",
+"updated_at": "2016-12-09T21:05:49.825Z"
+},
+{
+"id": 681,
+"name": "Cupcake",
+"code": "f5896876-028a-4ad0-970f-55e5e820c3ad",
+"time_to_bake_in_seconds": 3159,
+"created_at": "2016-12-09T21:05:49.829Z",
+"updated_at": "2016-12-09T21:05:49.829Z"
+},
+{
+"id": 682,
+"name": "Dacquoise",
+"code": "9b0ae051-2b69-4ecf-af8a-878c6f97977d",
+"time_to_bake_in_seconds": 2851,
+"created_at": "2016-12-09T21:05:49.834Z",
+"updated_at": "2016-12-09T21:05:49.834Z"
+},
+{
+"id": 683,
+"name": "Date and walnut loaf",
+"code": "c9406167-6207-4562-9174-c4bb79d72c18",
+"time_to_bake_in_seconds": 3109,
+"created_at": "2016-12-09T21:05:49.838Z",
+"updated_at": "2016-12-09T21:05:49.838Z"
+},
+{
+"id": 684,
+"name": "Date square",
+"code": "304f2be0-d2d7-4950-bf6b-31a2c144f3b9",
+"time_to_bake_in_seconds": 2963,
+"created_at": "2016-12-09T21:05:49.842Z",
+"updated_at": "2016-12-09T21:05:49.842Z"
+},
+{
+"id": 685,
+"name": "Depression cake",
+"code": "08a8c411-e9e0-4f4a-b6f7-7be9355dbd82",
+"time_to_bake_in_seconds": 2792,
+"created_at": "2016-12-09T21:05:49.847Z",
+"updated_at": "2016-12-09T21:05:49.847Z"
+},
+{
+"id": 686,
+"name": "Devil's food cake",
+"code": "4c606186-585a-4f53-adcd-7558d293f327",
+"time_to_bake_in_seconds": 3279,
+"created_at": "2016-12-09T21:05:49.851Z",
+"updated_at": "2016-12-09T21:05:49.851Z"
+},
+{
+"id": 687,
+"name": "Dobos cake",
+"code": "7f86302e-f46b-48e7-bdd0-a06082960627",
+"time_to_bake_in_seconds": 3275,
+"created_at": "2016-12-09T21:05:49.855Z",
+"updated_at": "2016-12-09T21:05:49.855Z"
+},
+{
+"id": 688,
+"name": "Dundee cake",
+"code": "843a8473-ea70-460c-9226-85e4ea1e6159",
+"time_to_bake_in_seconds": 2861,
+"created_at": "2016-12-09T21:05:49.860Z",
+"updated_at": "2016-12-09T21:05:49.860Z"
+},
+{
+"id": 689,
+"name": "Eccles cake",
+"code": "d9466709-4e17-4a90-a081-fadff2ff1236",
+"time_to_bake_in_seconds": 3055,
+"created_at": "2016-12-09T21:05:49.864Z",
+"updated_at": "2016-12-09T21:05:49.864Z"
+},
+{
+"id": 690,
+"name": "Esterházy torte",
+"code": "6d8f22ba-0ec4-4122-abe7-5e300d2e0d39",
+"time_to_bake_in_seconds": 3092,
+"created_at": "2016-12-09T21:05:49.869Z",
+"updated_at": "2016-12-09T21:05:49.869Z"
+},
+{
+"id": 691,
+"name": "Fat rascal",
+"code": "c11da431-08ca-441f-88ff-bd8624657771",
+"time_to_bake_in_seconds": 3188,
+"created_at": "2016-12-09T21:05:49.873Z",
+"updated_at": "2016-12-09T21:05:49.873Z"
+},
+{
+"id": 692,
+"name": "Faworki",
+"code": "2b6c4d65-8153-4efc-8f29-53faefc3bb05",
+"time_to_bake_in_seconds": 3213,
+"created_at": "2016-12-09T21:05:49.877Z",
+"updated_at": "2016-12-09T21:05:49.877Z"
+},
+{
+"id": 693,
+"name": "Fig cake",
+"code": "d6c32dbc-c724-4b98-94f9-bbe910ac3b1f",
+"time_to_bake_in_seconds": 3190,
+"created_at": "2016-12-09T21:05:49.882Z",
+"updated_at": "2016-12-09T21:05:49.882Z"
+},
+{
+"id": 694,
+"name": "Financier",
+"code": "46c4f591-7c15-45af-b485-64e0d7c97461",
+"time_to_bake_in_seconds": 3100,
+"created_at": "2016-12-09T21:05:49.886Z",
+"updated_at": "2016-12-09T21:05:49.886Z"
+},
+{
+"id": 695,
+"name": "Flourless chocolate cake",
+"code": "352caed3-2e16-4a78-9946-9b967effede5",
+"time_to_bake_in_seconds": 2889,
+"created_at": "2016-12-09T21:05:49.891Z",
+"updated_at": "2016-12-09T21:05:49.891Z"
+},
+{
+"id": 696,
+"name": "Fondant Fancy",
+"code": "13c74d6f-bd31-45d8-89bb-efcdc6412061",
+"time_to_bake_in_seconds": 2839,
+"created_at": "2016-12-09T21:05:49.895Z",
+"updated_at": "2016-12-09T21:05:49.895Z"
+},
+{
+"id": 697,
+"name": "Fragelité",
+"code": "c4d7d640-59aa-4b55-adfa-4a3051ca4ded",
+"time_to_bake_in_seconds": 2782,
+"created_at": "2016-12-09T21:05:49.899Z",
+"updated_at": "2016-12-09T21:05:49.899Z"
+},
+{
+"id": 698,
+"name": "Frog cake",
+"code": "f9762cc5-eb50-4fdc-a520-76e88ef26a2a",
+"time_to_bake_in_seconds": 2871,
+"created_at": "2016-12-09T21:05:49.903Z",
+"updated_at": "2016-12-09T21:05:49.903Z"
+},
+{
+"id": 699,
+"name": "Fruitcake",
+"code": "63e93589-5f9e-4141-af83-57bd6bd92500",
+"time_to_bake_in_seconds": 2964,
+"created_at": "2016-12-09T21:05:49.908Z",
+"updated_at": "2016-12-09T21:05:49.908Z"
+},
+{
+"id": 700,
+"name": "Fountain cake",
+"code": "4ee1f78c-1a8b-440a-aff6-eccf5da4cd67",
+"time_to_bake_in_seconds": 2740,
+"created_at": "2016-12-09T21:05:49.912Z",
+"updated_at": "2016-12-09T21:05:49.912Z"
+},
+{
+"id": 701,
+"name": "Funing big cake",
+"code": "d6308657-54ee-4a3a-8d7f-44e9126e5464",
+"time_to_bake_in_seconds": 2733,
+"created_at": "2016-12-09T21:05:49.916Z",
+"updated_at": "2016-12-09T21:05:49.916Z"
+},
+{
+"id": 702,
+"name": "Genoa cake",
+"code": "6631d7e8-f471-4f00-ba1c-88e19ead7efa",
+"time_to_bake_in_seconds": 3231,
+"created_at": "2016-12-09T21:05:49.921Z",
+"updated_at": "2016-12-09T21:05:49.921Z"
+},
+{
+"id": 703,
+"name": "Genoise Genoese cake",
+"code": "793873d3-194f-4087-a208-6d6c8e0507d8",
+"time_to_bake_in_seconds": 3037,
+"created_at": "2016-12-09T21:05:49.925Z",
+"updated_at": "2016-12-09T21:05:49.925Z"
+},
+{
+"id": 704,
+"name": "German Chocolate Cake",
+"code": "d528c691-a512-4280-af65-1a0325696d01",
+"time_to_bake_in_seconds": 3038,
+"created_at": "2016-12-09T21:05:49.929Z",
+"updated_at": "2016-12-09T21:05:49.929Z"
+},
+{
+"id": 705,
+"name": "Gingerbread",
+"code": "355b89c5-bf22-439a-b9c1-1c9df32ff542",
+"time_to_bake_in_seconds": 3288,
+"created_at": "2016-12-09T21:05:49.934Z",
+"updated_at": "2016-12-09T21:05:49.934Z"
+},
+{
+"id": 706,
+"name": "Goose Breast",
+"code": "982ce344-aea4-46ed-9ddc-bdcd29b93ad9",
+"time_to_bake_in_seconds": 2859,
+"created_at": "2016-12-09T21:05:49.938Z",
+"updated_at": "2016-12-09T21:05:49.938Z"
+},
+{
+"id": 707,
+"name": "Halloween cake",
+"code": "0ae18b54-469f-47b2-952f-d660532bd699",
+"time_to_bake_in_seconds": 3183,
+"created_at": "2016-12-09T21:05:49.942Z",
+"updated_at": "2016-12-09T21:05:49.942Z"
+},
+{
+"id": 708,
+"name": "Hash brownies",
+"code": "beef402f-9cfd-4389-9866-6e78fbb9517c",
+"time_to_bake_in_seconds": 3158,
+"created_at": "2016-12-09T21:05:49.946Z",
+"updated_at": "2016-12-09T21:05:49.946Z"
+},
+{
+"id": 709,
+"name": "Hot milk cake",
+"code": "01825754-2584-4e85-b293-ce493c723f1f",
+"time_to_bake_in_seconds": 2885,
+"created_at": "2016-12-09T21:05:49.950Z",
+"updated_at": "2016-12-09T21:05:49.950Z"
+},
+{
+"id": 710,
+"name": "Ice cream cake",
+"code": "982ce127-6b58-457f-a16e-188620d9fc7e",
+"time_to_bake_in_seconds": 3169,
+"created_at": "2016-12-09T21:05:49.955Z",
+"updated_at": "2016-12-09T21:05:49.955Z"
+},
+{
+"id": 711,
+"name": "Jaffa Cakes",
+"code": "c3cbcd4b-7465-4e98-b103-51f07c41c3c6",
+"time_to_bake_in_seconds": 3108,
+"created_at": "2016-12-09T21:05:49.959Z",
+"updated_at": "2016-12-09T21:05:49.959Z"
+},
+{
+"id": 712,
+"name": "Kabuni",
+"code": "2a24139c-51bd-4b55-b247-ff53c9e20baa",
+"time_to_bake_in_seconds": 2921,
+"created_at": "2016-12-09T21:05:49.963Z",
+"updated_at": "2016-12-09T21:05:49.963Z"
+},
+{
+"id": 713,
+"name": "Karpatka",
+"code": "8368e535-a8c6-4a35-8ac6-bc3c8bb9d479",
+"time_to_bake_in_seconds": 2712,
+"created_at": "2016-12-09T21:05:49.968Z",
+"updated_at": "2016-12-09T21:05:49.968Z"
+},
+{
+"id": 714,
+"name": "Kiev cake",
+"code": "b7f71e9f-4f4e-4438-a730-9a76393bd701",
+"time_to_bake_in_seconds": 2939,
+"created_at": "2016-12-09T21:05:49.972Z",
+"updated_at": "2016-12-09T21:05:49.972Z"
+},
+{
+"id": 715,
+"name": "King cake",
+"code": "f9c3ec36-62b2-4bb1-a8ce-a4798cda78cf",
+"time_to_bake_in_seconds": 3206,
+"created_at": "2016-12-09T21:05:49.976Z",
+"updated_at": "2016-12-09T21:05:49.976Z"
+},
+{
+"id": 716,
+"name": "Kladdkaka",
+"code": "82600a7f-9a10-4b2f-99a0-703fc4ddd5c7",
+"time_to_bake_in_seconds": 2729,
+"created_at": "2016-12-09T21:05:49.980Z",
+"updated_at": "2016-12-09T21:05:49.980Z"
+},
+{
+"id": 717,
+"name": "Kliņģeris",
+"code": "f2453f35-2db4-49d8-8a99-652dc91477d3",
+"time_to_bake_in_seconds": 3160,
+"created_at": "2016-12-09T21:05:49.984Z",
+"updated_at": "2016-12-09T21:05:49.984Z"
+},
+{
+"id": 718,
+"name": "Kołacz",
+"code": "31c8a1ef-c1ba-4ddb-8f98-c35110887895",
+"time_to_bake_in_seconds": 2962,
+"created_at": "2016-12-09T21:05:49.991Z",
+"updated_at": "2016-12-09T21:05:49.991Z"
+},
+{
+"id": 719,
+"name": "Kolaczki",
+"code": "df57ca77-a113-4ed5-a4c8-02274d10d0b5",
+"time_to_bake_in_seconds": 3169,
+"created_at": "2016-12-09T21:05:49.997Z",
+"updated_at": "2016-12-09T21:05:49.997Z"
+},
+{
+"id": 720,
+"name": "Kouign-amann",
+"code": "13c1df19-79be-4990-a378-a8c7cb7c827f",
+"time_to_bake_in_seconds": 2982,
+"created_at": "2016-12-09T21:05:50.003Z",
+"updated_at": "2016-12-09T21:05:50.003Z"
+},
+{
+"id": 721,
+"name": "Kutia",
+"code": "076db934-6618-4200-966f-29d4ab876398",
+"time_to_bake_in_seconds": 2896,
+"created_at": "2016-12-09T21:05:50.009Z",
+"updated_at": "2016-12-09T21:05:50.009Z"
+},
+{
+"id": 722,
+"name": "Kransekake",
+"code": "d56c789d-7ecd-47d4-9423-ecdc81a3e4d3",
+"time_to_bake_in_seconds": 3159,
+"created_at": "2016-12-09T21:05:50.014Z",
+"updated_at": "2016-12-09T21:05:50.014Z"
+},
+{
+"id": 723,
+"name": "Kremówka",
+"code": "fe36650f-54f9-4287-82f3-ac9da4b0c042",
+"time_to_bake_in_seconds": 3162,
+"created_at": "2016-12-09T21:05:50.019Z",
+"updated_at": "2016-12-09T21:05:50.019Z"
+},
+{
+"id": 724,
+"name": "Krówka",
+"code": "a7d37f50-2ae2-4894-9427-c8f2ee85f1c1",
+"time_to_bake_in_seconds": 2715,
+"created_at": "2016-12-09T21:05:50.023Z",
+"updated_at": "2016-12-09T21:05:50.023Z"
+},
+{
+"id": 725,
+"name": "Lady Baltimore cake",
+"code": "f74a161e-43e5-49e9-871d-8887a89395d6",
+"time_to_bake_in_seconds": 2892,
+"created_at": "2016-12-09T21:05:50.028Z",
+"updated_at": "2016-12-09T21:05:50.028Z"
+},
+{
+"id": 726,
+"name": "Lamanki or Klamäti",
+"code": "2605b0b4-b3eb-473a-b8a6-83e247927237",
+"time_to_bake_in_seconds": 3118,
+"created_at": "2016-12-09T21:05:50.032Z",
+"updated_at": "2016-12-09T21:05:50.032Z"
+},
+{
+"id": 727,
+"name": "Lamington",
+"code": "e0597453-93d9-47ec-bbe9-cb3faa89094a",
+"time_to_bake_in_seconds": 3037,
+"created_at": "2016-12-09T21:05:50.036Z",
+"updated_at": "2016-12-09T21:05:50.036Z"
+},
+{
+"id": 728,
+"name": "Layer cake",
+"code": "45deb658-08b3-43f7-b685-a1d2c51d6102",
+"time_to_bake_in_seconds": 3267,
+"created_at": "2016-12-09T21:05:50.040Z",
+"updated_at": "2016-12-09T21:05:50.040Z"
+},
+{
+"id": 729,
+"name": "Lemon cake",
+"code": "33af9340-e4a7-40ef-8172-d46f34333165",
+"time_to_bake_in_seconds": 2707,
+"created_at": "2016-12-09T21:05:50.045Z",
+"updated_at": "2016-12-09T21:05:50.045Z"
+},
+{
+"id": 730,
+"name": "Madeira cake",
+"code": "85ad8038-966b-4ee2-be93-a0c8ce7f3d37",
+"time_to_bake_in_seconds": 2849,
+"created_at": "2016-12-09T21:05:50.049Z",
+"updated_at": "2016-12-09T21:05:50.049Z"
+},
+{
+"id": 731,
+"name": "Makowiec",
+"code": "8b9914fd-387d-49b8-93e5-d42089d748de",
+"time_to_bake_in_seconds": 2993,
+"created_at": "2016-12-09T21:05:50.053Z",
+"updated_at": "2016-12-09T21:05:50.053Z"
+},
+{
+"id": 732,
+"name": "Magdalena",
+"code": "1bfb1f5d-5de5-4c2e-ae31-8b4beae74459",
+"time_to_bake_in_seconds": 3012,
+"created_at": "2016-12-09T21:05:50.057Z",
+"updated_at": "2016-12-09T21:05:50.057Z"
+},
+{
+"id": 733,
+"name": "Mantecada",
+"code": "1aca87dd-fbf4-4dc6-b45a-b6d5709fa64d",
+"time_to_bake_in_seconds": 3105,
+"created_at": "2016-12-09T21:05:50.061Z",
+"updated_at": "2016-12-09T21:05:50.061Z"
+},
+{
+"id": 734,
+"name": "Marble cake",
+"code": "024b7e83-21be-41d8-9491-c5d9a855f7a0",
+"time_to_bake_in_seconds": 2868,
+"created_at": "2016-12-09T21:05:50.065Z",
+"updated_at": "2016-12-09T21:05:50.065Z"
+},
+{
+"id": 735,
+"name": "Mazurek",
+"code": "fe257186-a55d-4836-8b3c-1497c48eb1a8",
+"time_to_bake_in_seconds": 3109,
+"created_at": "2016-12-09T21:05:50.070Z",
+"updated_at": "2016-12-09T21:05:50.070Z"
+},
+{
+"id": 736,
+"name": "Merveilleux",
+"code": "b660abbd-47f0-440c-90ce-8e40888bf4bc",
+"time_to_bake_in_seconds": 2793,
+"created_at": "2016-12-09T21:05:50.075Z",
+"updated_at": "2016-12-09T21:05:50.075Z"
+},
+{
+"id": 737,
+"name": "Mille-feuille",
+"code": "eb8f4d19-57c7-4e3f-aadf-e2795c984292",
+"time_to_bake_in_seconds": 2744,
+"created_at": "2016-12-09T21:05:50.079Z",
+"updated_at": "2016-12-09T21:05:50.079Z"
+},
+{
+"id": 738,
+"name": "Misérable cake",
+"code": "c776d189-7ec7-48a4-81f0-1e5deb30037b",
+"time_to_bake_in_seconds": 3206,
+"created_at": "2016-12-09T21:05:50.085Z",
+"updated_at": "2016-12-09T21:05:50.085Z"
+},
+{
+"id": 739,
+"name": "Molten chocolate cake",
+"code": "63e204e5-81f6-4848-ba03-ade0bc5a45fa",
+"time_to_bake_in_seconds": 3164,
+"created_at": "2016-12-09T21:05:50.089Z",
+"updated_at": "2016-12-09T21:05:50.089Z"
+},
+{
+"id": 740,
+"name": "Mooncake",
+"code": "724cf028-6723-484d-8db8-c7452de91a26",
+"time_to_bake_in_seconds": 3031,
+"created_at": "2016-12-09T21:05:50.094Z",
+"updated_at": "2016-12-09T21:05:50.094Z"
+},
+{
+"id": 741,
+"name": "Muffin",
+"code": "82ff1d50-b135-47f8-b751-8dcf5c87f1fe",
+"time_to_bake_in_seconds": 2873,
 "unit_price_in_cents": 300,
-"created_at": "2016-12-08T23:14:19.305Z",
-"updated_at": "2016-12-08T23:14:19.305Z",
-"for_sale": true
+"for_sale": true,
+"created_at": "2016-12-09T21:05:50.099Z",
+"updated_at": "2016-12-09T21:05:50.099Z",
+"image_url": "Muffin.jpg"
 },
 {
-"id": 203,
+"id": 742,
+"name": "Napoleonshat",
+"code": "cdc361b6-c010-448d-81c2-c939e207a0fe",
+"time_to_bake_in_seconds": 3228,
+"created_at": "2016-12-09T21:05:50.103Z",
+"updated_at": "2016-12-09T21:05:50.103Z"
+},
+{
+"id": 743,
+"name": "Napeleonskake",
+"code": "2158a8c7-0f13-4af7-b9eb-a9f81c2eb2ae",
+"time_to_bake_in_seconds": 3244,
+"created_at": "2016-12-09T21:05:50.107Z",
+"updated_at": "2016-12-09T21:05:50.107Z"
+},
+{
+"id": 744,
+"name": "Nasturtium cake",
+"code": "2c45d204-b2e8-4c40-9a45-7d7c958fd3ce",
+"time_to_bake_in_seconds": 3038,
+"created_at": "2016-12-09T21:05:50.112Z",
+"updated_at": "2016-12-09T21:05:50.112Z"
+},
+{
+"id": 745,
+"name": "Onion cake",
+"code": "17fcf91d-66d0-45ff-a1a7-5667786a7761",
+"time_to_bake_in_seconds": 3148,
+"created_at": "2016-12-09T21:05:50.116Z",
+"updated_at": "2016-12-09T21:05:50.116Z"
+},
+{
+"id": 746,
+"name": "Oponki or Pączki",
+"code": "fdea9ebc-2638-4b0d-9625-ebeb2c98da34",
+"time_to_bake_in_seconds": 3250,
+"created_at": "2016-12-09T21:05:50.120Z",
+"updated_at": "2016-12-09T21:05:50.120Z"
+},
+{
+"id": 747,
+"name": "Opera cake",
+"code": "239b14df-2c80-418b-8577-c941cecb7891",
+"time_to_bake_in_seconds": 2998,
+"created_at": "2016-12-09T21:05:50.124Z",
+"updated_at": "2016-12-09T21:05:50.124Z"
+},
+{
+"id": 748,
+"name": "Orange and polenta cake",
+"code": "fd293079-aa21-4fc9-b6a0-210cfd06b514",
+"time_to_bake_in_seconds": 2789,
+"created_at": "2016-12-09T21:05:50.128Z",
+"updated_at": "2016-12-09T21:05:50.128Z"
+},
+{
+"id": 749,
+"name": "Othellolagkage",
+"code": "787aad28-318c-449b-8dab-eb2145bf2635",
+"time_to_bake_in_seconds": 2831,
+"created_at": "2016-12-09T21:05:50.135Z",
+"updated_at": "2016-12-09T21:05:50.135Z"
+},
+{
+"id": 750,
+"name": "Pan di Spagna",
+"code": "4a17df75-8543-4318-9936-bc593bd9d59f",
+"time_to_bake_in_seconds": 3104,
+"created_at": "2016-12-09T21:05:50.141Z",
+"updated_at": "2016-12-09T21:05:50.141Z"
+},
+{
+"id": 751,
+"name": "Pancake",
+"code": "a9355775-b7c6-453e-9e3b-4ddcaddef867",
+"time_to_bake_in_seconds": 2731,
+"created_at": "2016-12-09T21:05:50.147Z",
+"updated_at": "2016-12-09T21:05:50.147Z"
+},
+{
+"id": 752,
+"name": "Panpepato",
+"code": "4b905514-fe5f-4776-8a02-9f54b607699d",
+"time_to_bake_in_seconds": 3155,
+"created_at": "2016-12-09T21:05:50.152Z",
+"updated_at": "2016-12-09T21:05:50.152Z"
+},
+{
+"id": 753,
+"name": "Panettone",
+"code": "04e8c35c-8679-4e2c-b704-29e085cc4699",
+"time_to_bake_in_seconds": 3160,
+"created_at": "2016-12-09T21:05:50.158Z",
+"updated_at": "2016-12-09T21:05:50.158Z"
+},
+{
+"id": 754,
+"name": "Parkin",
+"code": "d474a6de-84d6-4aac-aebd-ec998c6ec0f7",
+"time_to_bake_in_seconds": 2927,
+"created_at": "2016-12-09T21:05:50.163Z",
+"updated_at": "2016-12-09T21:05:50.163Z"
+},
+{
+"id": 755,
+"name": "Pavlova",
+"code": "ef058500-8615-4b36-b7e5-5865888fda28",
+"time_to_bake_in_seconds": 3299,
+"created_at": "2016-12-09T21:05:50.167Z",
+"updated_at": "2016-12-09T21:05:50.167Z"
+},
+{
+"id": 756,
+"name": "Petit Gâteau",
+"code": "239e0d67-c495-499e-b4cf-c1e3d0892fec",
+"time_to_bake_in_seconds": 3182,
+"created_at": "2016-12-09T21:05:50.171Z",
+"updated_at": "2016-12-09T21:05:50.171Z"
+},
+{
+"id": 757,
+"name": "Petits fours",
+"code": "7316d278-c243-40d1-88b4-7be2129ff881",
+"time_to_bake_in_seconds": 2816,
+"created_at": "2016-12-09T21:05:50.176Z",
+"updated_at": "2016-12-09T21:05:50.176Z"
+},
+{
+"id": 758,
+"name": "Piernik",
+"code": "40d584ef-8d93-46b4-9ceb-9cfa6014e81d",
+"time_to_bake_in_seconds": 3031,
+"created_at": "2016-12-09T21:05:50.180Z",
+"updated_at": "2016-12-09T21:05:50.180Z"
+},
+{
+"id": 759,
+"name": "Plum cake",
+"code": "37526bd1-965d-47f7-8a48-48db6ca3b15d",
+"time_to_bake_in_seconds": 3125,
+"created_at": "2016-12-09T21:05:50.184Z",
+"updated_at": "2016-12-09T21:05:50.184Z"
+},
+{
+"id": 760,
+"name": "Pound cake",
+"code": "84066f09-1e8f-4f5f-9c06-2b4973775625",
+"time_to_bake_in_seconds": 2827,
+"created_at": "2016-12-09T21:05:50.188Z",
+"updated_at": "2016-12-09T21:05:50.188Z"
+},
+{
+"id": 761,
+"name": "Princess cake",
+"code": "3d9d6640-0b51-40aa-afa2-869d2582af45",
+"time_to_bake_in_seconds": 2865,
+"created_at": "2016-12-09T21:05:50.192Z",
+"updated_at": "2016-12-09T21:05:50.192Z"
+},
+{
+"id": 762,
+"name": "Prinzregententorte",
+"code": "c6a46896-af96-4b12-a980-daa75082e8a4",
+"time_to_bake_in_seconds": 2706,
+"created_at": "2016-12-09T21:05:50.196Z",
+"updated_at": "2016-12-09T21:05:50.196Z"
+},
+{
+"id": 763,
+"name": "Pumpkin bread",
+"code": "a34f32d6-d6ed-4360-ac9f-8627259add31",
+"time_to_bake_in_seconds": 3104,
+"created_at": "2016-12-09T21:05:50.201Z",
+"updated_at": "2016-12-09T21:05:50.201Z"
+},
+{
+"id": 764,
+"name": "Punschkrapfen",
+"code": "5c9273b1-b85f-4026-b3c4-997a9caf207c",
+"time_to_bake_in_seconds": 3260,
+"created_at": "2016-12-09T21:05:50.205Z",
+"updated_at": "2016-12-09T21:05:50.205Z"
+},
+{
+"id": 765,
+"name": "Queen Elizabeth cake",
+"code": "7a0dc932-5429-4c06-bee9-fc850b22e72e",
+"time_to_bake_in_seconds": 2919,
+"created_at": "2016-12-09T21:05:50.209Z",
+"updated_at": "2016-12-09T21:05:50.209Z"
+},
+{
+"id": 766,
+"name": "Qumeshtore me pete",
+"code": "b94e4929-b9ef-473a-ab80-76e5c876fd7b",
+"time_to_bake_in_seconds": 2770,
+"created_at": "2016-12-09T21:05:50.214Z",
+"updated_at": "2016-12-09T21:05:50.214Z"
+},
+{
+"id": 767,
+"name": "Red bean cake",
+"code": "c85d400a-f334-435c-a05b-b95399ea9b3f",
+"time_to_bake_in_seconds": 3133,
+"created_at": "2016-12-09T21:05:50.219Z",
+"updated_at": "2016-12-09T21:05:50.219Z"
+},
+{
+"id": 768,
+"name": "Red velvet cake",
+"code": "87d8fe60-0cdf-4939-a2a6-6c67316510cd",
+"time_to_bake_in_seconds": 2823,
+"created_at": "2016-12-09T21:05:50.223Z",
+"updated_at": "2016-12-09T21:05:50.223Z"
+},
+{
+"id": 769,
+"name": "Rum cake",
+"code": "42c344d7-2db4-487c-bdbd-91dbae28785e",
+"time_to_bake_in_seconds": 2934,
+"created_at": "2016-12-09T21:05:50.227Z",
+"updated_at": "2016-12-09T21:05:50.227Z"
+},
+{
+"id": 770,
+"name": "Rum baba",
+"code": "0d4a6af1-95db-4cbe-8c90-e11a163800b7",
+"time_to_bake_in_seconds": 2734,
+"created_at": "2016-12-09T21:05:50.231Z",
+"updated_at": "2016-12-09T21:05:50.231Z"
+},
+{
+"id": 771,
+"name": "Ruske kape",
+"code": "0fa8f595-ced3-4157-8d70-199b335e95c9",
+"time_to_bake_in_seconds": 3090,
+"created_at": "2016-12-09T21:05:50.239Z",
+"updated_at": "2016-12-09T21:05:50.239Z"
+},
+{
+"id": 772,
+"name": "Sachertorte",
+"code": "4fdbfa7b-e26f-48bb-b676-1b6929978910",
+"time_to_bake_in_seconds": 3288,
+"created_at": "2016-12-09T21:05:50.244Z",
+"updated_at": "2016-12-09T21:05:50.244Z"
+},
+{
+"id": 773,
+"name": "Šakotis",
+"code": "f18bb13f-6a8e-41aa-ad78-4ba6b46b1cfe",
+"time_to_bake_in_seconds": 3132,
+"created_at": "2016-12-09T21:05:50.249Z",
+"updated_at": "2016-12-09T21:05:50.249Z"
+},
+{
+"id": 774,
+"name": "Salzburger Nockerl",
+"code": "385e9ced-3beb-44b4-bb5b-82a5b2444390",
+"time_to_bake_in_seconds": 2870,
+"created_at": "2016-12-09T21:05:50.254Z",
+"updated_at": "2016-12-09T21:05:50.254Z"
+},
+{
+"id": 775,
+"name": "Sekacz",
+"code": "854f85e8-6614-4d43-8fcc-58a036022c85",
+"time_to_bake_in_seconds": 3274,
+"created_at": "2016-12-09T21:05:50.258Z",
+"updated_at": "2016-12-09T21:05:50.258Z"
+},
+{
+"id": 776,
+"name": "Sernik",
+"code": "296670e0-8be0-4c39-9514-6ae50f538177",
+"time_to_bake_in_seconds": 3030,
+"created_at": "2016-12-09T21:05:50.262Z",
+"updated_at": "2016-12-09T21:05:50.262Z"
+},
+{
+"id": 777,
+"name": "Sesame seed cake",
+"code": "83580079-c5b0-4ff5-9a4a-7943ae980e7f",
+"time_to_bake_in_seconds": 3077,
+"created_at": "2016-12-09T21:05:50.266Z",
+"updated_at": "2016-12-09T21:05:50.266Z"
+},
+{
+"id": 778,
+"name": "Sfouf",
+"code": "2374bf5f-d031-47eb-90d6-3d0836d0aba1",
+"time_to_bake_in_seconds": 3289,
+"created_at": "2016-12-09T21:05:50.271Z",
+"updated_at": "2016-12-09T21:05:50.271Z"
+},
+{
+"id": 779,
+"name": "Simnel cake",
+"code": "c557e8b8-3aed-4a7b-b2ac-fddf12b9e988",
+"time_to_bake_in_seconds": 3189,
+"created_at": "2016-12-09T21:05:50.275Z",
+"updated_at": "2016-12-09T21:05:50.275Z"
+},
+{
+"id": 780,
+"name": "Smoked salmon cheesecake",
+"code": "49e30ea0-4503-4274-9c73-e99918b411cc",
+"time_to_bake_in_seconds": 3081,
+"created_at": "2016-12-09T21:05:50.279Z",
+"updated_at": "2016-12-09T21:05:50.279Z"
+},
+{
+"id": 781,
+"name": "Smörgåstårta",
+"code": "709e4239-6f2e-4fa1-8e37-5af10edf0562",
+"time_to_bake_in_seconds": 2989,
+"created_at": "2016-12-09T21:05:50.286Z",
+"updated_at": "2016-12-09T21:05:50.286Z"
+},
+{
+"id": 782,
+"name": "Snowball cake",
+"code": "d02fda80-37fc-4468-9e32-f65380a19e7e",
+"time_to_bake_in_seconds": 3177,
+"created_at": "2016-12-09T21:05:50.294Z",
+"updated_at": "2016-12-09T21:05:50.294Z"
+},
+{
+"id": 783,
+"name": "Snow skin mooncake",
+"code": "b1890ea9-3afe-498c-8530-cf78e4520657",
+"time_to_bake_in_seconds": 2973,
+"created_at": "2016-12-09T21:05:50.301Z",
+"updated_at": "2016-12-09T21:05:50.301Z"
+},
+{
+"id": 784,
+"name": "Soufflé",
+"code": "a32cb091-50ea-4db8-a542-4d5a529af384",
+"time_to_bake_in_seconds": 3090,
+"created_at": "2016-12-09T21:05:50.307Z",
+"updated_at": "2016-12-09T21:05:50.307Z"
+},
+{
+"id": 785,
+"name": "Spekkoek",
+"code": "22a43a94-5f3c-4ca6-9b08-aee22341a1d2",
+"time_to_bake_in_seconds": 2959,
+"created_at": "2016-12-09T21:05:50.313Z",
+"updated_at": "2016-12-09T21:05:50.313Z"
+},
+{
+"id": 786,
+"name": "Spice cake",
+"code": "dc290f08-4105-4576-bb95-3d7635574eee",
+"time_to_bake_in_seconds": 2924,
+"unit_price_in_cents": 2200,
+"for_sale": true,
+"created_at": "2016-12-09T21:05:50.319Z",
+"updated_at": "2016-12-09T21:05:50.319Z",
+"image_url": "Spice-Cake_8517.jpg"
+},
+{
+"id": 787,
+"name": "Spit cake",
+"code": "1e976c2b-4145-41bd-afae-afdf9d02ef85",
+"time_to_bake_in_seconds": 3147,
+"created_at": "2016-12-09T21:05:50.324Z",
+"updated_at": "2016-12-09T21:05:50.324Z"
+},
+{
+"id": 788,
+"name": "Sponge cake",
+"code": "1e3ed39c-965d-42c7-a4a4-cb7af03db91a",
+"time_to_bake_in_seconds": 3117,
+"created_at": "2016-12-09T21:05:50.330Z",
+"updated_at": "2016-12-09T21:05:50.330Z"
+},
+{
+"id": 789,
+"name": "St. Honoré cake",
+"code": "e3f4ca50-04a3-436d-a5fa-f38a6d9ea88a",
+"time_to_bake_in_seconds": 2873,
+"created_at": "2016-12-09T21:05:50.336Z",
+"updated_at": "2016-12-09T21:05:50.336Z"
+},
+{
+"id": 790,
+"name": "Stack cake",
+"code": "11216ca9-f5cf-488f-94a1-4c642e052382",
+"time_to_bake_in_seconds": 3159,
+"created_at": "2016-12-09T21:05:50.341Z",
+"updated_at": "2016-12-09T21:05:50.341Z"
+},
+{
+"id": 791,
+"name": "Strawberry cake",
+"code": "b4651afc-6dff-44a3-bfdf-c429c33591f8",
+"time_to_bake_in_seconds": 2845,
+"created_at": "2016-12-09T21:05:50.347Z",
+"updated_at": "2016-12-09T21:05:50.347Z"
+},
+{
+"id": 792,
+"name": "Streuselkuchen",
+"code": "c2adb30e-ef3c-4f4d-ba33-9b2f477ab5be",
+"time_to_bake_in_seconds": 2821,
+"created_at": "2016-12-09T21:05:50.360Z",
+"updated_at": "2016-12-09T21:05:50.360Z"
+},
+{
+"id": 793,
+"name": "Studenterbrød",
+"code": "84542fbc-20ff-4865-b428-db5470d17f70",
+"time_to_bake_in_seconds": 3191,
+"created_at": "2016-12-09T21:05:50.364Z",
+"updated_at": "2016-12-09T21:05:50.364Z"
+},
+{
+"id": 794,
+"name": "Sultana and cherry cake",
+"code": "93397204-eee7-4b08-8b0a-4ddfa8fe7ec8",
+"time_to_bake_in_seconds": 3187,
+"created_at": "2016-12-09T21:05:50.368Z",
+"updated_at": "2016-12-09T21:05:50.368Z"
+},
+{
+"id": 795,
+"name": "Suncake",
+"code": "0cb1b07e-becb-4c36-83e7-b6d6fc39d483",
+"time_to_bake_in_seconds": 3266,
+"created_at": "2016-12-09T21:05:50.372Z",
+"updated_at": "2016-12-09T21:05:50.372Z"
+},
+{
+"id": 796,
+"name": "Swiss roll",
+"code": "68ce96f8-89e3-4b7d-a2a1-06b64a32bee9",
+"time_to_bake_in_seconds": 3086,
+"created_at": "2016-12-09T21:05:50.375Z",
+"updated_at": "2016-12-09T21:05:50.375Z"
+},
+{
+"id": 797,
+"name": "Tarte Tatin",
+"code": "1b17e14f-c470-4a45-8eba-fd4913a28c7c",
+"time_to_bake_in_seconds": 2986,
+"created_at": "2016-12-09T21:05:50.379Z",
+"updated_at": "2016-12-09T21:05:50.379Z"
+},
+{
+"id": 798,
+"name": "Tea loaf",
+"code": "1566f5d8-b7e9-4abf-b876-0f391a0f77ee",
+"time_to_bake_in_seconds": 2818,
+"created_at": "2016-12-09T21:05:50.384Z",
+"updated_at": "2016-12-09T21:05:50.384Z"
+},
+{
+"id": 799,
+"name": "Teacake",
+"code": "41560b38-3360-423c-9743-f15c1474c639",
+"time_to_bake_in_seconds": 2973,
+"created_at": "2016-12-09T21:05:50.388Z",
+"updated_at": "2016-12-09T21:05:50.388Z"
+},
+{
+"id": 800,
+"name": "Tiramisu",
+"code": "38092958-9ef7-45d6-a672-b02c0d2ed298",
+"time_to_bake_in_seconds": 3203,
+"created_at": "2016-12-09T21:05:50.393Z",
+"updated_at": "2016-12-09T21:05:50.393Z"
+},
+{
+"id": 801,
+"name": "Tompouce",
+"code": "a4a42fff-8563-46b4-86f5-f3b917811249",
+"time_to_bake_in_seconds": 3296,
+"created_at": "2016-12-09T21:05:50.397Z",
+"updated_at": "2016-12-09T21:05:50.397Z"
+},
+{
+"id": 802,
+"name": "Torta Tre Monti",
+"code": "00363c5c-a928-43f2-833d-2d5df68c39a0",
+"time_to_bake_in_seconds": 3001,
+"created_at": "2016-12-09T21:05:50.402Z",
+"updated_at": "2016-12-09T21:05:50.402Z"
+},
+{
+"id": 803,
+"name": "Tres leches cake",
+"code": "ecaaa7f2-01c7-4f0f-a01e-e6e9754e6b6d",
+"time_to_bake_in_seconds": 2864,
+"created_at": "2016-12-09T21:05:50.406Z",
+"updated_at": "2016-12-09T21:05:50.406Z"
+},
+{
+"id": 804,
+"name": "Tunis cake",
+"code": "20891393-3adb-4d59-ab04-2828f72fb00e",
+"time_to_bake_in_seconds": 3234,
+"created_at": "2016-12-09T21:05:50.410Z",
+"updated_at": "2016-12-09T21:05:50.410Z"
+},
+{
+"id": 805,
+"name": "Træstammer",
+"code": "d58c567f-092d-4441-9fbc-71ba1c463f38",
+"time_to_bake_in_seconds": 3197,
+"created_at": "2016-12-09T21:05:50.414Z",
+"updated_at": "2016-12-09T21:05:50.414Z"
+},
+{
+"id": 806,
+"name": "Upside-down cake",
+"code": "ac8efcf0-421c-43c8-9170-e09c66535325",
+"time_to_bake_in_seconds": 2992,
+"created_at": "2016-12-09T21:05:50.419Z",
+"updated_at": "2016-12-09T21:05:50.419Z"
+},
+{
+"id": 807,
+"name": "Victoria sponge cake",
+"code": "8ad2013a-ece5-4aac-886f-75261e9b65c2",
+"time_to_bake_in_seconds": 3117,
+"created_at": "2016-12-09T21:05:50.423Z",
+"updated_at": "2016-12-09T21:05:50.423Z"
+},
+{
+"id": 808,
+"name": "Vínarterta",
+"code": "18b18d77-1b08-4f35-9e23-6ce753c011cf",
+"time_to_bake_in_seconds": 2764,
+"created_at": "2016-12-09T21:05:50.427Z",
+"updated_at": "2016-12-09T21:05:50.427Z"
+},
+{
+"id": 809,
+"name": "Wedding cake",
+"code": "0b0384d5-dada-4421-ac42-13b1f9a5b45b",
+"time_to_bake_in_seconds": 3194,
+"created_at": "2016-12-09T21:05:50.432Z",
+"updated_at": "2016-12-09T21:05:50.432Z"
+},
+{
+"id": 810,
+"name": "Welsh cake",
+"code": "dede3403-3ad8-47d5-a98b-bc54d3ef5c03",
+"time_to_bake_in_seconds": 2706,
+"created_at": "2016-12-09T21:05:50.437Z",
+"updated_at": "2016-12-09T21:05:50.437Z"
+},
+{
+"id": 811,
+"name": "Whoopie pies",
+"code": "0ffaa1a7-1d1d-4008-82a5-ab4d9a9841e5",
+"time_to_bake_in_seconds": 3232,
+"unit_price_in_cents": 300,
+"for_sale": true,
+"created_at": "2016-12-09T21:05:50.443Z",
+"updated_at": "2016-12-09T21:05:50.443Z",
+"image_url": "WhoopiePir.jpg"
+},
+{
+"id": 812,
 "name": "Wine cake",
-"code": "3a719c54-0d7b-4128-bd0f-280930e69dd9",
-"time_to_bake_in_seconds": 2776,
-"created_at": "2016-12-08T23:14:19.309Z",
-"updated_at": "2016-12-08T23:14:19.309Z"
+"code": "abee82eb-adc1-447d-99c3-e8bf7d60ab2d",
+"time_to_bake_in_seconds": 2918,
+"created_at": "2016-12-09T21:05:50.449Z",
+"updated_at": "2016-12-09T21:05:50.449Z"
 }
 ]
 
@@ -1670,6 +1675,7 @@ products.each do |product|
     name: product[:name],
     time_to_bake_in_seconds: product[:time_to_bake_in_seconds],
     unit_price_in_cents: product[:unit_price_in_cents],
-    for_sale: product[:for_sale]
+    for_sale: product[:for_sale],
+    image_url: product[:image_url]
   )
 end

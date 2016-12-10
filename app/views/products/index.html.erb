@@ -1,11 +1,11 @@
 <!-- Adds "Admin View" to the side of title if Admin -->
-<h4>All Products
+<h3>Our Products
 <small>
   <% if current_user && current_user.admin? %>
   Admin View
-<% end %>
+  <% end %>
 </small>
-</h4>
+</h3>
 
 <div class="container">
 
@@ -13,28 +13,26 @@
     <div class="col-md-6">
       <% if current_user && current_user.admin? %>
         <% @products.each do |product| %>
-          <p>Name: <%= product.name %></p>
-          Price: <%= number_to_currency product.unit_price_in_cents.to_i/100 %>
+          <p><%= product.name %> -- <%= number_to_currency product.unit_price_in_cents.to_i/100 %></p>
+          <%= image_tag(product.image_url, size: '150x100') %>
           <% if product.for_sale %>
-            <p>
-              Viewable
-            </p>
-            <% else %>
-            <p>
-              Not Viewable
-            </p>
+            <p>Viewable</p>
+          <% else %>
+            <p>Not Viewable</p>
           <% end %>
           <%= link_to "Admin: Edit Product", edit_product_path(product.id), class: "btn btn-info" %>
-      <% end %>
+        <% end %>
+      <hr>
 
-    <% else %>
-      <% @products.each do |product| %>
-        <p>Name: <%= product.name %></p>
-        Price: <%= number_to_currency product.unit_price_in_cents/100 %>
-        <%= link_to "Add to cart!", line_items_path(line_item: { product_id: product.id, quantity: 1, total_sale_price_in_cents: product.unit_price_in_cents}), method: :post, class: "btn" %>
-    <% end %>
-      </div>
-    <% end %>
+      <% else %>
+        <% @products.each do |product| %>
+          <p><%= product.name %> -- <%= number_to_currency product.unit_price_in_cents/100 %></p>
+          <%= image_tag(product.image_url, size: '150x100') %>
+          <%= link_to "Add to cart!", line_items_path(line_item: { product_id: product.id, quantity: 1, total_sale_price_in_cents: product.unit_price_in_cents}), method: :post, class: "btn" %>
+          <hr>
+        <% end %>
+    </div>
+      <% end %>
 
     <div class="col-md-6">
       <% if !current_cart.line_items.empty? %>
@@ -42,5 +40,4 @@
       <% end %>
     </div>
   </div>
-
 </div>
