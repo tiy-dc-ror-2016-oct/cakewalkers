@@ -39,12 +39,6 @@ class OrdersController < ApplicationController
     @order = Order.find(params[:id])
   end
 
-  def destroy
-    Order.find(params[:id]).destroy
-    redirect_to root_path
-  end
-
-
   def status
     @order = Order.find(params[:id])
     render json: { status: BakeJobHandler.new(@order).order_status }
