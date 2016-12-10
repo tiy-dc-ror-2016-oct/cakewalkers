@@ -1,8 +1,17 @@
 class OrdersController < ApplicationController
+  load_and_authorize_resource
   BASE_URI = ENV["CAKEWALKER_API"]||"http://localhost:1234/bake_jobs"
 
   def new
     @order = Order.new
+  end
+
+  def index
+    if current_user.cakewalker?
+      @orders = Order.where(status: ["Ready for delivery", "Out for delivery"])
+    else
+      @orders = Order.all
+    end
   end
 
   def create
@@ -15,7 +24,7 @@ class OrdersController < ApplicationController
         response = bake_job.post_bake_job(line_item)
         line_item.update(bake_job_id: response.parsed_response["id"].to_i)
       end
-      @order.update(status: "waiting")
+      @order.update(status: response.parsed_response["state"])
       redirect_to client_order_path(@order.id)
     else
       render :new
@@ -29,7 +38,11 @@ class OrdersController < ApplicationController
   def update
     @order = Order.find(params[:id])
     if @order.update(order_params)
-      redirect_to client_order_path(params[:id])
+      if current_user.cakewalker?
+        redirect_to orders_path
+      else
+        redirect_to client_order_path(params[:id])
+      end
     else
       render :edit
     end
@@ -52,7 +65,7 @@ class OrdersController < ApplicationController
 
   private
   def order_params
-    params.require(:order).permit(:shipping_city, :shipping_street, :shipping_state, :shipping_zip, :billing_street, :billing_state, :billing_zip, :billing_city, :full_name, :phone, :email, :credit_card_number, :cc_expiration, :cc_code)
+    params.require(:order).permit(:shipping_city, :shipping_street, :shipping_state, :shipping_zip, :billing_street, :billing_state, :billing_zip, :billing_city, :full_name, :phone, :email, :credit_card_number, :cc_expiration, :cc_code, :status, :cakewalker_id)
   end
 
 

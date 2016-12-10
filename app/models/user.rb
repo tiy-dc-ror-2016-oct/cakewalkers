@@ -11,10 +11,17 @@ class User < ApplicationRecord
   def admin?
     roles_array = []
     self.roles.map { |x| roles_array << x.name }
-
     if roles_array.include? "admin"
       return true
     end
-
   end
+
+  def cakewalker?
+    roles_array = []
+    self.roles.map { |x| roles_array << x.name }
+    if roles_array.include? "cakewalker"
+      return true
+    end
+  end
+
 end

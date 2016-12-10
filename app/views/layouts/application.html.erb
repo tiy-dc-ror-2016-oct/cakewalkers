@@ -30,6 +30,11 @@
             <li>
               <%= link_to "Our Treats", products_path %>
             </li>
+            <% if current_user.admin? || current_user.cakewalker? %>
+              <li>
+                <%= link_to "Orders", orders_path %>
+              </li>
+            <% end %>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <% if current_user %>

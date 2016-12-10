@@ -1,0 +1,33 @@
+<h3>Orders
+  <small>
+    <% if current_user && current_user.admin? %>
+      <p>Admin View</p>
+      Total order value: <%= @orders.total %>
+    <% end %>
+  </small>
+</h3>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <% @orders.each do |order| %>
+        <p><%= order.full_name %></p>
+        <p><%= order.shipping_street %></p>
+        <p><%= order.shipping_city %></p>
+        <p><%= order.shipping_state %></p>
+        <p><%= order.shipping_zip %></p>
+        <% if current_user.cakewalker? %>
+          <% if order.status == "Ready for delivery" %>
+            <%= link_to "Claim", order_path(id: order.id, order: { status: "Out for delivery", cakewalker_id: current_user.id }), method: :patch, class: "btn btn-default" %>
+          <% else %>
+            <p>This order is being delivered!</p>
+            <% if order.cakewalker_id == current_user.id %>
+              <%= link_to "Delivered", order_path(id: order.id, order: { status: "Delivered" }), method: :patch, class: "btn btn-default" %>
+            <% end %>
+          <% end %>
+        <% end %>
+        <hr>
+      <% end %>
+    </div>
+  </div>
+</div>
