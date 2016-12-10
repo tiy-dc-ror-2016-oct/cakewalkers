@@ -1,4 +1,6 @@
 class LineItemsController < ApplicationController
+  BASE_URI = ENV["CAKEWALKER_API"]||"http://localhost:1234/bake_jobs"
+
   def create
     @products = Product.all
     @line_item = LineItem.new(line_item_params)
@@ -7,6 +9,11 @@ class LineItemsController < ApplicationController
       current_cart.line_items << @line_item
     end
 
+    redirect_to products_path
+  end
+
+  def destroy
+    LineItem.find(params[:id]).destroy
     redirect_to products_path
   end
 

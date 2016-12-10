@@ -1,11 +1,11 @@
 class Order < ApplicationRecord
   has_many :line_items
-  belongs_to :client, class_name: :user
-  belongs_to :cakewalker, class_name: :user
+  belongs_to :client, class_name: "User"
+  belongs_to :cakewalker, class_name: "User"
   belongs_to :cart
-  belongs_to :delivery_address, class_name: :address
+  belongs_to :delivery_address, class_name: "Address"
   accepts_nested_attributes_for :delivery_address
-  belongs_to :billing_address, class_name: :address
+  belongs_to :billing_address, class_name: "Address"
   accepts_nested_attributes_for :billing_address
 
   validates :full_name, presence: true
@@ -21,11 +21,14 @@ class Order < ApplicationRecord
     max_line_items.map { |item| item.product.time_to_bake_in_seconds }.reduce(:+)
   end
 
-  # def delivery_address
-  #   if client
-  #     # Lookup Addresses for client
-  #   else
-  #     # new address
-  #   end
-  # end
+  def grouped_line_items
+    line_items.group_by do |line_item|
+      line_item.product
+    end
+  end
+
+  def total
+    line_items.sum(:total_sale_price_in_cents)/100
+  end
+
 end

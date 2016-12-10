@@ -5,7 +5,7 @@ class OrdersControllerTest < ActionDispatch::IntegrationTest
   def setup
     stub_request(
       :post,
-      "https://cakewalkers-api.herokuapp.com/bake_jobs/3e46954c-627a-4afc-97cc-d9ae16f62d1e"
+      "http://localhost:1234/bake_jobs/3e46954c-627a-4afc-97cc-d9ae16f62d1e"
     ).to_return(
       :status => 200,
       :body => File.read("test/helpers/response.txt"),
@@ -40,11 +40,10 @@ class OrdersControllerTest < ActionDispatch::IntegrationTest
 
   test "can post new bake job" do
     get products_path
-    current_order = CurrentOrder.find(session[:current_order_id])
-
-    current_order.line_items.create!(product: Product.first, quantity: 2)
+    current_cart = Cart.find(session[:current_cart_id])
+    current_cart.line_items.create!(product: Product.first, quantity: 2)
     post orders_path, params: { order: { full_name: "Allie Rowan", email: "arowan@gmail.com", phone: "3015551234", billing_street: "1234 kenyon st", billing_city: "Washington", billing_state: "DC", billing_zip: "12345", credit_card_number: "13004-0123-1423", cc_expiration: Date.new, cc_code: "234" } }
-    puts last_response
     assert_equal 1, Order.last.line_items.size
+    assert_equal 1, Order.last.line_items.last.bake_job_id
   end
 end

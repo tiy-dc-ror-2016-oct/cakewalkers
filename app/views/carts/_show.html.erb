@@ -1,10 +1,44 @@
-<div id="cart">
-  <h5>Your current cart:</h5>
+<div>
+  <div id="sidebar">
+    <h4>Your current cart:</h4>
 
-  <% current_cart.grouped_line_items.each do |product, line_items| %>
-    <%= product.name %>
-  <% end %>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>
+            Product
+          </th>
+          <th>
+            Quantity
+          </th>
+          <th>
+            Price
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <% current_cart.grouped_line_items.each do |product, line_items| %>
+          <tr>
+            <td>
+              <%= product.name %>
+            </td>
+            <td>
+              <%= line_items.size %>
+            </td>
+            <td>
+              <%= number_to_currency line_items.sum {|line_item| line_item.total_sale_price_in_cents.to_i / 100 } %>
+            </td>
+            <td id="remove">
+              <%= link_to "Remove!", line_item_path(line_items.first.id), method: :delete %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
 
-  <%= current_cart.line_items.count %>,
-  <%= number_to_currency current_cart.total %>
+    <p>Cart total: <%= number_to_currency current_cart.total %></p>
+    <p><%= link_to "Clear Cart", cart_path, method: :delete %></p>
+    <p><%= link_to "Checkout!", new_order_path, class: "btn btn-default" %></p>
+
+  </div>
 </div>
