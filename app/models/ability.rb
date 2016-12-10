@@ -17,7 +17,7 @@ class Ability
     else
       can :create, User
       can :update, User, id: user.id
-      can :destroy, User, id: user_id
+      can :destroy, User, id: user.id
       can :create, Order
       can :update, Order, client_id: user.id
       can :create, LineItem
