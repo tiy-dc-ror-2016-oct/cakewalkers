@@ -2,20 +2,24 @@
   <small>
     <% if current_user && current_user.admin? %>
       <p>Admin View</p>
-      Total order value: <%= @orders.total %>
+      Total order value: <%= number_to_currency @orders.sum {|order| order.total } %>
     <% end %>
   </small>
 </h3>
 
 <div class="container">
   <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-3">
       <% @orders.each do |order| %>
-        <p><%= order.full_name %></p>
-        <p><%= order.shipping_street %></p>
-        <p><%= order.shipping_city %></p>
-        <p><%= order.shipping_state %></p>
-        <p><%= order.shipping_zip %></p>
+        <p>Order Placed: <%= time_ago_in_words(order.created_at) %> ago</p>
+        <p>Name: <%= order.full_name %></p>
+        <p>Deliver to:</p>
+        <div id="address">
+          <p><%= order.shipping_street %></p>
+          <%= order.shipping_city %>,
+          <%= order.shipping_state %>,
+          <%= order.shipping_zip %>
+        </div>
         <% if current_user.cakewalker? %>
           <% if order.status == "Ready for delivery" %>
             <%= link_to "Claim", order_path(id: order.id, order: { status: "Out for delivery", cakewalker_id: current_user.id }), method: :patch, class: "btn btn-default" %>
