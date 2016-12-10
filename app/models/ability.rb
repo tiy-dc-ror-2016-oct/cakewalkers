@@ -23,5 +23,6 @@ class Ability
     can :create, Order
     can :manage, Cart
     can :new_featured, Order
+    can :status, Order
   end
 end
