@@ -24,7 +24,6 @@ class OrdersController < ApplicationController
         response = bake_job.post_bake_job(line_item)
         line_item.update(bake_job_id: response.parsed_response["id"].to_i)
       end
-      @order.update(status: response.parsed_response["state"])
       redirect_to client_order_path(@order.id)
     else
       render :new
