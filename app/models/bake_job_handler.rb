@@ -13,6 +13,8 @@ class BakeJobHandler
       status_names = { 1=> "Ready to bake", 2=> "Baking", 3=> "Ready for delivery"}
       response_array = order_statuses
       order_status_codes = response_array.map { |response| status_codes[response["state"]] }
+      # status_names[order_status_codes.min]
+      @order.update(status: status_names[order_status_codes.min])
       @order.status = status_names[order_status_codes.min]
       return @order.status
     end

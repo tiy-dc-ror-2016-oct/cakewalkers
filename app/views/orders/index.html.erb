@@ -10,6 +10,11 @@
 <div class="container">
   <div class="row">
     <div class="col-md-3">
+      <% if @orders.empty? %>
+        <p>
+          No active orders right now.
+        </p>
+      <% end %>
       <% @orders.each do |order| %>
         <p>Order Placed: <%= time_ago_in_words(order.created_at) %> ago</p>
         <p>Name: <%= order.full_name %></p>
