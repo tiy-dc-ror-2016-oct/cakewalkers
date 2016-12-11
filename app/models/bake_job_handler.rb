@@ -13,7 +13,6 @@ class BakeJobHandler
       status_names = { 1=> "Ready to bake", 2=> "Baking", 3=> "Ready for delivery"}
       response_array = order_statuses
       order_status_codes = response_array.map { |response| status_codes[response["state"]] }
-      # status_names[order_status_codes.min]
       @order.status = status_names[order_status_codes.min]
       return @order.status
     end
@@ -48,7 +47,7 @@ class BakeJobHandler
   end
 
   def get_active_jobs_from_factory
-    get_all_bake_jobs.select { |job| job["state"] == "baking" || job["state"] == "waiting" }
+    get_all_bake_jobs.select { |job| job["created_at"] < order.created_at && (job["state"] == "baking" || job["state"] == "waiting") }
   end
 
   def total_active_job_time
