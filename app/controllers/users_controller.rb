@@ -5,6 +5,7 @@ class UsersController < ApplicationController
   end
 
   def create
+    admin_created = true if current_user
     @user = User.new(user_params)
     if !current_user
       @user.roles << Role.find_by(name: "client")
@@ -12,8 +13,10 @@ class UsersController < ApplicationController
       @user.roles << Role.find(params[:user][:roles])
     end
     session["message"] = "you signed up!"
-    if @user.save
+    if @user.save && !admin_created
       session[:current_user_id] = @user.id
+      redirect_to products_path
+    elsif admin_created
       redirect_to products_path
     else
       render :new
