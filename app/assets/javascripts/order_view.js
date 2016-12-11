@@ -3,6 +3,8 @@
 
   function loadAndRenderOrderStatus () {
     window.cakewalkers.loadOrderStatus().done(function (data){
+      $(".client-order").html("");
+      $(".client-order-time").html("");
       $(".client-order").append(data.status);
       $(".client-order-time").append(
         "around " +
@@ -11,4 +13,7 @@
     });
   }
   loadAndRenderOrderStatus();
+
+  // Every 5 seconds load new appointments
+  window.setInterval(loadAndRenderOrderStatus, 5 * 1000);
 }());
