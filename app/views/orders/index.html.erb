@@ -26,12 +26,13 @@
           <%= order.shipping_zip %>
         </div>
         <% if current_user.cakewalker? %>
+          <p>This order needs to be claimed</p>
           <% if order.status == "Ready for delivery" %>
-            <%= link_to "Claim", order_path(id: order.id, order: { status: "Out for delivery", cakewalker_id: current_user.id }), method: :patch, class: "btn btn-default" %>
+            <%= link_to "Claim", order_path(id: order.id, order: { status: "Out for delivery", cakewalker_id: current_user.id }), method: :patch, class: "btn btn-primary" %>
           <% else %>
             <p>This order is being delivered!</p>
             <% if order.cakewalker_id == current_user.id %>
-              <%= link_to "Delivered", order_path(id: order.id, order: { status: "Delivered" }), method: :patch, class: "btn btn-default" %>
+              <%= link_to "Delivered", order_path(id: order.id, order: { status: "Delivered" }), method: :patch, class: "btn btn-primary" %>
             <% end %>
           <% end %>
         <% end %>
