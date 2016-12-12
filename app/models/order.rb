@@ -24,7 +24,7 @@ class Order < ApplicationRecord
   end
 
   def total
-    line_items.sum(:total_sale_price_in_cents)/100
+    line_items.sum(:total_sale_price_in_cents)
   end
 
 end
