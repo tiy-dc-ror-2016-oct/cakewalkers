@@ -9,7 +9,7 @@
       You have successfully placed your order for:
       <% @order.grouped_line_items.each do |product, line_items| %>
         <li>
-          <%= line_items.size %> <%= product.name %>
+          <%= line_items.size %> <%= product.name %>: <%= number_to_currency line_items.sum {|line_item| line_item.total_sale_price_in_cents.to_i / 100 }%>
         </li>
       <% end %>
       <br>
