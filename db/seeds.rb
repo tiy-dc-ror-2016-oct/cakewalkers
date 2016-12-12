@@ -41,7 +41,7 @@ products.each do |product|
     "unit_price_in_cents": 800,
     "for_sale": true,
     "image_url": "PullmanLoaf.jpg",
-    "featured": "true"
+    "featured": true
     })
   elsif product["name"] == "Avocado cake"
     product = product.merge!({
