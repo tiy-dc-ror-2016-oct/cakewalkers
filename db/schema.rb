@@ -62,9 +62,6 @@ ActiveRecord::Schema.define(version: 20161212185649) do
     t.string   "phone"
     t.string   "email"
     t.integer  "cart_id"
-    t.string   "credit_card_number"
-    t.date     "cc_expiration"
-    t.string   "cc_code"
     t.datetime "expected_delivery_time"
   end
 
