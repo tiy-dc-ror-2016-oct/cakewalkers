@@ -86,10 +86,10 @@ products.each do |product|
     api_id: product["code"],
     name: product["name"],
     time_to_bake_in_seconds: product["time_to_bake_in_seconds"],
-    featured: product[:featured],
-    unit_price_in_cents: product[:unit_price_in_cents],
-    for_sale: product[:for_sale],
-    image_url: product[:image_url]
+    featured: product["featured"],
+    unit_price_in_cents: product["unit_price_in_cents"],
+    for_sale: product["for_sale"],
+    image_url: product["image_url"]
   )
 end
 
