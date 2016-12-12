@@ -13,7 +13,7 @@ class LineItemsController < ApplicationController
 
   def destroy
     LineItem.find(params[:id]).destroy
-    redirect_to products_path
+    redirect_to cart_path
   end
 
   private
