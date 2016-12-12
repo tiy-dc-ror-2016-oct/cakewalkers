@@ -36,6 +36,7 @@ class OrdersController < ApplicationController
       @order.line_items.each do |line_item|
         response = bake_job.post_bake_job(line_item)
         line_item.update(bake_job_id: response.parsed_response["id"].to_i)
+        OrderMailer.confirm_order(@order).deliver_now
       end
       redirect_to client_order_path(@order.id)
     else
@@ -84,7 +85,7 @@ class OrdersController < ApplicationController
 
   private
   def order_params
-    params.require(:order).permit(:shipping_city, :shipping_street, :shipping_state, :shipping_zip, :billing_street, :billing_state, :billing_zip, :billing_city, :full_name, :phone, :email, :credit_card_number, :cc_expiration, :cc_code, :status, :cakewalker_id)
+    params.require(:order).permit(:shipping_city, :shipping_street, :shipping_state, :shipping_zip, :billing_street, :billing_state, :billing_zip, :billing_city, :full_name, :phone, :email, :status, :cakewalker_id)
   end
 
 
