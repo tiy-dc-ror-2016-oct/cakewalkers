@@ -5,7 +5,7 @@
 
   <div class="row vertical-center-row">
     <div class="edit_left_side">
-      <div class="col-md-6">
+      <div class="col-md-12 products_index">
 
         <h1>Our Products
         <small>
@@ -37,13 +37,6 @@
           <% end %>
       </div>
         <% end %>
-    </div>
-    <div class="add_padding_to_top">
-      <div class="col-md-6">
-        <% if !current_cart.line_items.empty? %>
-          <%= render partial: "/carts/show" %>
-        <% end %>
-      </div>
     </div>
   </div>
 </div>
