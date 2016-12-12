@@ -10,9 +10,6 @@ class Order < ApplicationRecord
   validates :full_name, presence: true
   validates :email, presence: true
   validates :phone, presence: true
-  validates :credit_card_number, presence: true
-  validates :cc_expiration, presence: true
-  validates :cc_code, presence: true
 
   def total_estimated_time_in_seconds
     bake_rounds = (line_items.size / 3.0).ceil
