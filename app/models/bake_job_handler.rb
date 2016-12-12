@@ -57,7 +57,11 @@ class BakeJobHandler
   end
 
   def active_job_time_to_completion
-    total_active_job_time / 3
+    if order.expected_delivery_time
+      order.expected_delivery_time
+    else
+      order.update(expected_delivery_time: Time.now + (total_active_job_time / 3))
+    end
   end
 
 end
