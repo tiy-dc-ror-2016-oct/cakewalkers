@@ -1,5 +1,5 @@
 class BakeJobHandler
-  BASE_URI = ENV["CAKEWALKER_API"]||"http://localhost:1234/bake_jobs"
+  BASE_URI = ENV["CAKEWALKER_API"]||"http://localhost:1234/"
   attr_accessor :order
   def initialize(order)
     @order = order
@@ -29,11 +29,11 @@ class BakeJobHandler
   end
 
   def line_item_status(line_item)
-    HTTParty.get("#{BASE_URI}/#{line_item.bake_job_id}")
+    HTTParty.get("#{BASE_URI}bake_jobs/#{line_item.bake_job_id}")
   end
 
   def post_bake_job(line_item)
-    HTTParty.post("#{BASE_URI}/#{line_item.product.api_id}",
+    HTTParty.post("#{BASE_URI}bake_jobs/#{line_item.product.api_id}",
       body:
       {
         bake_job:
@@ -45,7 +45,7 @@ class BakeJobHandler
   end
 
   def get_all_bake_jobs
-    HTTParty.get("#{BASE_URI}")
+    HTTParty.get("#{BASE_URI}bake_jobs")
   end
 
   def get_active_jobs_from_factory

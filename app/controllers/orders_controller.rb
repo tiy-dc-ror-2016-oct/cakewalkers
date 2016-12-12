@@ -1,6 +1,6 @@
 class OrdersController < ApplicationController
   load_and_authorize_resource
-  BASE_URI = ENV["CAKEWALKER_API"]||"http://localhost:1234/bake_jobs"
+  BASE_URI = ENV["CAKEWALKER_API"]||"http://localhost:1234/"
 
   def new
     @order = Order.new
