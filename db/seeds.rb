@@ -76,4 +76,4 @@ products.each do |product|
   )
 end
 
-Product.where("name = 'Muffin'").update(unit_price_in_cents: nil, for_sale: nil, image_url: nil )
+Product.where("name = 'Muffin'").last.update(unit_price_in_cents: nil, for_sale: nil, image_url: nil )
