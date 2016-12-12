@@ -1,4 +1,4 @@
-<h1>Award Winning Bakery</h1>
+<h1>Cakewalkers <small>An Award Winning Bakery</small></h1>
 <div class="welcome">
 
   <p>
@@ -11,10 +11,13 @@
     Today's featured sweet is...
   </h3>
   <p>
-    <%= image_tag(Product.featured.image_url, size: '150x100') %>
-    <%= Product.featured.name %>
+    <h4><%= Product.featured.name %></h4>
+    <p>
+      Sound's delicious, right?
+    </p>
 
-    <br />
+    <%= image_tag(Product.featured.image_url, size: '100x100', class:"featured") if Product.featured.image_url%>
     <%= link_to "Buy one now!", new_featured_path %>
+
   </p>
 </div>

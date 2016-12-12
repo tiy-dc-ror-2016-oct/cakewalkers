@@ -7,8 +7,7 @@
       $(".client-order-time").html("");
       $(".client-order").append(data.status);
       $(".client-order-time").append(
-        "around " +
-        Math.round(data.time_to_go/60) + " minutes"
+        (moment(data.time_to_go).format('MMMM Do YYYY, h:mm:ss a'))
       );
     });
   }
