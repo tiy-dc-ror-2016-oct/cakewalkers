@@ -42,8 +42,8 @@ class OrdersController < ApplicationController
       @order.line_items.each do |line_item|
         response = bake_job.post_bake_job(line_item)
         line_item.update(bake_job_id: response.parsed_response["id"].to_i)
-        OrderMailer.confirm_order(@order).deliver_now
       end
+      OrderMailer.confirm_order(@order).deliver_now
       redirect_to client_order_path(@order.id)
     else
       render :new
@@ -93,13 +93,9 @@ class OrdersController < ApplicationController
 
   def order_params
     params.require(:order).
-           permit(:full_name, :email,
-                  delivery_address_attributes: [:id, :contact_phone, :street, :city, :state, :zip_code],
-                  billing_address_attributes: [:id, :contact_phone, :street, :city, :state, :zip_code])
-
-  end
-
-  def verify_credit_card(order)
+     permit(:full_name, :email, :status, :cakewalker_id,
+            delivery_address_attributes: [:id, :contact_phone, :street, :city, :state, :zip_code],
+            billing_address_attributes: [:id, :contact_phone, :street, :city, :state, :zip_code])
   end
 
   def setup_order_defaults

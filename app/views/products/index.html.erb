@@ -17,22 +17,24 @@
 
         <% if current_user && current_user.admin? %>
           <% @products.each do |product| %>
-            <p> <span> <%= product.name %> </span> -- <%= number_to_currency product.unit_price_in_cents.to_i/100 %></p>
+            <p> <span> <%= product.name %> </span> -- <%= number_to_currency product.unit_price_in_cents.to_f/100.0 %></p>
             <%= image_tag(product.image_url, size: '300x200') if product.image_url %>
             <% if product.for_sale %>
-              <p>Viewable</p>
+              <p>For Sale</p>
             <% else %>
-              <p>Not Viewable</p>
+              <p>Not For Sale</p>
             <% end %>
-            <%= link_to "Admin: Edit Product", edit_product_path(product.id), class: "btn btn-info" %>
+            <p id="admin-btn"><%= link_to "Admin: Edit Product", edit_product_path(product.id), class: "btn btn-info" %></p>
             <hr>
           <% end %>
 
         <% else %>
           <% @products.each do |product| %>
             <p> <span> <%= product.name %> </span> </p>
-            <%= image_tag(product.image_url, size: '300x200') %>
-            <p><%= link_to "Add to cart!", line_items_path(line_item: { product_id: product.id, quantity: 1, total_sale_price_in_cents: product.unit_price_in_cents}), method: :post, class: "btn btn-primary" %> || <%= number_to_currency product.unit_price_in_cents.to_i/100 %></p>
+            <% if product.image_url %>
+              <%= image_tag(product.image_url, size: '300x200') %>
+            <% end %>
+            <p><%= link_to "Add to cart!", line_items_path(line_item: { product_id: product.id, quantity: 1, total_sale_price_in_cents: product.unit_price_in_cents}), method: :post, class: "btn btn-primary" %> || <%= number_to_currency product.unit_price_in_cents.to_f/100.0 %></p>
             <hr>
           <% end %>
       </div>
