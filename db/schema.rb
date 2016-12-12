@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161210190736) do
+ActiveRecord::Schema.define(version: 20161212195505) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,9 +22,10 @@ ActiveRecord::Schema.define(version: 20161210190736) do
     t.string   "apartment"
     t.string   "city"
     t.string   "state"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
     t.string   "zip_code"
+    t.integer  "credit_card_id"
   end
 
   create_table "carts", force: :cascade do |t|
@@ -34,15 +35,14 @@ ActiveRecord::Schema.define(version: 20161210190736) do
 
   create_table "credit_cards", force: :cascade do |t|
     t.integer  "user_id"
-    t.integer  "billing_address_id"
     t.string   "name_on_card"
     t.string   "kind"
     t.string   "number"
     t.string   "expiration_month"
     t.string   "expiration_year"
     t.string   "security_code"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
   end
 
   create_table "line_items", force: :cascade do |t|
@@ -61,10 +61,14 @@ ActiveRecord::Schema.define(version: 20161210190736) do
     t.integer  "client_id"
     t.integer  "cakewalker_id"
     t.string   "status"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
     t.integer  "cart_id"
     t.integer  "credit_card_id"
+    t.integer  "delivery_address_id"
+    t.integer  "billing_address_id"
+    t.string   "full_name"
+    t.string   "email"
   end
 
   create_table "products", force: :cascade do |t|

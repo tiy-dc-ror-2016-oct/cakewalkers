@@ -6,6 +6,10 @@ class Order < ApplicationRecord
   belongs_to :cart
   belongs_to :credit_card
   accepts_nested_attributes_for :credit_card
+  belongs_to :delivery_address, class_name: "Address"
+  accepts_nested_attributes_for :delivery_address
+  belongs_to :billing_address, class_name: "Address"
+  accepts_nested_attributes_for :billing_address
 
   def total_estimated_time_in_seconds
     bake_rounds = (line_items.size / 3.0).ceil
