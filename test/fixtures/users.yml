@@ -6,7 +6,7 @@ ben:
   password_digest: MyString
 
 alex:
-  email: alex@gmail.com
+  email: amax3002@gmail.com
   full_name: Alex Guy
   password_digest: MyString
 

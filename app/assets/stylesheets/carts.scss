@@ -4,15 +4,28 @@
 #sidebar {
  padding: 10px;
  border-radius: 5px;
- background-color: white;
+ background-color: #D3D3D3;
  border-style: solid;
  border-width: medium;
 }
 
 #sidebar p:last-child {
- text-align: center;
+ // text-align: center;
 }
 
 #remove {
- border-color: white;
+ border-color: #D3D3D3;
+ text-align: left;
+}
+
+
+td {
+    // text-align:center;
+    vertical-align:middle;
+}
+
+h2 {
+  // text-align: center;
+  margin-top: 5px;
+  color: #e05b49;
 }

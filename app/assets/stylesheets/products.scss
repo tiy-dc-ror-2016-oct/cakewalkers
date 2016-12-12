@@ -1,3 +1,58 @@
 // Place all the styles related to the products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.row p{
+  padding-top: 10px;
+  margin-bottom: 0px;
+}
+
+.col-md-6 {
+  display:block;
+  margin:auto;
+}
+
+
+.col-md-6 img {
+  display:block;
+  margin:auto;
+  border-radius:50%;
+  overflow:hidden;
+}
+
+.col-md-6 span {
+  display:block;
+  margin:auto;
+  font-size: 25px;
+  // text-align: center;
+  text-shadow: 1px 1px 1px #000, 2px 2px 3px purple;
+}
+
+.col-md-6 p {
+  display:block;
+  margin:auto;
+  font-size: 20px;
+  // text-align: center;
+}
+
+h1 {
+  // text-align: center;
+}
+
+div .add_padding_to_top {
+  padding-top: 100px;
+  // text-align: center;
+}
+
+div .add_padding_to_top {
+  // text-align: center;
+}
+
+th {
+  // text-align: center;
+}
+
+p {
+    // text-align: center;
+
+}

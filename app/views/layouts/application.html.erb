@@ -4,8 +4,9 @@
   <head>
     <title>Cakewalkers</title>
     <%= csrf_meta_tags %>
-
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link rel='shortcut icon' href='favicon.ico' type='image/x-icon'/ >
 
   </head>
 
@@ -19,13 +20,25 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-           <%= link_to "Bakeshop", root_path, class: "navbar-brand" %>
+           <%= link_to image_tag('Logo-Highres.png', size: '50x50'), root_path, class: "navbar-brand", id:"logo" %>
+           <%= link_to "Cakewalkers", root_path, class: "navbar-brand" %>
         </div>
         <div class="collapse navbar-collapse" id="bakeshop-nav">
           <ul class="nav navbar-nav">
             <li>
               <%= link_to "Our Treats", products_path %>
             </li>
+            <% if (current_user && current_user.admin?) || (current_user && current_user.cakewalker?) %>
+              <li>
+                <%= link_to "Orders", orders_path %>
+              </li>
+
+            <% end %>
+            <% if current_user && current_user.admin? %>
+              <li>
+                <%= link_to "Create New User", new_user_path %>
+              </li>
+            <% end %>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <% if current_user %>
@@ -50,7 +63,11 @@
       <%= yield %>
     </div>
 
+    <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script type="text/javascript">
+      Stripe.setPublishableKey('<%= ENV['PUBLISHABLE_KEY'] %>');
+    </script>
 
   </body>
 </html>

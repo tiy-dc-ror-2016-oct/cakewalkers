@@ -33,18 +33,6 @@ ActiveRecord::Schema.define(version: 20161212195505) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "credit_cards", force: :cascade do |t|
-    t.integer  "user_id"
-    t.string   "name_on_card"
-    t.string   "kind"
-    t.string   "number"
-    t.string   "expiration_month"
-    t.string   "expiration_year"
-    t.string   "security_code"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
-  end
-
   create_table "line_items", force: :cascade do |t|
     t.integer  "order_id"
     t.integer  "product_id"
@@ -61,10 +49,10 @@ ActiveRecord::Schema.define(version: 20161212195505) do
     t.integer  "client_id"
     t.integer  "cakewalker_id"
     t.string   "status"
-    t.datetime "created_at",          null: false
-    t.datetime "updated_at",          null: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
     t.integer  "cart_id"
-    t.integer  "credit_card_id"
+    t.datetime "expected_delivery_time"
     t.integer  "delivery_address_id"
     t.integer  "billing_address_id"
     t.string   "full_name"
@@ -79,6 +67,8 @@ ActiveRecord::Schema.define(version: 20161212195505) do
     t.string   "name"
     t.string   "api_id"
     t.integer  "time_to_bake_in_seconds"
+    t.string   "image_url"
+    t.boolean  "featured",                default: false
   end
 
   create_table "roles", force: :cascade do |t|

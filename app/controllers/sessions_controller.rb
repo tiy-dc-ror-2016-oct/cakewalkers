@@ -8,7 +8,11 @@ class SessionsController < ApplicationController
     if @user && @user.authenticate(params[:password])
       session[:current_user_id] = @user.id
       flash[:success] = "Successfully logged in!"
-      redirect_to products_path
+      if @user.cakewalker?
+        redirect_to orders_path
+      else
+        redirect_to products_path
+      end
     else
       flash[:danger] = "Invalid email/password combination"
       redirect_to new_session_path

@@ -1,20 +1,21 @@
 class OrdersController < ApplicationController
-  BASE_URI = ENV["CAKEWALKER_API"] || "http://localhost:1234/bake_jobs"
+  load_and_authorize_resource
 
   def new
-    @order = Order.new(client: current_user)
+    setup_order_defaults
+  end
 
-    @order.full_name = current_user.try(:full_name)
-    @order.email = current_user.try(:email)
-    @order.delivery_address = current_user.try(:address) || Address.new
-    @order.credit_card = current_user.try(:credit_card) || CreditCard.new
-    @order.billing_address = @order.credit_card.try(:address) || Address.new
+  def index
+    if current_user.cakewalker?
+      @orders = Order.where(status: ["Ready for delivery", "Out for delivery"])
+    else
+      @orders = Order.all
+    end
   end
 
   def create
     @order = Order.new(
       client: current_user,
-      credit_card_id: order_params[:credit_card_attributes][:id],
       delivery_address_id: order_params[:delivery_address_attributes][:id],
       billing_address_id: order_params[:billing_address_attributes][:id]
     )
@@ -22,18 +23,35 @@ class OrdersController < ApplicationController
     @order.line_items = current_cart.line_items
 
     if @order.save
-      # binding.pry
+
+      @amount = current_cart.total
+      customer = Stripe::Customer.create(
+        :email => params[:email],
+        :source  => params[:stripeToken]
+      )
+
+      Stripe::Charge.create(
+        :customer    => customer.id,
+        :amount      => @amount,
+        :description => 'Rails Stripe customer',
+        :currency    => 'usd'
+      )
+
       bake_job = BakeJobHandler.new(@order)
       current_cart.line_items.delete_all
       @order.line_items.each do |line_item|
         response = bake_job.post_bake_job(line_item)
         line_item.update(bake_job_id: response.parsed_response["id"].to_i)
       end
-      @order.update(status: "waiting")
       redirect_to client_order_path(@order.id)
     else
       render :new
     end
+
+    rescue Stripe::CardError => e
+      flash[:error] = e.message
+      redirect_to new_order_path
+
   end
 
   def edit
@@ -43,7 +61,11 @@ class OrdersController < ApplicationController
   def update
     @order = Order.find(params[:id])
     if @order.update(order_params)
-      redirect_to client_order_path(params[:id])
+      if current_user.cakewalker?
+        redirect_to orders_path
+      else
+        redirect_to client_order_path(params[:id])
+      end
     else
       render :edit
     end
@@ -53,14 +75,17 @@ class OrdersController < ApplicationController
     @order = Order.find(params[:id])
   end
 
-  def destroy
-    Order.find(params[:id]).destroy
-    redirect_to root_path
+  def status # 600 seconds for delivery time
+    @order = Order.find(params[:id])
+    render json: { status: BakeJobHandler.new(@order).order_status, time_to_go: BakeJobHandler.new(@order).active_job_time_to_completion + 600 }
   end
 
-  def status
-    @order = Order.find(params[:id])
-    render json: { status: BakeJobHandler.new(@order).order_status }
+  def new_featured
+    setup_order_defaults
+    @current_cart = Cart.create
+    @current_cart.line_items << LineItem.create(product: Product.featured, quantity: 1, total_sale_price_in_cents: Product.featured.unit_price_in_cents)
+    session[:current_cart_id] = @current_cart.id
+    render :new
   end
 
   private
@@ -69,10 +94,18 @@ class OrdersController < ApplicationController
     params.require(:order).
            permit(:full_name, :email,
                   delivery_address_attributes: [:id, :contact_phone, :street, :city, :state, :zip_code],
-                  credit_card_attributes: [:id, :name_on_card, :kind, :number, :expiration_month, :expiration_year, :security_code],
                   billing_address_attributes: [:id, :contact_phone, :street, :city, :state, :zip_code])
   end
 
   def verify_credit_card(order)
+  end
+
+  def setup_order_defaults
+    @order = Order.new(client: current_user)
+
+    @order.full_name = current_user.try(:full_name)
+    @order.email = current_user.try(:email)
+    @order.delivery_address = current_user.try(:address) || Address.new
+    @order.billing_address = current_user.try(:address) || Address.new
   end
 end
