@@ -12,8 +12,11 @@
       );
     });
   }
-  loadAndRenderOrderStatus();
+  if ($(".client-order").length > 0) {
+    loadAndRenderOrderStatus();
 
-  // Every 5 seconds load new appointments
-  window.setInterval(loadAndRenderOrderStatus, 5 * 1000);
+    // Every 5 seconds load new appointments
+    window.setInterval(loadAndRenderOrderStatus, 5 * 1000);
+  }
+
 }());
