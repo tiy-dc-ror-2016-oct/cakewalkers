@@ -20,14 +20,17 @@
         <p>Name: <%= order.full_name %></p>
         <p>Deliver to:</p>
         <div id="address">
-          <p><%= order.shipping_street %></p>
-          <%= order.shipping_city %>,
-          <%= order.shipping_state %>,
-          <%= order.shipping_zip %>
+          <p><%= order.delivery_address.street %></p>
+          <p><%= order.delivery_address.city %>,
+          <%= order.delivery_address.state %></p>
+          <p><%= order.delivery_address.zip_code %></p>
+          <% if current_user.admin? %>
+            <%= order.status %>
+          <% end %>
         </div>
         <% if current_user.cakewalker? %>
-          <p>This order needs to be claimed</p>
           <% if order.status == "Ready for delivery" %>
+          <p>This order needs to be claimed</p>
             <%= link_to "Claim", order_path(id: order.id, order: { status: "Out for delivery", cakewalker_id: current_user.id }), method: :patch, class: "btn btn-primary" %>
           <% else %>
             <p>This order is being delivered!</p>

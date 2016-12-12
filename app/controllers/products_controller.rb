@@ -22,6 +22,7 @@ class ProductsController < ApplicationController
   def update
     @product = Product.find(params[:id])
     if @product.update(product_params)
+      @product.update(unit_price_in_cents: params[:product][:unit_price_in_cents].to_f*100.0)
       redirect_to products_path
     else
       render :edit
