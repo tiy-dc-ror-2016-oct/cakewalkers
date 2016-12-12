@@ -1,9 +1,8 @@
 (function() {
   'use strict';
 
-  var $form = $('#new_order');
-
   $(document).on("ready", function() {
+    var $form = $('#new_order');
     $form.on("submit", function(event) {
       event.preventDefault();
 

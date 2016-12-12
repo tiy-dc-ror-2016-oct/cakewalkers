@@ -1,0 +1,5 @@
+class RenameShippingAddressIdToBillingAddressIdInOrderTable < ActiveRecord::Migration[5.0]
+  def change
+    rename_column :orders, :shipping_address_id, :billing_address_id
+  end
+end

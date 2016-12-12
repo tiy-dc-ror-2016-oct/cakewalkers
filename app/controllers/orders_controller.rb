@@ -2,7 +2,7 @@ class OrdersController < ApplicationController
   load_and_authorize_resource
 
   def new
-    @order = Order.new
+    setup_order_defaults
   end
 
   def index
@@ -14,8 +14,14 @@ class OrdersController < ApplicationController
   end
 
   def create
-    @order = Order.new(order_params)
+    @order = Order.new(
+      client: current_user,
+      delivery_address_id: order_params[:delivery_address_attributes][:id],
+      billing_address_id: order_params[:billing_address_attributes][:id]
+    )
+    @order.assign_attributes(order_params)
     @order.line_items = current_cart.line_items
+
     if @order.save
 
       @amount = current_cart.total
@@ -76,7 +82,7 @@ class OrdersController < ApplicationController
   end
 
   def new_featured
-    @order = Order.new
+    setup_order_defaults
     @current_cart = Cart.create
     @current_cart.line_items << LineItem.create(product: Product.featured, quantity: 1, total_sale_price_in_cents: Product.featured.unit_price_in_cents)
     session[:current_cart_id] = @current_cart.id
@@ -84,10 +90,24 @@ class OrdersController < ApplicationController
   end
 
   private
+
   def order_params
-    params.require(:order).permit(:shipping_city, :shipping_street, :shipping_state, :shipping_zip, :billing_street, :billing_state, :billing_zip, :billing_city, :full_name, :phone, :email, :status, :cakewalker_id)
+    params.require(:order).
+           permit(:full_name, :email,
+                  delivery_address_attributes: [:id, :contact_phone, :street, :city, :state, :zip_code],
+                  billing_address_attributes: [:id, :contact_phone, :street, :city, :state, :zip_code])
+
   end
 
+  def verify_credit_card(order)
+  end
 
+  def setup_order_defaults
+    @order = Order.new(client: current_user)
 
+    @order.full_name = current_user.try(:full_name)
+    @order.email = current_user.try(:email)
+    @order.delivery_address = current_user.try(:address) || Address.new
+    @order.billing_address = current_user.try(:address) || Address.new
+  end
 end

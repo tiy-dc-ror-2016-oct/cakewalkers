@@ -5,8 +5,8 @@ class User < ApplicationRecord
   has_many :orders, foreign_key: :client_id
   has_many :orders, foreign_key: :cakewalker_id
   validates :email, uniqueness: true
-
-  has_many :addresses
+  has_one :address
+  accepts_nested_attributes_for :address
 
   def admin?
     roles_array = []
@@ -23,5 +23,4 @@ class User < ApplicationRecord
       return true
     end
   end
-
 end

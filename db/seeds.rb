@@ -49,34 +49,34 @@ products = HTTParty.get(Cakewalkers::URL + "products")
 products.each do |product|
   if product["name"] == "Muffin"
     product = product.merge!({
-    "unit_price_in_cents": 300,
-    "for_sale": true,
-    "image_url": "Muffin.jpg"
+    "unit_price_in_cents" => 300,
+    "for_sale" => true,
+    "image_url" => "Muffin.jpg"
     })
   elsif product["name"] == "Pullman loaf"
     product = product.merge!({
-    "unit_price_in_cents": 800,
-    "for_sale": true,
-    "image_url": "PullmanLoaf.jpg",
-    "featured": true
+    "unit_price_in_cents" => 800,
+    "for_sale" => true,
+    "image_url" => "PullmanLoaf.jpg",
+    "featured" => true
     })
   elsif product["name"] == "Avocado cake"
     product = product.merge!({
-    "unit_price_in_cents": 3800,
-    "for_sale": true,
-    "image_url": "AvacodoCake.jpg"
+    "unit_price_in_cents" => 3800,
+    "for_sale" => true,
+    "image_url" => "AvacodoCake.jpg"
     })
   elsif product["name"] == "Spice cake"
     product = product.merge!({
-    "unit_price_in_cents": 2200,
-    "for_sale": true,
-    "image_url": "Spice-Cake_8517.jpg"
+    "unit_price_in_cents" => 2200,
+    "for_sale" => true,
+    "image_url" => "Spice-Cake_8517.jpg"
     })
   elsif product["name"] == "Whoopie pies"
     product = product.merge!({
-    "unit_price_in_cents": 300,
-    "for_sale": true,
-    "image_url": "WhoopiePir.jpg"
+    "unit_price_in_cents" => 300,
+    "for_sale" => true,
+    "image_url" => "WhoopiePir.jpg"
     })
   end
 end
