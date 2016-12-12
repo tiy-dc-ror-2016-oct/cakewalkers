@@ -17,13 +17,14 @@ Role.create(
 )
 
 # Create 1 Admin
-new_user = User.create(
+new_admin = User.create(
   full_name: "Pamela Duke",
   email: "pduke@gmail.com",
   password: "password",
   password_confirmation: "password"
 )
 
+# Create 1 CakeWalker
 cakewalker = User.create(
   full_name: "Ziggy Cakedust",
   email: "cakedust@cakewalker.com",
@@ -31,6 +32,7 @@ cakewalker = User.create(
   password_confirmation: "password"
 )
 
+#Create 1 regular Client
 client = User.create(
   full_name: "Harry Potter",
   email: "hpotter@hogwarts.com",
@@ -38,7 +40,7 @@ client = User.create(
   password_confirmation: "password"
 )
 
-new_user.roles << Role.find_by(name: "admin")
+new_admin.roles << Role.find_by(name: "admin")
 cakewalker.roles << Role.find_by(name: "cakewalker")
 client.roles << Role.find_by(name: "client")
 # Create all prducts
@@ -92,3 +94,39 @@ products.each do |product|
 end
 
 Product.where("name = 'Muffin'").last.update(unit_price_in_cents: nil, for_sale: nil, image_url: nil )
+
+
+new_cart = Cart.create()
+# Create New Order
+new_order_ready_status = Order.create(
+  client_id: client.id,
+  status: "Ready for delivery",
+  billing_street: "450 Massachusetts Ave NW",
+  billing_city: "Washington",
+  billing_state: "DC",
+  billing_zip: "20001",
+  shipping_street: "450 Massachusetts Ave NW",
+  shipping_city: "Washington",
+  shipping_state: "DC",
+  shipping_zip: "20001",
+  full_name: client.full_name,
+  email: client.email,
+  phone: "610-308-0539",
+  cart_id: new_cart.id
+)
+
+new_line_item = LineItem.create(
+  order: new_order_ready_status,
+  product: Product.find_by(name: "Spice Cake"),
+  quantity: 2,
+  total_sale_price_in_cents: 4400,
+  estimated_bake_time_in_seconds: 1800
+)
+
+another_line_item = LineItem.create(
+  order: new_order_ready_status,
+  product: Product.find_by(name: "Pullman loaf"),
+  quantity: 4,
+  total_sale_price_in_cents: 3200,
+  estimated_bake_time_in_seconds: 1800
+)
