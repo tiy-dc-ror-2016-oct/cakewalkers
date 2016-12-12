@@ -2,10 +2,9 @@ require 'test_helper'
 
 class UserMailerTest < ActionMailer::TestCase
   test "appointment" do
-    mail = UserMailer.welcome_email
-    assert_equal "Sign Up", mail.subject
-    assert_equal ["to@example.org"], mail.to
+    mail = UserMailer.welcome_email(User.last)
+    assert_equal "Welcome to CakeWalkers", mail.subject
+    assert_equal ["amax3002@gmail.com"], mail.to
     assert_equal ["from@example.com"], mail.from
-    assert_match "Hi", mail.body.encoded
   end
 end
