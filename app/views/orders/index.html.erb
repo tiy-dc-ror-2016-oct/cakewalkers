@@ -2,7 +2,7 @@
   <small>
     <% if current_user && current_user.admin? %>
       <p>Admin View</p>
-      Total order value: <%= number_to_currency @orders.sum {|order| order.total } %>
+      Total order value: <%= number_to_currency @orders.sum {|order| order.total / 100 } %>
     <% end %>
   </small>
 </h3>

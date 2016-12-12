@@ -17,6 +17,20 @@ class OrdersController < ApplicationController
     @order = Order.new(order_params)
     @order.line_items = current_cart.line_items
     if @order.save
+
+      @amount = current_cart.total
+      customer = Stripe::Customer.create(
+        :email => params[:email],
+        :source  => params[:stripeToken]
+      )
+
+      Stripe::Charge.create(
+        :customer    => customer.id,
+        :amount      => @amount,
+        :description => 'Rails Stripe customer',
+        :currency    => 'usd'
+      )
+
       bake_job = BakeJobHandler.new(@order)
       current_cart.line_items.delete_all
       @order.line_items.each do |line_item|
@@ -27,6 +41,11 @@ class OrdersController < ApplicationController
     else
       render :new
     end
+
+    rescue Stripe::CardError => e
+      flash[:error] = e.message
+      redirect_to new_order_path
+
   end
 
   def edit
