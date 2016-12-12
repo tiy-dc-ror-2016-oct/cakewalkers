@@ -35,6 +35,7 @@ gem 'cancancan'
 gem 'mail'
 gem 'httparty'
 gem 'webmock'
+gem 'momentjs-rails'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
