@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161210163913) do
+ActiveRecord::Schema.define(version: 20161210190736) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,7 +22,6 @@ ActiveRecord::Schema.define(version: 20161210163913) do
     t.string   "apartment"
     t.string   "city"
     t.string   "state"
-    t.boolean  "is_default"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
     t.string   "zip_code"
@@ -42,7 +41,6 @@ ActiveRecord::Schema.define(version: 20161210163913) do
     t.string   "expiration_month"
     t.string   "expiration_year"
     t.string   "security_code"
-    t.boolean  "is_default"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
   end
@@ -63,14 +61,9 @@ ActiveRecord::Schema.define(version: 20161210163913) do
     t.integer  "client_id"
     t.integer  "cakewalker_id"
     t.string   "status"
-    t.datetime "created_at",          null: false
-    t.datetime "updated_at",          null: false
-    t.string   "full_name"
-    t.string   "phone"
-    t.string   "email"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
     t.integer  "cart_id"
-    t.integer  "delivery_address_id"
-    t.integer  "billing_address_id"
     t.integer  "credit_card_id"
   end
 

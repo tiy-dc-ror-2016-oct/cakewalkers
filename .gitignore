@@ -15,3 +15,10 @@
 
 # Ignore Byebug command history file.
 .byebug_history
+
+Gemfile.lock
+
+db/seeds.rb
+
+# Ignore seeds file
+seeds.rb

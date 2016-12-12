@@ -1,12 +1,9 @@
 class Order < ApplicationRecord
   has_many :line_items
   belongs_to :client, class_name: "User"
+  accepts_nested_attributes_for :client
   belongs_to :cakewalker, class_name: "User"
   belongs_to :cart
-  belongs_to :delivery_address, class_name: "Address"
-  accepts_nested_attributes_for :delivery_address
-  belongs_to :billing_address, class_name: "Address"
-  accepts_nested_attributes_for :billing_address
   belongs_to :credit_card
   accepts_nested_attributes_for :credit_card
 
