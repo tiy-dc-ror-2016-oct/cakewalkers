@@ -18,7 +18,7 @@ class OrdersController < ApplicationController
       delivery_address_id: order_params[:delivery_address_attributes][:id],
       billing_address_id: order_params[:billing_address_attributes][:id]
     )
-
+    @order.assign_attributes(order_params)
     @order.line_items = current_cart.line_items
 
     if @order.save
