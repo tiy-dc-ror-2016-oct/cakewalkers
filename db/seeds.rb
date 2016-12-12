@@ -27,7 +27,7 @@ new_user = User.create(
 new_user.roles << Role.find_by(name: "admin")
 
 # Create all prducts
-products = HTTParty.get(BakeJobHandler::BASE_URI + "products")
+products = HTTParty.get(Cakewalker::API + "products")
 
 products.each do |product|
   if product["name"] == "Muffin"
