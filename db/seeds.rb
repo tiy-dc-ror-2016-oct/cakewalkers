@@ -97,21 +97,21 @@ Product.where("name = 'Muffin'").last.update(unit_price_in_cents: nil, for_sale:
 
 
 new_cart = Cart.create()
+address = Address.create(
+  contact_phone: "3013325555",
+  street: "1515 k street",
+  city: "Washington",
+  state: "DC",
+  zip_code: "20202"
+)
 # Create New Order
 new_order_ready_status = Order.create(
   client_id: client.id,
   status: "Ready for delivery",
-  billing_street: "450 Massachusetts Ave NW",
-  billing_city: "Washington",
-  billing_state: "DC",
-  billing_zip: "20001",
-  shipping_street: "450 Massachusetts Ave NW",
-  shipping_city: "Washington",
-  shipping_state: "DC",
-  shipping_zip: "20001",
+  delivery_address: address,
+  billing_address: address,
   full_name: client.full_name,
   email: client.email,
-  phone: "610-308-0539",
   cart_id: new_cart.id
 )
 
