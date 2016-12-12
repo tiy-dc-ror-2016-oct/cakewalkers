@@ -15,8 +15,10 @@ class UsersController < ApplicationController
     session["message"] = "you signed up!"
     if @user.save && !admin_created
       session[:current_user_id] = @user.id
+      UserMailer.welcome_email(@user).deliver_now
       redirect_to products_path
     elsif admin_created
+      UserMailer.welcome_email(@user).deliver_now
       redirect_to products_path
     else
       render :new
