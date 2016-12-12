@@ -24,8 +24,23 @@ new_user = User.create(
   password_confirmation: "password"
 )
 
-new_user.roles << Role.find_by(name: "admin")
+cakewalker = User.create(
+  full_name: "Ziggy Cakedust",
+  email: "cakedust@cakewalker.com",
+  password: "password",
+  password_confirmation: "password"
+)
 
+client = User.create(
+  full_name: "Harry Potter",
+  email: "hpotter@hogwarts.com",
+  password: "password",
+  password_confirmation: "password"
+)
+
+new_user.roles << Role.find_by(name: "admin")
+cakewalker.roles << Role.find_by(name: "cakewalker")
+client.roles << Role.find_by(name: "client")
 # Create all prducts
 products = HTTParty.get(Cakewalkers::URL + "products")
 
