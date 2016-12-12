@@ -1,5 +1,4 @@
 class LineItemsController < ApplicationController
-  BASE_URI = ENV["CAKEWALKER_API"]||"http://localhost:1234/bake_jobs"
 
   def create
     @products = Product.all
