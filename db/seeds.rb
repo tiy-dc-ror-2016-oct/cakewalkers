@@ -27,7 +27,7 @@ new_user = User.create(
 new_user.roles << Role.find_by(name: "admin")
 
 # Create all prducts
-products = HTTParty.get(Cakewalker::API + "products")
+products = HTTParty.get(Cakewalkers::URL + "products")
 
 products.each do |product|
   if product["name"] == "Muffin"
