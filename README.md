@@ -1,24 +1,5 @@
-# README
+# Cakewalkers
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Welcome to Cakewalkers! This is a pretty cool app.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Our development team was tasked with creating an application that would communicate new orders from clients to a robot designed to make baked goods on the fly. Cakewalkers can claim orders from a queue and mark them as delivered when they have completed the job. Admins can change product listings (price, etc.) and see all past orders. Clients can log in or proceed as guests and order baked goods.
