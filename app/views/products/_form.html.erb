@@ -8,7 +8,7 @@
 
     <div class="form-group">
       <%= f.label "Price" %>
-      <%= f.text_field :unit_price_in_cents, value: product.unit_price_in_cents/100.0, class: 'form-control' %>
+      <%= f.text_field :unit_price_in_cents, value: product.unit_price_in_cents.to_f/100.0, class: 'form-control' %>
     </div>
 
     <div class="form-group">
