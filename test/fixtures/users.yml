@@ -3,13 +3,14 @@
 ben:
   email: ben@gmail.com
   full_name: Ben Mangelsen
-  password_digest: MyString
+  password_digest: <%= BCrypt::Password.create("test") %>
 
 alex:
   email: amax3002@gmail.com
   full_name: Alex Guy
-  password_digest: MyString
+  password_digest: <%= BCrypt::Password.create("test") %>
 
 allie:
   email: allie@gmail.com
   full_name: Allie Rowan
+  password_digest: <%= BCrypt::Password.create("test") %>

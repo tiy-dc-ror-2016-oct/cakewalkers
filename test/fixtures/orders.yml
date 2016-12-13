@@ -4,22 +4,12 @@ first:
   client: ben
   cakewalker: russell
   status: ready for delivery
-  billing_street: 123 this street
-  billing_city: Washington
-  billing_state: DC
-  billing_zip: 12345
   full_name: Ben Mangelson
   email: b@gmail.com
-  phone: 123456789
 
 second:
   client: alex
   cakewalker: farimah
   status: baking
-  billing_street: 123 that street
-  billing_city: Washington
-  billing_state: DC
-  billing_zip: 12333
   full_name: Alex Guy
   email: amax3002@gmail.com
-  phone: 123456789
