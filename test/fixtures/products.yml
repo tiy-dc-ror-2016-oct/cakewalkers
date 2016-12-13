@@ -11,6 +11,7 @@ muffin:
   for_sale: true
   time_to_bake_in_seconds: 1500
   api_id: 3e46954c-627a-4afc-97cc-d9ae16f62d1e
+  featured: true
 
 cupcake:
   unit_price_in_cents: 200

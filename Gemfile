@@ -46,7 +46,11 @@ group :development, :test do
   gem 'pry-rails'
   gem 'webmock'
   gem 'dotenv-rails'
+  gem 'rspec-rails'
+  gem 'capybara'
 end
+
+gem 'selenium-webdriver', group: :test
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
