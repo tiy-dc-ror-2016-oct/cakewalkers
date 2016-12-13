@@ -11,12 +11,4 @@ class CartsControllerTest < ActionDispatch::IntegrationTest
     post line_items_path, params: { line_item: {total_sale_price_in_cents: 100} }
     assert_equal 1, Cart.find(session[:current_cart_id]).line_items.size
   end
-
-  # test "can remove items from cart" do
-  #
-  # end
-  #
-  # test "can emtpy cart" do
-  #
-  # end
 end
